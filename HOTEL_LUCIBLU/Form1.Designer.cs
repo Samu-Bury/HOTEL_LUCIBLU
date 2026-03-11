@@ -35,7 +35,7 @@ namespace HOTEL_LUCIBLU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1467, 831);
+            this.ClientSize = new System.Drawing.Size(862, 517);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
