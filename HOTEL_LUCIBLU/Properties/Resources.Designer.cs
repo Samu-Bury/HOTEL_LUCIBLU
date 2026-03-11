@@ -153,6 +153,16 @@ namespace HOTEL_LUCIBLU.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Group_98 {
+            get {
+                object obj = ResourceManager.GetObject("Group 98", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hotel_foto {
             get {
                 object obj = ResourceManager.GetObject("hotel_foto", resourceCulture);
@@ -256,6 +266,26 @@ namespace HOTEL_LUCIBLU.Properties {
         internal static System.Drawing.Bitmap Rectangle_34__2_ {
             get {
                 object obj = ResourceManager.GetObject("Rectangle 34 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Rectangle_37 {
+            get {
+                object obj = ResourceManager.GetObject("Rectangle 37", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Rectangle_43__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Rectangle 43 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
