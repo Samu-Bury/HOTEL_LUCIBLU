@@ -17,5 +17,16 @@ namespace HOTEL_LUCIBLU
             InitializeComponent();
         }
 
+        //Registrati (Open Form)
+        private void label6_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 1;
+        }
+
+        //Accedi (Open Form)
+        private void label7_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 0;
+        }
     }
 }
