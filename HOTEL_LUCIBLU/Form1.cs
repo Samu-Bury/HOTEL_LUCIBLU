@@ -16,7 +16,30 @@ namespace HOTEL_LUCIBLU
         public Form1()
         {
             InitializeComponent();
+            tabControl1.SelectedIndex = 2; //apro home iniziale
+            //Controllo se è stato effettuato l'accesso
+            ControlloAccesso();
         }
+
+        #region Controllo Accesso
+        public void ControlloAccesso()
+        {
+            if (!accesso)
+            {
+                button_accedi.Visible = true;
+                button_account.Visible = false;
+                button_prenota.Visible = false;
+                button_prenotazioni.Visible = false;
+            }
+            else
+            {
+                button_accedi.Visible = false;
+                button_account.Visible = true;
+                button_prenota.Visible = true;
+                button_prenotazioni.Visible = true;
+            }
+        }
+        #endregion
 
         //Registrati (Open Form)
         private void label6_Click(object sender, EventArgs e)
@@ -30,9 +53,30 @@ namespace HOTEL_LUCIBLU
             tabControl1.SelectedIndex = 0;
         }
 
+        //Buttom Accedi (porta alla pagina home)
         private void button1_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 2;
+            accesso = true;
+            ControlloAccesso();
         }
+
+        private void button_accedi_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 0;
+            
+        }
+
+        private void button_prenota_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 3;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 6;
+        }
+
+        
     }
 }
