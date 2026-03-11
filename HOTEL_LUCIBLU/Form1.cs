@@ -12,6 +12,7 @@ namespace HOTEL_LUCIBLU
 {
     public partial class Form1 : Form
     {
+        bool accesso = false;
         public Form1()
         {
             InitializeComponent();
@@ -27,6 +28,11 @@ namespace HOTEL_LUCIBLU
         private void label7_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 0;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 2;
         }
     }
 }
