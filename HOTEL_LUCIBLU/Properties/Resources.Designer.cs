@@ -73,6 +73,16 @@ namespace HOTEL_LUCIBLU.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Firefly__1__1 {
+            get {
+                object obj = ResourceManager.GetObject("Firefly (1) 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Form__Prenota___Date {
             get {
                 object obj = ResourceManager.GetObject("Form- Prenota - Date", resourceCulture);
@@ -86,6 +96,36 @@ namespace HOTEL_LUCIBLU.Properties {
         internal static System.Drawing.Bitmap Form_Home {
             get {
                 object obj = ResourceManager.GetObject("Form-Home", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Group_115 {
+            get {
+                object obj = ResourceManager.GetObject("Group 115", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Group_125 {
+            get {
+                object obj = ResourceManager.GetObject("Group 125", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Group_126 {
+            get {
+                object obj = ResourceManager.GetObject("Group 126", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -176,6 +216,16 @@ namespace HOTEL_LUCIBLU.Properties {
         internal static System.Drawing.Bitmap login_panel {
             get {
                 object obj = ResourceManager.GetObject("login_panel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_PNG_1 {
+            get {
+                object obj = ResourceManager.GetObject("logo_PNG 1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
