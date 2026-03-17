@@ -205,7 +205,7 @@ namespace HOTEL_LUCIBLU
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(405, 35);
+            this.panel1.Location = new System.Drawing.Point(320, 32);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(311, 416);
             this.panel1.TabIndex = 5;
@@ -314,17 +314,18 @@ namespace HOTEL_LUCIBLU
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.BackgroundImage = global::HOTEL_LUCIBLU.Properties.Resources.logo1;
+            this.panel2.BackgroundImage = global::HOTEL_LUCIBLU.Properties.Resources.logo_PNG_1;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel2.Location = new System.Drawing.Point(75, 33);
+            this.panel2.Location = new System.Drawing.Point(57, 1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(166, 57);
+            this.panel2.Size = new System.Drawing.Size(178, 111);
             this.panel2.TabIndex = 0;
             // 
             // tabPage10
             // 
             this.tabPage10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tabPage10.Controls.Add(this.panel3);
+            this.tabPage10.Controls.Add(this.panel4);
             this.tabPage10.Location = new System.Drawing.Point(4, 24);
             this.tabPage10.Name = "tabPage10";
             this.tabPage10.Size = new System.Drawing.Size(893, 486);
@@ -351,8 +352,7 @@ namespace HOTEL_LUCIBLU
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Location = new System.Drawing.Point(245, 34);
+            this.panel3.Location = new System.Drawing.Point(174, 30);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(609, 416);
             this.panel3.TabIndex = 6;
@@ -504,11 +504,11 @@ namespace HOTEL_LUCIBLU
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.BackgroundImage = global::HOTEL_LUCIBLU.Properties.Resources.logo1;
+            this.panel4.BackgroundImage = global::HOTEL_LUCIBLU.Properties.Resources.logo_PNG_1;
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel4.Location = new System.Drawing.Point(228, 21);
+            this.panel4.Location = new System.Drawing.Point(698, 27);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(166, 57);
+            this.panel4.Size = new System.Drawing.Size(187, 115);
             this.panel4.TabIndex = 0;
             // 
             // tabPage2
