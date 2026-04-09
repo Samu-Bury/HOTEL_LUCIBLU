@@ -33,6 +33,7 @@ namespace HOTEL_LUCIBLU
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button_login = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -46,6 +47,7 @@ namespace HOTEL_LUCIBLU
             this.tabPage10 = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button_register = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -61,9 +63,9 @@ namespace HOTEL_LUCIBLU
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
+            this.button_prenota = new System.Windows.Forms.Button();
+            this.button_prenotazioni = new System.Windows.Forms.Button();
+            this.button_account = new System.Windows.Forms.Button();
             this.label57 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -74,6 +76,8 @@ namespace HOTEL_LUCIBLU
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label31 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
@@ -97,6 +101,9 @@ namespace HOTEL_LUCIBLU
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel15 = new System.Windows.Forms.Panel();
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
@@ -137,13 +144,6 @@ namespace HOTEL_LUCIBLU
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.button_login = new System.Windows.Forms.Button();
-            this.button_register = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -209,6 +209,18 @@ namespace HOTEL_LUCIBLU
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(311, 416);
             this.panel1.TabIndex = 5;
+            // 
+            // button_login
+            // 
+            this.button_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(111)))), ((int)(((byte)(196)))));
+            this.button_login.ForeColor = System.Drawing.Color.White;
+            this.button_login.Location = new System.Drawing.Point(58, 313);
+            this.button_login.Name = "button_login";
+            this.button_login.Size = new System.Drawing.Size(189, 37);
+            this.button_login.TabIndex = 11;
+            this.button_login.Text = "Accedi";
+            this.button_login.UseVisualStyleBackColor = false;
+            this.button_login.Click += new System.EventHandler(this.button_login_Click);
             // 
             // label6
             // 
@@ -351,6 +363,18 @@ namespace HOTEL_LUCIBLU
             this.panel3.Size = new System.Drawing.Size(609, 416);
             this.panel3.TabIndex = 6;
             // 
+            // button_register
+            // 
+            this.button_register.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(111)))), ((int)(((byte)(196)))));
+            this.button_register.ForeColor = System.Drawing.Color.White;
+            this.button_register.Location = new System.Drawing.Point(382, 354);
+            this.button_register.Name = "button_register";
+            this.button_register.Size = new System.Drawing.Size(189, 37);
+            this.button_register.TabIndex = 17;
+            this.button_register.Text = "Registrati";
+            this.button_register.UseVisualStyleBackColor = false;
+            this.button_register.Click += new System.EventHandler(this.button_register_Click);
+            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(33, 282);
@@ -484,9 +508,9 @@ namespace HOTEL_LUCIBLU
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(232)))), ((int)(((byte)(245)))));
             this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabPage2.Controls.Add(this.button15);
-            this.tabPage2.Controls.Add(this.button14);
-            this.tabPage2.Controls.Add(this.button13);
+            this.tabPage2.Controls.Add(this.button_prenota);
+            this.tabPage2.Controls.Add(this.button_prenotazioni);
+            this.tabPage2.Controls.Add(this.button_account);
             this.tabPage2.Controls.Add(this.label57);
             this.tabPage2.Controls.Add(this.label17);
             this.tabPage2.Controls.Add(this.label20);
@@ -503,44 +527,45 @@ namespace HOTEL_LUCIBLU
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Home";
             // 
-            // button15
+            // button_prenota
             // 
-            this.button15.BackColor = System.Drawing.Color.Transparent;
-            this.button15.BackgroundImage = global::HOTEL_LUCIBLU.Properties.Resources.Group_126;
-            this.button15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button15.FlatAppearance.BorderSize = 0;
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Location = new System.Drawing.Point(785, 338);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(201, 140);
-            this.button15.TabIndex = 20;
-            this.button15.UseVisualStyleBackColor = false;
+            this.button_prenota.BackColor = System.Drawing.Color.Transparent;
+            this.button_prenota.BackgroundImage = global::HOTEL_LUCIBLU.Properties.Resources.Group_126;
+            this.button_prenota.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button_prenota.FlatAppearance.BorderSize = 0;
+            this.button_prenota.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_prenota.Location = new System.Drawing.Point(785, 338);
+            this.button_prenota.Name = "button_prenota";
+            this.button_prenota.Size = new System.Drawing.Size(201, 140);
+            this.button_prenota.TabIndex = 20;
+            this.button_prenota.UseVisualStyleBackColor = false;
+            this.button_prenota.Click += new System.EventHandler(this.button_prenota_Click_1);
             // 
-            // button14
+            // button_prenotazioni
             // 
-            this.button14.BackColor = System.Drawing.Color.Transparent;
-            this.button14.BackgroundImage = global::HOTEL_LUCIBLU.Properties.Resources.Group_125;
-            this.button14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button14.FlatAppearance.BorderSize = 0;
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Location = new System.Drawing.Point(578, 338);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(201, 140);
-            this.button14.TabIndex = 19;
-            this.button14.UseVisualStyleBackColor = false;
+            this.button_prenotazioni.BackColor = System.Drawing.Color.Transparent;
+            this.button_prenotazioni.BackgroundImage = global::HOTEL_LUCIBLU.Properties.Resources.Group_125;
+            this.button_prenotazioni.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button_prenotazioni.FlatAppearance.BorderSize = 0;
+            this.button_prenotazioni.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_prenotazioni.Location = new System.Drawing.Point(578, 338);
+            this.button_prenotazioni.Name = "button_prenotazioni";
+            this.button_prenotazioni.Size = new System.Drawing.Size(201, 140);
+            this.button_prenotazioni.TabIndex = 19;
+            this.button_prenotazioni.UseVisualStyleBackColor = false;
             // 
-            // button13
+            // button_account
             // 
-            this.button13.BackColor = System.Drawing.Color.Transparent;
-            this.button13.BackgroundImage = global::HOTEL_LUCIBLU.Properties.Resources.Group_115;
-            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Location = new System.Drawing.Point(468, 362);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(87, 85);
-            this.button13.TabIndex = 18;
-            this.button13.UseVisualStyleBackColor = false;
+            this.button_account.BackColor = System.Drawing.Color.Transparent;
+            this.button_account.BackgroundImage = global::HOTEL_LUCIBLU.Properties.Resources.Group_115;
+            this.button_account.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button_account.FlatAppearance.BorderSize = 0;
+            this.button_account.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_account.Location = new System.Drawing.Point(468, 362);
+            this.button_account.Name = "button_account";
+            this.button_account.Size = new System.Drawing.Size(87, 85);
+            this.button_account.TabIndex = 18;
+            this.button_account.UseVisualStyleBackColor = false;
             // 
             // label57
             // 
@@ -654,6 +679,28 @@ namespace HOTEL_LUCIBLU
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Prenota-Data";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Gray;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(18, 13);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(101, 43);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "◀ Home";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(111)))), ((int)(((byte)(196)))));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(830, 417);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(136, 43);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Prosegui ▶";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // panel8
             // 
@@ -921,6 +968,39 @@ namespace HOTEL_LUCIBLU
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Prenota-Camere";
             this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(111)))), ((int)(((byte)(196)))));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(731, 432);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(248, 43);
+            this.button5.TabIndex = 29;
+            this.button5.Text = "Conferma e Vai al Pagamento ▶";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Gray;
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(624, 432);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(101, 43);
+            this.button4.TabIndex = 28;
+            this.button4.Text = "◀ Date";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Gray;
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(19, 13);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(101, 43);
+            this.button3.TabIndex = 27;
+            this.button3.Text = "◀ Home";
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // panel15
             // 
@@ -1351,83 +1431,6 @@ namespace HOTEL_LUCIBLU
             this.tabPage9.Text = "Prenota-Conferma";
             this.tabPage9.UseVisualStyleBackColor = true;
             // 
-            // button_login
-            // 
-            this.button_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(111)))), ((int)(((byte)(196)))));
-            this.button_login.ForeColor = System.Drawing.Color.White;
-            this.button_login.Location = new System.Drawing.Point(58, 313);
-            this.button_login.Name = "button_login";
-            this.button_login.Size = new System.Drawing.Size(189, 37);
-            this.button_login.TabIndex = 11;
-            this.button_login.Text = "Accedi";
-            this.button_login.UseVisualStyleBackColor = false;
-            // 
-            // button_register
-            // 
-            this.button_register.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(111)))), ((int)(((byte)(196)))));
-            this.button_register.ForeColor = System.Drawing.Color.White;
-            this.button_register.Location = new System.Drawing.Point(382, 354);
-            this.button_register.Name = "button_register";
-            this.button_register.Size = new System.Drawing.Size(189, 37);
-            this.button_register.TabIndex = 17;
-            this.button_register.Text = "Registrati";
-            this.button_register.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(111)))), ((int)(((byte)(196)))));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(830, 417);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 43);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Prosegui ▶";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Gray;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(18, 13);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(101, 43);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "◀ Home";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Gray;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(19, 13);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(101, 43);
-            this.button3.TabIndex = 27;
-            this.button3.Text = "◀ Home";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Gray;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(624, 432);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(101, 43);
-            this.button4.TabIndex = 28;
-            this.button4.Text = "◀ Date";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(111)))), ((int)(((byte)(196)))));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(731, 432);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(248, 43);
-            this.button5.TabIndex = 29;
-            this.button5.Text = "Conferma e Vai al Pagamento ▶";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1569,9 +1572,9 @@ namespace HOTEL_LUCIBLU
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button_prenota;
+        private System.Windows.Forms.Button button_prenotazioni;
+        private System.Windows.Forms.Button button_account;
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.Button button_login;
         private System.Windows.Forms.Button button_register;
