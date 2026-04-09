@@ -19,6 +19,7 @@ namespace HOTEL_LUCIBLU
             tabControl1.SelectedIndex = 2; //apro home iniziale
             //Controllo se è stato effettuato l'accesso
             ControlloAccesso();
+            this.AutoScaleMode = AutoScaleMode.None;
         }
 
         #region Controllo Accesso
@@ -26,14 +27,14 @@ namespace HOTEL_LUCIBLU
         {
             if (!accesso)
             {
-                button_accedi.Visible = true;
+                button_login.Visible = true;
                 button_account.Visible = false;
                 button_prenota.Visible = false;
                 button_prenotazioni.Visible = false;
             }
             else
             {
-                button_accedi.Visible = false;
+                button_login.Visible = false;
                 button_account.Visible = true;
                 button_prenota.Visible = true;
                 button_prenotazioni.Visible = true;
