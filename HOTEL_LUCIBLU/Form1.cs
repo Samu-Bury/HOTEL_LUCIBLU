@@ -347,16 +347,16 @@ namespace HOTEL_LUCIBLU
             if (!accesso)
             {
                 button_login.Visible = true;
-                button_account.Visible = false;
-                button_prenota.Visible = false;
-                button_prenotazioni.Visible = false;
+                button_account_home.Visible = false;
+                button_prenota_home.Visible = false;
+                button_prenotazioni_home.Visible = false;
             }
             else
             {
                 button_login.Visible = false;
-                button_account.Visible = true;
-                button_prenota.Visible = true;
-                button_prenotazioni.Visible = true;
+                button_account_home.Visible = true;
+                button_prenota_home.Visible = true;
+                button_prenotazioni_home.Visible = true;
             }
         }
         #endregion
@@ -380,5 +380,7 @@ namespace HOTEL_LUCIBLU
 
         private void button4_Click(object sender, EventArgs e) { tabControl1.SelectedIndex = 6; }
         private void button_prenota_Click_1(object sender, EventArgs e) { tabControl1.SelectedIndex = 3; }
+
+        
     }
 }
