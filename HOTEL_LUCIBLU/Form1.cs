@@ -160,10 +160,48 @@ namespace HOTEL_LUCIBLU
         {
             tabControl1.SelectedIndex = 2;
         }
-        #endregion
+
 
         #endregion
 
+        #endregion
+
+        // ACCOUNT
+        #region ACCOUNT
+
+        #region AZIONE BOTTONI
+
+        //Home
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 2;
+        }
+
+
+
+
+        #endregion
+
+        #endregion
+
+        // PRENOTA-PAGAMENTO
+        #region PRENOTA PAGAMENTO
+
+        #region AZIONE BOTTONI
+        //Home
+        private void button35_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 2;
+        }
+
+        //Camere
+        private void button41_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 7;
+        }
+        #endregion
+
+        #endregion
 
 
     }
