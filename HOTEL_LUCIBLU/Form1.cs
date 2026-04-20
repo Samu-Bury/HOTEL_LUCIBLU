@@ -12,9 +12,12 @@ namespace HOTEL_LUCIBLU
 
         private bool accesso = false;
 
+        #region Calendario
         //Calendario
         int anno = 2026;
         int meseCorrente;
+
+        #endregion
 
         //Account
         bool posizioneHome = true; //Sono andato nella schermata account dalla Home o da ADMIN (true = home)
@@ -24,12 +27,13 @@ namespace HOTEL_LUCIBLU
         public Form1()
         {
             InitializeComponent();
-            this.AutoScaleMode = AutoScaleMode.None;
-            tabControl1.SelectedIndex = 2; // Home
+            this.AutoScaleMode = AutoScaleMode.None; //Non deforma la form su altri dispositivi
+            tabControl1.SelectedIndex = 2; // Home come pagina iniziale
             AggiornaVisibilitaBottoniHome(); //Visualizzazione bottoni in base all'accesso se presente o meno
 
+            #region Setting TabControl
             //Nasconde il menu dei TabControl
-            //TabControl1 (SOFTWARE)
+            //TabControl1 (APP)
             tabControl1.Appearance = TabAppearance.FlatButtons;
             tabControl1.ItemSize = new Size(0, 1);
             tabControl1.SizeMode = TabSizeMode.Fixed;
@@ -37,6 +41,8 @@ namespace HOTEL_LUCIBLU
             tabControl2.Appearance = TabAppearance.FlatButtons;
             tabControl2.ItemSize = new Size(0, 1);
             tabControl2.SizeMode = TabSizeMode.Fixed;
+
+            #endregion
 
             #region SETTING BOTTONI HOME (RIMOZIONE SFONDO E ALTRO.)
             Button[] bottoni = {
@@ -64,7 +70,7 @@ namespace HOTEL_LUCIBLU
             if (DateTime.Now.Year == 2026)
                 meseCorrente = DateTime.Now.Month;
             else
-                meseCorrente = 1; // Gennaio
+                meseCorrente = 1;
 
             AggiornaCalendario(); //Carico i giorni
 

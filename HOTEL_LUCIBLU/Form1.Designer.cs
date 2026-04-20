@@ -471,7 +471,7 @@ namespace HOTEL_LUCIBLU
             // 
             this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(111)))), ((int)(((byte)(196)))));
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(685, 340);
+            this.button6.Location = new System.Drawing.Point(835, 423);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(141, 37);
             this.button6.TabIndex = 13;
@@ -546,7 +546,7 @@ namespace HOTEL_LUCIBLU
             // checkBox_ricordami_login
             // 
             this.checkBox_ricordami_login.AutoSize = true;
-            this.checkBox_ricordami_login.Location = new System.Drawing.Point(34, 275);
+            this.checkBox_ricordami_login.Location = new System.Drawing.Point(38, 275);
             this.checkBox_ricordami_login.Name = "checkBox_ricordami_login";
             this.checkBox_ricordami_login.Size = new System.Drawing.Size(80, 19);
             this.checkBox_ricordami_login.TabIndex = 8;
@@ -754,7 +754,7 @@ namespace HOTEL_LUCIBLU
             // checkBox_ricordami_register
             // 
             this.checkBox_ricordami_register.AutoSize = true;
-            this.checkBox_ricordami_register.Location = new System.Drawing.Point(441, 327);
+            this.checkBox_ricordami_register.Location = new System.Drawing.Point(391, 329);
             this.checkBox_ricordami_register.Name = "checkBox_ricordami_register";
             this.checkBox_ricordami_register.Size = new System.Drawing.Size(80, 19);
             this.checkBox_ricordami_register.TabIndex = 8;
@@ -811,7 +811,7 @@ namespace HOTEL_LUCIBLU
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(255)))));
-            this.label12.Location = new System.Drawing.Point(400, 42);
+            this.label12.Location = new System.Drawing.Point(406, 53);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(82, 21);
             this.label12.TabIndex = 2;
@@ -1076,7 +1076,7 @@ namespace HOTEL_LUCIBLU
             this.data42.Name = "data42";
             this.data42.Size = new System.Drawing.Size(75, 34);
             this.data42.TabIndex = 61;
-            this.data42.Text = "button34";
+            this.data42.Text = "42";
             this.data42.UseVisualStyleBackColor = true;
             // 
             // data41
@@ -1085,7 +1085,7 @@ namespace HOTEL_LUCIBLU
             this.data41.Name = "data41";
             this.data41.Size = new System.Drawing.Size(75, 34);
             this.data41.TabIndex = 60;
-            this.data41.Text = "button34";
+            this.data41.Text = "41";
             this.data41.UseVisualStyleBackColor = true;
             // 
             // data40
@@ -1094,7 +1094,7 @@ namespace HOTEL_LUCIBLU
             this.data40.Name = "data40";
             this.data40.Size = new System.Drawing.Size(75, 34);
             this.data40.TabIndex = 59;
-            this.data40.Text = "button34";
+            this.data40.Text = "40";
             this.data40.UseVisualStyleBackColor = true;
             // 
             // data39
@@ -1103,7 +1103,7 @@ namespace HOTEL_LUCIBLU
             this.data39.Name = "data39";
             this.data39.Size = new System.Drawing.Size(75, 34);
             this.data39.TabIndex = 58;
-            this.data39.Text = "button34";
+            this.data39.Text = "39";
             this.data39.UseVisualStyleBackColor = true;
             // 
             // data38
@@ -1112,7 +1112,7 @@ namespace HOTEL_LUCIBLU
             this.data38.Name = "data38";
             this.data38.Size = new System.Drawing.Size(75, 34);
             this.data38.TabIndex = 57;
-            this.data38.Text = "button34";
+            this.data38.Text = "38";
             this.data38.UseVisualStyleBackColor = true;
             // 
             // data37
@@ -1121,7 +1121,7 @@ namespace HOTEL_LUCIBLU
             this.data37.Name = "data37";
             this.data37.Size = new System.Drawing.Size(75, 34);
             this.data37.TabIndex = 56;
-            this.data37.Text = "button34";
+            this.data37.Text = "37";
             this.data37.UseVisualStyleBackColor = true;
             // 
             // data36
@@ -1130,7 +1130,7 @@ namespace HOTEL_LUCIBLU
             this.data36.Name = "data36";
             this.data36.Size = new System.Drawing.Size(75, 34);
             this.data36.TabIndex = 55;
-            this.data36.Text = "button34";
+            this.data36.Text = "36";
             this.data36.UseVisualStyleBackColor = true;
             // 
             // data35
@@ -1139,7 +1139,7 @@ namespace HOTEL_LUCIBLU
             this.data35.Name = "data35";
             this.data35.Size = new System.Drawing.Size(75, 34);
             this.data35.TabIndex = 54;
-            this.data35.Text = "button34";
+            this.data35.Text = "35";
             this.data35.UseVisualStyleBackColor = true;
             // 
             // data34
@@ -1148,7 +1148,7 @@ namespace HOTEL_LUCIBLU
             this.data34.Name = "data34";
             this.data34.Size = new System.Drawing.Size(75, 34);
             this.data34.TabIndex = 53;
-            this.data34.Text = "button34";
+            this.data34.Text = "34";
             this.data34.UseVisualStyleBackColor = true;
             // 
             // data33
@@ -1157,7 +1157,7 @@ namespace HOTEL_LUCIBLU
             this.data33.Name = "data33";
             this.data33.Size = new System.Drawing.Size(75, 34);
             this.data33.TabIndex = 52;
-            this.data33.Text = "button34";
+            this.data33.Text = "33";
             this.data33.UseVisualStyleBackColor = true;
             // 
             // data32
@@ -1166,7 +1166,7 @@ namespace HOTEL_LUCIBLU
             this.data32.Name = "data32";
             this.data32.Size = new System.Drawing.Size(75, 34);
             this.data32.TabIndex = 51;
-            this.data32.Text = "button34";
+            this.data32.Text = "32";
             this.data32.UseVisualStyleBackColor = true;
             // 
             // panel23
@@ -1315,7 +1315,7 @@ namespace HOTEL_LUCIBLU
             this.data31.Name = "data31";
             this.data31.Size = new System.Drawing.Size(75, 34);
             this.data31.TabIndex = 47;
-            this.data31.Text = "button34";
+            this.data31.Text = "31";
             this.data31.UseVisualStyleBackColor = true;
             // 
             // data30
@@ -1324,7 +1324,7 @@ namespace HOTEL_LUCIBLU
             this.data30.Name = "data30";
             this.data30.Size = new System.Drawing.Size(75, 34);
             this.data30.TabIndex = 46;
-            this.data30.Text = "button33";
+            this.data30.Text = "30";
             this.data30.UseVisualStyleBackColor = true;
             // 
             // data29
@@ -1333,7 +1333,7 @@ namespace HOTEL_LUCIBLU
             this.data29.Name = "data29";
             this.data29.Size = new System.Drawing.Size(75, 34);
             this.data29.TabIndex = 45;
-            this.data29.Text = "button32";
+            this.data29.Text = "29";
             this.data29.UseVisualStyleBackColor = true;
             // 
             // data28
@@ -1342,7 +1342,7 @@ namespace HOTEL_LUCIBLU
             this.data28.Name = "data28";
             this.data28.Size = new System.Drawing.Size(75, 34);
             this.data28.TabIndex = 44;
-            this.data28.Text = "button25";
+            this.data28.Text = "28";
             this.data28.UseVisualStyleBackColor = true;
             // 
             // data27
@@ -1351,7 +1351,7 @@ namespace HOTEL_LUCIBLU
             this.data27.Name = "data27";
             this.data27.Size = new System.Drawing.Size(75, 34);
             this.data27.TabIndex = 43;
-            this.data27.Text = "button26";
+            this.data27.Text = "27";
             this.data27.UseVisualStyleBackColor = true;
             // 
             // data26
@@ -1360,7 +1360,7 @@ namespace HOTEL_LUCIBLU
             this.data26.Name = "data26";
             this.data26.Size = new System.Drawing.Size(75, 34);
             this.data26.TabIndex = 42;
-            this.data26.Text = "button27";
+            this.data26.Text = "26";
             this.data26.UseVisualStyleBackColor = true;
             // 
             // data25
@@ -1369,7 +1369,7 @@ namespace HOTEL_LUCIBLU
             this.data25.Name = "data25";
             this.data25.Size = new System.Drawing.Size(75, 34);
             this.data25.TabIndex = 41;
-            this.data25.Text = "button28";
+            this.data25.Text = "25";
             this.data25.UseVisualStyleBackColor = true;
             // 
             // data24
@@ -1378,7 +1378,7 @@ namespace HOTEL_LUCIBLU
             this.data24.Name = "data24";
             this.data24.Size = new System.Drawing.Size(75, 34);
             this.data24.TabIndex = 40;
-            this.data24.Text = "button29";
+            this.data24.Text = "24";
             this.data24.UseVisualStyleBackColor = true;
             // 
             // data23
@@ -1387,7 +1387,7 @@ namespace HOTEL_LUCIBLU
             this.data23.Name = "data23";
             this.data23.Size = new System.Drawing.Size(75, 34);
             this.data23.TabIndex = 39;
-            this.data23.Text = "button30";
+            this.data23.Text = "23";
             this.data23.UseVisualStyleBackColor = true;
             // 
             // data22
@@ -1396,7 +1396,7 @@ namespace HOTEL_LUCIBLU
             this.data22.Name = "data22";
             this.data22.Size = new System.Drawing.Size(75, 34);
             this.data22.TabIndex = 38;
-            this.data22.Text = "button31";
+            this.data22.Text = "22";
             this.data22.UseVisualStyleBackColor = true;
             // 
             // data21
@@ -1405,7 +1405,7 @@ namespace HOTEL_LUCIBLU
             this.data21.Name = "data21";
             this.data21.Size = new System.Drawing.Size(75, 34);
             this.data21.TabIndex = 37;
-            this.data21.Text = "button18";
+            this.data21.Text = "21";
             this.data21.UseVisualStyleBackColor = true;
             // 
             // data20
@@ -1414,7 +1414,7 @@ namespace HOTEL_LUCIBLU
             this.data20.Name = "data20";
             this.data20.Size = new System.Drawing.Size(75, 34);
             this.data20.TabIndex = 36;
-            this.data20.Text = "button19";
+            this.data20.Text = "20";
             this.data20.UseVisualStyleBackColor = true;
             // 
             // data19
@@ -1423,7 +1423,7 @@ namespace HOTEL_LUCIBLU
             this.data19.Name = "data19";
             this.data19.Size = new System.Drawing.Size(75, 34);
             this.data19.TabIndex = 35;
-            this.data19.Text = "button20";
+            this.data19.Text = "19";
             this.data19.UseVisualStyleBackColor = true;
             // 
             // data18
@@ -1432,7 +1432,7 @@ namespace HOTEL_LUCIBLU
             this.data18.Name = "data18";
             this.data18.Size = new System.Drawing.Size(75, 34);
             this.data18.TabIndex = 34;
-            this.data18.Text = "button21";
+            this.data18.Text = "18";
             this.data18.UseVisualStyleBackColor = true;
             // 
             // data17
@@ -1441,7 +1441,7 @@ namespace HOTEL_LUCIBLU
             this.data17.Name = "data17";
             this.data17.Size = new System.Drawing.Size(75, 34);
             this.data17.TabIndex = 33;
-            this.data17.Text = "button22";
+            this.data17.Text = "17";
             this.data17.UseVisualStyleBackColor = true;
             // 
             // data16
@@ -1450,7 +1450,7 @@ namespace HOTEL_LUCIBLU
             this.data16.Name = "data16";
             this.data16.Size = new System.Drawing.Size(75, 34);
             this.data16.TabIndex = 32;
-            this.data16.Text = "button23";
+            this.data16.Text = "16";
             this.data16.UseVisualStyleBackColor = true;
             // 
             // data15
@@ -1459,7 +1459,7 @@ namespace HOTEL_LUCIBLU
             this.data15.Name = "data15";
             this.data15.Size = new System.Drawing.Size(75, 34);
             this.data15.TabIndex = 31;
-            this.data15.Text = "button24";
+            this.data15.Text = "15";
             this.data15.UseVisualStyleBackColor = true;
             // 
             // data14
@@ -1468,7 +1468,7 @@ namespace HOTEL_LUCIBLU
             this.data14.Name = "data14";
             this.data14.Size = new System.Drawing.Size(75, 34);
             this.data14.TabIndex = 30;
-            this.data14.Text = "button11";
+            this.data14.Text = "14";
             this.data14.UseVisualStyleBackColor = true;
             // 
             // data13
@@ -1477,7 +1477,7 @@ namespace HOTEL_LUCIBLU
             this.data13.Name = "data13";
             this.data13.Size = new System.Drawing.Size(75, 34);
             this.data13.TabIndex = 29;
-            this.data13.Text = "button12";
+            this.data13.Text = "13";
             this.data13.UseVisualStyleBackColor = true;
             // 
             // data12
@@ -1486,7 +1486,7 @@ namespace HOTEL_LUCIBLU
             this.data12.Name = "data12";
             this.data12.Size = new System.Drawing.Size(75, 34);
             this.data12.TabIndex = 28;
-            this.data12.Text = "button13";
+            this.data12.Text = "12";
             this.data12.UseVisualStyleBackColor = true;
             // 
             // data11
@@ -1495,7 +1495,7 @@ namespace HOTEL_LUCIBLU
             this.data11.Name = "data11";
             this.data11.Size = new System.Drawing.Size(75, 34);
             this.data11.TabIndex = 27;
-            this.data11.Text = "button14";
+            this.data11.Text = "11";
             this.data11.UseVisualStyleBackColor = true;
             // 
             // data10
@@ -1504,7 +1504,7 @@ namespace HOTEL_LUCIBLU
             this.data10.Name = "data10";
             this.data10.Size = new System.Drawing.Size(75, 34);
             this.data10.TabIndex = 26;
-            this.data10.Text = "button15";
+            this.data10.Text = "10";
             this.data10.UseVisualStyleBackColor = true;
             // 
             // data9
@@ -1513,7 +1513,7 @@ namespace HOTEL_LUCIBLU
             this.data9.Name = "data9";
             this.data9.Size = new System.Drawing.Size(75, 34);
             this.data9.TabIndex = 25;
-            this.data9.Text = "button16";
+            this.data9.Text = "9";
             this.data9.UseVisualStyleBackColor = true;
             // 
             // data8
@@ -1522,7 +1522,7 @@ namespace HOTEL_LUCIBLU
             this.data8.Name = "data8";
             this.data8.Size = new System.Drawing.Size(75, 34);
             this.data8.TabIndex = 24;
-            this.data8.Text = "button17";
+            this.data8.Text = "8";
             this.data8.UseVisualStyleBackColor = true;
             // 
             // data7
@@ -1531,7 +1531,7 @@ namespace HOTEL_LUCIBLU
             this.data7.Name = "data7";
             this.data7.Size = new System.Drawing.Size(75, 34);
             this.data7.TabIndex = 23;
-            this.data7.Text = "button10";
+            this.data7.Text = "7";
             this.data7.UseVisualStyleBackColor = true;
             // 
             // data6
@@ -1540,7 +1540,7 @@ namespace HOTEL_LUCIBLU
             this.data6.Name = "data6";
             this.data6.Size = new System.Drawing.Size(75, 34);
             this.data6.TabIndex = 22;
-            this.data6.Text = "button9";
+            this.data6.Text = "6";
             this.data6.UseVisualStyleBackColor = true;
             // 
             // data5
@@ -1549,7 +1549,7 @@ namespace HOTEL_LUCIBLU
             this.data5.Name = "data5";
             this.data5.Size = new System.Drawing.Size(75, 34);
             this.data5.TabIndex = 21;
-            this.data5.Text = "button8";
+            this.data5.Text = "5";
             this.data5.UseVisualStyleBackColor = true;
             // 
             // data4
@@ -1558,7 +1558,7 @@ namespace HOTEL_LUCIBLU
             this.data4.Name = "data4";
             this.data4.Size = new System.Drawing.Size(75, 34);
             this.data4.TabIndex = 20;
-            this.data4.Text = "button7";
+            this.data4.Text = "4";
             this.data4.UseVisualStyleBackColor = true;
             // 
             // data3
@@ -1567,7 +1567,7 @@ namespace HOTEL_LUCIBLU
             this.data3.Name = "data3";
             this.data3.Size = new System.Drawing.Size(75, 34);
             this.data3.TabIndex = 19;
-            this.data3.Text = "button6";
+            this.data3.Text = "3";
             this.data3.UseVisualStyleBackColor = true;
             // 
             // data2
@@ -1576,7 +1576,7 @@ namespace HOTEL_LUCIBLU
             this.data2.Name = "data2";
             this.data2.Size = new System.Drawing.Size(75, 34);
             this.data2.TabIndex = 18;
-            this.data2.Text = "button5";
+            this.data2.Text = "2";
             this.data2.UseVisualStyleBackColor = true;
             // 
             // data1
@@ -1585,7 +1585,7 @@ namespace HOTEL_LUCIBLU
             this.data1.Name = "data1";
             this.data1.Size = new System.Drawing.Size(75, 34);
             this.data1.TabIndex = 17;
-            this.data1.Text = "button1";
+            this.data1.Text = "1";
             this.data1.UseVisualStyleBackColor = true;
             // 
             // button_indietro
@@ -1615,7 +1615,7 @@ namespace HOTEL_LUCIBLU
             this.label_nomeMese.AutoSize = true;
             this.label_nomeMese.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label_nomeMese.ForeColor = System.Drawing.Color.Black;
-            this.label_nomeMese.Location = new System.Drawing.Point(261, 21);
+            this.label_nomeMese.Location = new System.Drawing.Point(267, 34);
             this.label_nomeMese.Name = "label_nomeMese";
             this.label_nomeMese.Size = new System.Drawing.Size(105, 21);
             this.label_nomeMese.TabIndex = 16;
@@ -1668,7 +1668,7 @@ namespace HOTEL_LUCIBLU
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label31.Location = new System.Drawing.Point(69, 107);
+            this.label31.Location = new System.Drawing.Point(70, 111);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(69, 19);
             this.label31.TabIndex = 17;
@@ -1678,7 +1678,7 @@ namespace HOTEL_LUCIBLU
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label30.Location = new System.Drawing.Point(69, 88);
+            this.label30.Location = new System.Drawing.Point(69, 89);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(112, 19);
             this.label30.TabIndex = 16;
@@ -1709,7 +1709,7 @@ namespace HOTEL_LUCIBLU
             this.panel12.BackColor = System.Drawing.Color.Transparent;
             this.panel12.BackgroundImage = global::HOTEL_LUCIBLU.Properties.Resources.Rectangle_18;
             this.panel12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel12.Location = new System.Drawing.Point(24, 107);
+            this.panel12.Location = new System.Drawing.Point(24, 113);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(24, 19);
             this.panel12.TabIndex = 14;
@@ -1719,7 +1719,7 @@ namespace HOTEL_LUCIBLU
             this.panel11.BackColor = System.Drawing.Color.Transparent;
             this.panel11.BackgroundImage = global::HOTEL_LUCIBLU.Properties.Resources.Rectangle_17;
             this.panel11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel11.Location = new System.Drawing.Point(24, 88);
+            this.panel11.Location = new System.Drawing.Point(24, 90);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(24, 19);
             this.panel11.TabIndex = 13;
@@ -1729,7 +1729,7 @@ namespace HOTEL_LUCIBLU
             this.panel10.BackColor = System.Drawing.Color.Transparent;
             this.panel10.BackgroundImage = global::HOTEL_LUCIBLU.Properties.Resources.Rectangle_16;
             this.panel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel10.Location = new System.Drawing.Point(24, 67);
+            this.panel10.Location = new System.Drawing.Point(24, 68);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(24, 19);
             this.panel10.TabIndex = 13;
@@ -2737,7 +2737,6 @@ namespace HOTEL_LUCIBLU
             // 
             // panel14
             // 
-            this.panel14.BackgroundImage = global::HOTEL_LUCIBLU.Properties.Resources.Rectangle_43__1_;
             this.panel14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel14.Controls.Add(this.label_totPrezzoNotti_Camere);
             this.panel14.Controls.Add(this.label52);
