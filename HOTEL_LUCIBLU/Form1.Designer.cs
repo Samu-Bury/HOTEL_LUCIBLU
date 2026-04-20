@@ -32,6 +32,7 @@ namespace HOTEL_LUCIBLU
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button6 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label_registrati_login = new System.Windows.Forms.Label();
             this.button_login = new System.Windows.Forms.Button();
@@ -79,7 +80,18 @@ namespace HOTEL_LUCIBLU
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel_calendario = new System.Windows.Forms.Panel();
+            this.data42 = new System.Windows.Forms.Button();
+            this.data41 = new System.Windows.Forms.Button();
+            this.data40 = new System.Windows.Forms.Button();
+            this.data39 = new System.Windows.Forms.Button();
+            this.data38 = new System.Windows.Forms.Button();
+            this.data37 = new System.Windows.Forms.Button();
+            this.data36 = new System.Windows.Forms.Button();
+            this.data35 = new System.Windows.Forms.Button();
+            this.data34 = new System.Windows.Forms.Button();
+            this.data33 = new System.Windows.Forms.Button();
+            this.data32 = new System.Windows.Forms.Button();
             this.panel23 = new System.Windows.Forms.Panel();
             this.label48 = new System.Windows.Forms.Label();
             this.panel22 = new System.Windows.Forms.Panel();
@@ -94,35 +106,35 @@ namespace HOTEL_LUCIBLU
             this.label38 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
             this.label33 = new System.Windows.Forms.Label();
-            this.button34 = new System.Windows.Forms.Button();
-            this.button33 = new System.Windows.Forms.Button();
-            this.button32 = new System.Windows.Forms.Button();
-            this.button25 = new System.Windows.Forms.Button();
-            this.button26 = new System.Windows.Forms.Button();
-            this.button27 = new System.Windows.Forms.Button();
-            this.button28 = new System.Windows.Forms.Button();
-            this.button29 = new System.Windows.Forms.Button();
-            this.button30 = new System.Windows.Forms.Button();
-            this.button31 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.data31 = new System.Windows.Forms.Button();
+            this.data30 = new System.Windows.Forms.Button();
+            this.data29 = new System.Windows.Forms.Button();
+            this.data28 = new System.Windows.Forms.Button();
+            this.data27 = new System.Windows.Forms.Button();
+            this.data26 = new System.Windows.Forms.Button();
+            this.data25 = new System.Windows.Forms.Button();
+            this.data24 = new System.Windows.Forms.Button();
+            this.data23 = new System.Windows.Forms.Button();
+            this.data22 = new System.Windows.Forms.Button();
+            this.data21 = new System.Windows.Forms.Button();
+            this.data20 = new System.Windows.Forms.Button();
+            this.data19 = new System.Windows.Forms.Button();
+            this.data18 = new System.Windows.Forms.Button();
+            this.data17 = new System.Windows.Forms.Button();
+            this.data16 = new System.Windows.Forms.Button();
+            this.data15 = new System.Windows.Forms.Button();
+            this.data14 = new System.Windows.Forms.Button();
+            this.data13 = new System.Windows.Forms.Button();
+            this.data12 = new System.Windows.Forms.Button();
+            this.data11 = new System.Windows.Forms.Button();
+            this.data10 = new System.Windows.Forms.Button();
+            this.data9 = new System.Windows.Forms.Button();
+            this.data8 = new System.Windows.Forms.Button();
+            this.data7 = new System.Windows.Forms.Button();
+            this.data6 = new System.Windows.Forms.Button();
+            this.data5 = new System.Windows.Forms.Button();
+            this.data4 = new System.Windows.Forms.Button();
+            this.data3 = new System.Windows.Forms.Button();
             this.data2 = new System.Windows.Forms.Button();
             this.data1 = new System.Windows.Forms.Button();
             this.button_indietro = new System.Windows.Forms.Button();
@@ -173,6 +185,7 @@ namespace HOTEL_LUCIBLU
             this.label63 = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
             this.panel24 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
             this.label79 = new System.Windows.Forms.Label();
             this.label78 = new System.Windows.Forms.Label();
             this.label69 = new System.Windows.Forms.Label();
@@ -280,47 +293,38 @@ namespace HOTEL_LUCIBLU
             this.label81 = new System.Windows.Forms.Label();
             this.label80 = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.panel32 = new System.Windows.Forms.Panel();
-            this.panel33 = new System.Windows.Forms.Panel();
-            this.label101 = new System.Windows.Forms.Label();
-            this.button45 = new System.Windows.Forms.Button();
-            this.label102 = new System.Windows.Forms.Label();
-            this.button44 = new System.Windows.Forms.Button();
-            this.label103 = new System.Windows.Forms.Label();
-            this.button46 = new System.Windows.Forms.Button();
-            this.label104 = new System.Windows.Forms.Label();
-            this.button47 = new System.Windows.Forms.Button();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage9 = new System.Windows.Forms.TabPage();
-            this.tabPage11 = new System.Windows.Forms.TabPage();
-            this.tabPage12 = new System.Windows.Forms.TabPage();
-            this.tabPage13 = new System.Windows.Forms.TabPage();
-            this.panel34 = new System.Windows.Forms.Panel();
-            this.label105 = new System.Windows.Forms.Label();
-            this.label106 = new System.Windows.Forms.Label();
-            this.panel35 = new System.Windows.Forms.Panel();
-            this.label107 = new System.Windows.Forms.Label();
-            this.label108 = new System.Windows.Forms.Label();
-            this.panel36 = new System.Windows.Forms.Panel();
-            this.label109 = new System.Windows.Forms.Label();
-            this.label110 = new System.Windows.Forms.Label();
-            this.panel37 = new System.Windows.Forms.Panel();
-            this.label111 = new System.Windows.Forms.Label();
-            this.label112 = new System.Windows.Forms.Label();
-            this.panel38 = new System.Windows.Forms.Panel();
-            this.label113 = new System.Windows.Forms.Label();
-            this.label114 = new System.Windows.Forms.Label();
-            this.panel39 = new System.Windows.Forms.Panel();
-            this.label115 = new System.Windows.Forms.Label();
-            this.label116 = new System.Windows.Forms.Label();
-            this.panel40 = new System.Windows.Forms.Panel();
-            this.label117 = new System.Windows.Forms.Label();
-            this.label118 = new System.Windows.Forms.Label();
+            this.label121 = new System.Windows.Forms.Label();
+            this.listBox2 = new System.Windows.Forms.ListBox();
             this.panel41 = new System.Windows.Forms.Panel();
             this.label119 = new System.Windows.Forms.Label();
             this.label120 = new System.Windows.Forms.Label();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.label121 = new System.Windows.Forms.Label();
+            this.panel40 = new System.Windows.Forms.Panel();
+            this.label117 = new System.Windows.Forms.Label();
+            this.label118 = new System.Windows.Forms.Label();
+            this.panel39 = new System.Windows.Forms.Panel();
+            this.label115 = new System.Windows.Forms.Label();
+            this.label116 = new System.Windows.Forms.Label();
+            this.panel38 = new System.Windows.Forms.Panel();
+            this.label113 = new System.Windows.Forms.Label();
+            this.label114 = new System.Windows.Forms.Label();
+            this.panel37 = new System.Windows.Forms.Panel();
+            this.label111 = new System.Windows.Forms.Label();
+            this.label112 = new System.Windows.Forms.Label();
+            this.panel36 = new System.Windows.Forms.Panel();
+            this.label109 = new System.Windows.Forms.Label();
+            this.label110 = new System.Windows.Forms.Label();
+            this.panel35 = new System.Windows.Forms.Panel();
+            this.label107 = new System.Windows.Forms.Label();
+            this.label108 = new System.Windows.Forms.Label();
+            this.panel34 = new System.Windows.Forms.Panel();
+            this.label106 = new System.Windows.Forms.Label();
+            this.label105 = new System.Windows.Forms.Label();
+            this.tabPage11 = new System.Windows.Forms.TabPage();
+            this.label127 = new System.Windows.Forms.Label();
+            this.button49 = new System.Windows.Forms.Button();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.button48 = new System.Windows.Forms.Button();
             this.panel42 = new System.Windows.Forms.Panel();
             this.label122 = new System.Windows.Forms.Label();
@@ -330,28 +334,30 @@ namespace HOTEL_LUCIBLU
             this.label126 = new System.Windows.Forms.Label();
             this.panel43 = new System.Windows.Forms.Panel();
             this.listBox3 = new System.Windows.Forms.ListBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.button49 = new System.Windows.Forms.Button();
-            this.label127 = new System.Windows.Forms.Label();
-            this.label128 = new System.Windows.Forms.Label();
-            this.listBox4 = new System.Windows.Forms.ListBox();
+            this.tabPage12 = new System.Windows.Forms.TabPage();
+            this.label137 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button52 = new System.Windows.Forms.Button();
+            this.button51 = new System.Windows.Forms.Button();
+            this.label136 = new System.Windows.Forms.Label();
+            this.button50 = new System.Windows.Forms.Button();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.panel44 = new System.Windows.Forms.Panel();
+            this.label135 = new System.Windows.Forms.Label();
+            this.label134 = new System.Windows.Forms.Label();
             this.label129 = new System.Windows.Forms.Label();
             this.label130 = new System.Windows.Forms.Label();
             this.label131 = new System.Windows.Forms.Label();
             this.label132 = new System.Windows.Forms.Label();
             this.label133 = new System.Windows.Forms.Label();
             this.panel45 = new System.Windows.Forms.Panel();
-            this.label134 = new System.Windows.Forms.Label();
-            this.label135 = new System.Windows.Forms.Label();
-            this.label136 = new System.Windows.Forms.Label();
-            this.button50 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.button51 = new System.Windows.Forms.Button();
-            this.button52 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label137 = new System.Windows.Forms.Label();
-            this.listBox5 = new System.Windows.Forms.ListBox();
+            this.listBox4 = new System.Windows.Forms.ListBox();
+            this.tabPage13 = new System.Windows.Forms.TabPage();
+            this.button54 = new System.Windows.Forms.Button();
+            this.button55 = new System.Windows.Forms.Button();
+            this.label145 = new System.Windows.Forms.Label();
+            this.button53 = new System.Windows.Forms.Button();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.panel46 = new System.Windows.Forms.Panel();
             this.label138 = new System.Windows.Forms.Label();
             this.label139 = new System.Windows.Forms.Label();
@@ -361,11 +367,20 @@ namespace HOTEL_LUCIBLU
             this.label143 = new System.Windows.Forms.Label();
             this.label144 = new System.Windows.Forms.Label();
             this.panel47 = new System.Windows.Forms.Panel();
-            this.label145 = new System.Windows.Forms.Label();
-            this.button53 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.button54 = new System.Windows.Forms.Button();
-            this.button55 = new System.Windows.Forms.Button();
+            this.listBox5 = new System.Windows.Forms.ListBox();
+            this.panel32 = new System.Windows.Forms.Panel();
+            this.panel33 = new System.Windows.Forms.Panel();
+            this.button8 = new System.Windows.Forms.Button();
+            this.label146 = new System.Windows.Forms.Label();
+            this.label128 = new System.Windows.Forms.Label();
+            this.button47 = new System.Windows.Forms.Button();
+            this.label104 = new System.Windows.Forms.Label();
+            this.button46 = new System.Windows.Forms.Button();
+            this.label103 = new System.Windows.Forms.Label();
+            this.button44 = new System.Windows.Forms.Button();
+            this.label102 = new System.Windows.Forms.Label();
+            this.button45 = new System.Windows.Forms.Button();
+            this.label101 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -373,7 +388,7 @@ namespace HOTEL_LUCIBLU
             this.panel3.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            this.panel13.SuspendLayout();
+            this.panel_calendario.SuspendLayout();
             this.panel23.SuspendLayout();
             this.panel22.SuspendLayout();
             this.panel21.SuspendLayout();
@@ -399,27 +414,27 @@ namespace HOTEL_LUCIBLU
             this.panel30.SuspendLayout();
             this.panel28.SuspendLayout();
             this.tabPage6.SuspendLayout();
-            this.panel32.SuspendLayout();
-            this.panel33.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage9.SuspendLayout();
-            this.tabPage11.SuspendLayout();
-            this.tabPage12.SuspendLayout();
-            this.tabPage13.SuspendLayout();
-            this.panel34.SuspendLayout();
-            this.panel35.SuspendLayout();
-            this.panel36.SuspendLayout();
-            this.panel37.SuspendLayout();
-            this.panel38.SuspendLayout();
-            this.panel39.SuspendLayout();
-            this.panel40.SuspendLayout();
             this.panel41.SuspendLayout();
+            this.panel40.SuspendLayout();
+            this.panel39.SuspendLayout();
+            this.panel38.SuspendLayout();
+            this.panel37.SuspendLayout();
+            this.panel36.SuspendLayout();
+            this.panel35.SuspendLayout();
+            this.panel34.SuspendLayout();
+            this.tabPage11.SuspendLayout();
             this.panel42.SuspendLayout();
             this.panel43.SuspendLayout();
+            this.tabPage12.SuspendLayout();
             this.panel44.SuspendLayout();
             this.panel45.SuspendLayout();
+            this.tabPage13.SuspendLayout();
             this.panel46.SuspendLayout();
             this.panel47.SuspendLayout();
+            this.panel32.SuspendLayout();
+            this.panel33.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -443,6 +458,7 @@ namespace HOTEL_LUCIBLU
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.tabPage1.Controls.Add(this.button6);
             this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
@@ -450,6 +466,18 @@ namespace HOTEL_LUCIBLU
             this.tabPage1.Size = new System.Drawing.Size(1004, 484);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Login";
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(111)))), ((int)(((byte)(196)))));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(685, 340);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(141, 37);
+            this.button6.TabIndex = 13;
+            this.button6.Text = "Test Accesso Admin";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // panel1
             // 
@@ -820,7 +848,7 @@ namespace HOTEL_LUCIBLU
             this.button_accedi_home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button_accedi_home.FlatAppearance.BorderSize = 0;
             this.button_accedi_home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_accedi_home.Location = new System.Drawing.Point(785, 338);
+            this.button_accedi_home.Location = new System.Drawing.Point(785, 339);
             this.button_accedi_home.Name = "button_accedi_home";
             this.button_accedi_home.Size = new System.Drawing.Size(201, 140);
             this.button_accedi_home.TabIndex = 21;
@@ -969,7 +997,7 @@ namespace HOTEL_LUCIBLU
             // 
             this.tabPage3.BackgroundImage = global::HOTEL_LUCIBLU.Properties.Resources.Form__Prenota___Date;
             this.tabPage3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabPage3.Controls.Add(this.panel13);
+            this.tabPage3.Controls.Add(this.panel_calendario);
             this.tabPage3.Controls.Add(this.button2);
             this.tabPage3.Controls.Add(this.button_prosegui_prenotaDate);
             this.tabPage3.Controls.Add(this.panel8);
@@ -983,53 +1011,163 @@ namespace HOTEL_LUCIBLU
             this.tabPage3.Text = "Prenota-Data";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // panel13
+            // panel_calendario
             // 
-            this.panel13.Controls.Add(this.panel23);
-            this.panel13.Controls.Add(this.panel22);
-            this.panel13.Controls.Add(this.panel21);
-            this.panel13.Controls.Add(this.panel20);
-            this.panel13.Controls.Add(this.panel19);
-            this.panel13.Controls.Add(this.panel17);
-            this.panel13.Controls.Add(this.panel16);
-            this.panel13.Controls.Add(this.button34);
-            this.panel13.Controls.Add(this.button33);
-            this.panel13.Controls.Add(this.button32);
-            this.panel13.Controls.Add(this.button25);
-            this.panel13.Controls.Add(this.button26);
-            this.panel13.Controls.Add(this.button27);
-            this.panel13.Controls.Add(this.button28);
-            this.panel13.Controls.Add(this.button29);
-            this.panel13.Controls.Add(this.button30);
-            this.panel13.Controls.Add(this.button31);
-            this.panel13.Controls.Add(this.button18);
-            this.panel13.Controls.Add(this.button19);
-            this.panel13.Controls.Add(this.button20);
-            this.panel13.Controls.Add(this.button21);
-            this.panel13.Controls.Add(this.button22);
-            this.panel13.Controls.Add(this.button23);
-            this.panel13.Controls.Add(this.button24);
-            this.panel13.Controls.Add(this.button11);
-            this.panel13.Controls.Add(this.button12);
-            this.panel13.Controls.Add(this.button13);
-            this.panel13.Controls.Add(this.button14);
-            this.panel13.Controls.Add(this.button15);
-            this.panel13.Controls.Add(this.button16);
-            this.panel13.Controls.Add(this.button17);
-            this.panel13.Controls.Add(this.button10);
-            this.panel13.Controls.Add(this.button9);
-            this.panel13.Controls.Add(this.button8);
-            this.panel13.Controls.Add(this.button7);
-            this.panel13.Controls.Add(this.button6);
-            this.panel13.Controls.Add(this.data2);
-            this.panel13.Controls.Add(this.data1);
-            this.panel13.Controls.Add(this.button_indietro);
-            this.panel13.Controls.Add(this.button_avanti);
-            this.panel13.Controls.Add(this.label_nomeMese);
-            this.panel13.Location = new System.Drawing.Point(45, 82);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(632, 342);
-            this.panel13.TabIndex = 17;
+            this.panel_calendario.Controls.Add(this.data42);
+            this.panel_calendario.Controls.Add(this.data41);
+            this.panel_calendario.Controls.Add(this.data40);
+            this.panel_calendario.Controls.Add(this.data39);
+            this.panel_calendario.Controls.Add(this.data38);
+            this.panel_calendario.Controls.Add(this.data37);
+            this.panel_calendario.Controls.Add(this.data36);
+            this.panel_calendario.Controls.Add(this.data35);
+            this.panel_calendario.Controls.Add(this.data34);
+            this.panel_calendario.Controls.Add(this.data33);
+            this.panel_calendario.Controls.Add(this.data32);
+            this.panel_calendario.Controls.Add(this.panel23);
+            this.panel_calendario.Controls.Add(this.panel22);
+            this.panel_calendario.Controls.Add(this.panel21);
+            this.panel_calendario.Controls.Add(this.panel20);
+            this.panel_calendario.Controls.Add(this.panel19);
+            this.panel_calendario.Controls.Add(this.panel17);
+            this.panel_calendario.Controls.Add(this.panel16);
+            this.panel_calendario.Controls.Add(this.data31);
+            this.panel_calendario.Controls.Add(this.data30);
+            this.panel_calendario.Controls.Add(this.data29);
+            this.panel_calendario.Controls.Add(this.data28);
+            this.panel_calendario.Controls.Add(this.data27);
+            this.panel_calendario.Controls.Add(this.data26);
+            this.panel_calendario.Controls.Add(this.data25);
+            this.panel_calendario.Controls.Add(this.data24);
+            this.panel_calendario.Controls.Add(this.data23);
+            this.panel_calendario.Controls.Add(this.data22);
+            this.panel_calendario.Controls.Add(this.data21);
+            this.panel_calendario.Controls.Add(this.data20);
+            this.panel_calendario.Controls.Add(this.data19);
+            this.panel_calendario.Controls.Add(this.data18);
+            this.panel_calendario.Controls.Add(this.data17);
+            this.panel_calendario.Controls.Add(this.data16);
+            this.panel_calendario.Controls.Add(this.data15);
+            this.panel_calendario.Controls.Add(this.data14);
+            this.panel_calendario.Controls.Add(this.data13);
+            this.panel_calendario.Controls.Add(this.data12);
+            this.panel_calendario.Controls.Add(this.data11);
+            this.panel_calendario.Controls.Add(this.data10);
+            this.panel_calendario.Controls.Add(this.data9);
+            this.panel_calendario.Controls.Add(this.data8);
+            this.panel_calendario.Controls.Add(this.data7);
+            this.panel_calendario.Controls.Add(this.data6);
+            this.panel_calendario.Controls.Add(this.data5);
+            this.panel_calendario.Controls.Add(this.data4);
+            this.panel_calendario.Controls.Add(this.data3);
+            this.panel_calendario.Controls.Add(this.data2);
+            this.panel_calendario.Controls.Add(this.data1);
+            this.panel_calendario.Controls.Add(this.button_indietro);
+            this.panel_calendario.Controls.Add(this.button_avanti);
+            this.panel_calendario.Controls.Add(this.label_nomeMese);
+            this.panel_calendario.Location = new System.Drawing.Point(45, 82);
+            this.panel_calendario.Name = "panel_calendario";
+            this.panel_calendario.Size = new System.Drawing.Size(632, 378);
+            this.panel_calendario.TabIndex = 17;
+            // 
+            // data42
+            // 
+            this.data42.Location = new System.Drawing.Point(510, 307);
+            this.data42.Name = "data42";
+            this.data42.Size = new System.Drawing.Size(75, 34);
+            this.data42.TabIndex = 61;
+            this.data42.Text = "button34";
+            this.data42.UseVisualStyleBackColor = true;
+            // 
+            // data41
+            // 
+            this.data41.Location = new System.Drawing.Point(429, 307);
+            this.data41.Name = "data41";
+            this.data41.Size = new System.Drawing.Size(75, 34);
+            this.data41.TabIndex = 60;
+            this.data41.Text = "button34";
+            this.data41.UseVisualStyleBackColor = true;
+            // 
+            // data40
+            // 
+            this.data40.Location = new System.Drawing.Point(348, 307);
+            this.data40.Name = "data40";
+            this.data40.Size = new System.Drawing.Size(75, 34);
+            this.data40.TabIndex = 59;
+            this.data40.Text = "button34";
+            this.data40.UseVisualStyleBackColor = true;
+            // 
+            // data39
+            // 
+            this.data39.Location = new System.Drawing.Point(267, 307);
+            this.data39.Name = "data39";
+            this.data39.Size = new System.Drawing.Size(75, 34);
+            this.data39.TabIndex = 58;
+            this.data39.Text = "button34";
+            this.data39.UseVisualStyleBackColor = true;
+            // 
+            // data38
+            // 
+            this.data38.Location = new System.Drawing.Point(184, 307);
+            this.data38.Name = "data38";
+            this.data38.Size = new System.Drawing.Size(75, 34);
+            this.data38.TabIndex = 57;
+            this.data38.Text = "button34";
+            this.data38.UseVisualStyleBackColor = true;
+            // 
+            // data37
+            // 
+            this.data37.Location = new System.Drawing.Point(103, 307);
+            this.data37.Name = "data37";
+            this.data37.Size = new System.Drawing.Size(75, 34);
+            this.data37.TabIndex = 56;
+            this.data37.Text = "button34";
+            this.data37.UseVisualStyleBackColor = true;
+            // 
+            // data36
+            // 
+            this.data36.Location = new System.Drawing.Point(24, 307);
+            this.data36.Name = "data36";
+            this.data36.Size = new System.Drawing.Size(75, 34);
+            this.data36.TabIndex = 55;
+            this.data36.Text = "button34";
+            this.data36.UseVisualStyleBackColor = true;
+            // 
+            // data35
+            // 
+            this.data35.Location = new System.Drawing.Point(510, 269);
+            this.data35.Name = "data35";
+            this.data35.Size = new System.Drawing.Size(75, 34);
+            this.data35.TabIndex = 54;
+            this.data35.Text = "button34";
+            this.data35.UseVisualStyleBackColor = true;
+            // 
+            // data34
+            // 
+            this.data34.Location = new System.Drawing.Point(429, 267);
+            this.data34.Name = "data34";
+            this.data34.Size = new System.Drawing.Size(75, 34);
+            this.data34.TabIndex = 53;
+            this.data34.Text = "button34";
+            this.data34.UseVisualStyleBackColor = true;
+            // 
+            // data33
+            // 
+            this.data33.Location = new System.Drawing.Point(348, 267);
+            this.data33.Name = "data33";
+            this.data33.Size = new System.Drawing.Size(75, 34);
+            this.data33.TabIndex = 52;
+            this.data33.Text = "button34";
+            this.data33.UseVisualStyleBackColor = true;
+            // 
+            // data32
+            // 
+            this.data32.Location = new System.Drawing.Point(267, 269);
+            this.data32.Name = "data32";
+            this.data32.Size = new System.Drawing.Size(75, 34);
+            this.data32.TabIndex = 51;
+            this.data32.Text = "button34";
+            this.data32.UseVisualStyleBackColor = true;
             // 
             // panel23
             // 
@@ -1171,266 +1309,266 @@ namespace HOTEL_LUCIBLU
             this.label33.TabIndex = 49;
             this.label33.Text = "LUN";
             // 
-            // button34
+            // data31
             // 
-            this.button34.Location = new System.Drawing.Point(186, 267);
-            this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(75, 34);
-            this.button34.TabIndex = 47;
-            this.button34.Text = "button34";
-            this.button34.UseVisualStyleBackColor = true;
+            this.data31.Location = new System.Drawing.Point(186, 267);
+            this.data31.Name = "data31";
+            this.data31.Size = new System.Drawing.Size(75, 34);
+            this.data31.TabIndex = 47;
+            this.data31.Text = "button34";
+            this.data31.UseVisualStyleBackColor = true;
             // 
-            // button33
+            // data30
             // 
-            this.button33.Location = new System.Drawing.Point(103, 267);
-            this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(75, 34);
-            this.button33.TabIndex = 46;
-            this.button33.Text = "button33";
-            this.button33.UseVisualStyleBackColor = true;
+            this.data30.Location = new System.Drawing.Point(103, 267);
+            this.data30.Name = "data30";
+            this.data30.Size = new System.Drawing.Size(75, 34);
+            this.data30.TabIndex = 46;
+            this.data30.Text = "button33";
+            this.data30.UseVisualStyleBackColor = true;
             // 
-            // button32
+            // data29
             // 
-            this.button32.Location = new System.Drawing.Point(24, 267);
-            this.button32.Name = "button32";
-            this.button32.Size = new System.Drawing.Size(75, 34);
-            this.button32.TabIndex = 45;
-            this.button32.Text = "button32";
-            this.button32.UseVisualStyleBackColor = true;
+            this.data29.Location = new System.Drawing.Point(24, 267);
+            this.data29.Name = "data29";
+            this.data29.Size = new System.Drawing.Size(75, 34);
+            this.data29.TabIndex = 45;
+            this.data29.Text = "button32";
+            this.data29.UseVisualStyleBackColor = true;
             // 
-            // button25
+            // data28
             // 
-            this.button25.Location = new System.Drawing.Point(510, 229);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(75, 34);
-            this.button25.TabIndex = 44;
-            this.button25.Text = "button25";
-            this.button25.UseVisualStyleBackColor = true;
+            this.data28.Location = new System.Drawing.Point(510, 229);
+            this.data28.Name = "data28";
+            this.data28.Size = new System.Drawing.Size(75, 34);
+            this.data28.TabIndex = 44;
+            this.data28.Text = "button25";
+            this.data28.UseVisualStyleBackColor = true;
             // 
-            // button26
+            // data27
             // 
-            this.button26.Location = new System.Drawing.Point(429, 229);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(75, 34);
-            this.button26.TabIndex = 43;
-            this.button26.Text = "button26";
-            this.button26.UseVisualStyleBackColor = true;
+            this.data27.Location = new System.Drawing.Point(429, 229);
+            this.data27.Name = "data27";
+            this.data27.Size = new System.Drawing.Size(75, 34);
+            this.data27.TabIndex = 43;
+            this.data27.Text = "button26";
+            this.data27.UseVisualStyleBackColor = true;
             // 
-            // button27
+            // data26
             // 
-            this.button27.Location = new System.Drawing.Point(348, 229);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(75, 34);
-            this.button27.TabIndex = 42;
-            this.button27.Text = "button27";
-            this.button27.UseVisualStyleBackColor = true;
+            this.data26.Location = new System.Drawing.Point(348, 229);
+            this.data26.Name = "data26";
+            this.data26.Size = new System.Drawing.Size(75, 34);
+            this.data26.TabIndex = 42;
+            this.data26.Text = "button27";
+            this.data26.UseVisualStyleBackColor = true;
             // 
-            // button28
+            // data25
             // 
-            this.button28.Location = new System.Drawing.Point(267, 229);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(75, 34);
-            this.button28.TabIndex = 41;
-            this.button28.Text = "button28";
-            this.button28.UseVisualStyleBackColor = true;
+            this.data25.Location = new System.Drawing.Point(267, 229);
+            this.data25.Name = "data25";
+            this.data25.Size = new System.Drawing.Size(75, 34);
+            this.data25.TabIndex = 41;
+            this.data25.Text = "button28";
+            this.data25.UseVisualStyleBackColor = true;
             // 
-            // button29
+            // data24
             // 
-            this.button29.Location = new System.Drawing.Point(186, 229);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(75, 34);
-            this.button29.TabIndex = 40;
-            this.button29.Text = "button29";
-            this.button29.UseVisualStyleBackColor = true;
+            this.data24.Location = new System.Drawing.Point(186, 229);
+            this.data24.Name = "data24";
+            this.data24.Size = new System.Drawing.Size(75, 34);
+            this.data24.TabIndex = 40;
+            this.data24.Text = "button29";
+            this.data24.UseVisualStyleBackColor = true;
             // 
-            // button30
+            // data23
             // 
-            this.button30.Location = new System.Drawing.Point(105, 229);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(75, 34);
-            this.button30.TabIndex = 39;
-            this.button30.Text = "button30";
-            this.button30.UseVisualStyleBackColor = true;
+            this.data23.Location = new System.Drawing.Point(105, 229);
+            this.data23.Name = "data23";
+            this.data23.Size = new System.Drawing.Size(75, 34);
+            this.data23.TabIndex = 39;
+            this.data23.Text = "button30";
+            this.data23.UseVisualStyleBackColor = true;
             // 
-            // button31
+            // data22
             // 
-            this.button31.Location = new System.Drawing.Point(24, 229);
-            this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(75, 34);
-            this.button31.TabIndex = 38;
-            this.button31.Text = "button31";
-            this.button31.UseVisualStyleBackColor = true;
+            this.data22.Location = new System.Drawing.Point(24, 229);
+            this.data22.Name = "data22";
+            this.data22.Size = new System.Drawing.Size(75, 34);
+            this.data22.TabIndex = 38;
+            this.data22.Text = "button31";
+            this.data22.UseVisualStyleBackColor = true;
             // 
-            // button18
+            // data21
             // 
-            this.button18.Location = new System.Drawing.Point(510, 189);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(75, 34);
-            this.button18.TabIndex = 37;
-            this.button18.Text = "button18";
-            this.button18.UseVisualStyleBackColor = true;
+            this.data21.Location = new System.Drawing.Point(510, 189);
+            this.data21.Name = "data21";
+            this.data21.Size = new System.Drawing.Size(75, 34);
+            this.data21.TabIndex = 37;
+            this.data21.Text = "button18";
+            this.data21.UseVisualStyleBackColor = true;
             // 
-            // button19
+            // data20
             // 
-            this.button19.Location = new System.Drawing.Point(429, 189);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(75, 34);
-            this.button19.TabIndex = 36;
-            this.button19.Text = "button19";
-            this.button19.UseVisualStyleBackColor = true;
+            this.data20.Location = new System.Drawing.Point(429, 189);
+            this.data20.Name = "data20";
+            this.data20.Size = new System.Drawing.Size(75, 34);
+            this.data20.TabIndex = 36;
+            this.data20.Text = "button19";
+            this.data20.UseVisualStyleBackColor = true;
             // 
-            // button20
+            // data19
             // 
-            this.button20.Location = new System.Drawing.Point(348, 189);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(75, 34);
-            this.button20.TabIndex = 35;
-            this.button20.Text = "button20";
-            this.button20.UseVisualStyleBackColor = true;
+            this.data19.Location = new System.Drawing.Point(348, 189);
+            this.data19.Name = "data19";
+            this.data19.Size = new System.Drawing.Size(75, 34);
+            this.data19.TabIndex = 35;
+            this.data19.Text = "button20";
+            this.data19.UseVisualStyleBackColor = true;
             // 
-            // button21
+            // data18
             // 
-            this.button21.Location = new System.Drawing.Point(267, 189);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(75, 34);
-            this.button21.TabIndex = 34;
-            this.button21.Text = "button21";
-            this.button21.UseVisualStyleBackColor = true;
+            this.data18.Location = new System.Drawing.Point(267, 189);
+            this.data18.Name = "data18";
+            this.data18.Size = new System.Drawing.Size(75, 34);
+            this.data18.TabIndex = 34;
+            this.data18.Text = "button21";
+            this.data18.UseVisualStyleBackColor = true;
             // 
-            // button22
+            // data17
             // 
-            this.button22.Location = new System.Drawing.Point(186, 189);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(75, 34);
-            this.button22.TabIndex = 33;
-            this.button22.Text = "button22";
-            this.button22.UseVisualStyleBackColor = true;
+            this.data17.Location = new System.Drawing.Point(186, 189);
+            this.data17.Name = "data17";
+            this.data17.Size = new System.Drawing.Size(75, 34);
+            this.data17.TabIndex = 33;
+            this.data17.Text = "button22";
+            this.data17.UseVisualStyleBackColor = true;
             // 
-            // button23
+            // data16
             // 
-            this.button23.Location = new System.Drawing.Point(105, 189);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(75, 34);
-            this.button23.TabIndex = 32;
-            this.button23.Text = "button23";
-            this.button23.UseVisualStyleBackColor = true;
+            this.data16.Location = new System.Drawing.Point(105, 189);
+            this.data16.Name = "data16";
+            this.data16.Size = new System.Drawing.Size(75, 34);
+            this.data16.TabIndex = 32;
+            this.data16.Text = "button23";
+            this.data16.UseVisualStyleBackColor = true;
             // 
-            // button24
+            // data15
             // 
-            this.button24.Location = new System.Drawing.Point(24, 189);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(75, 34);
-            this.button24.TabIndex = 31;
-            this.button24.Text = "button24";
-            this.button24.UseVisualStyleBackColor = true;
+            this.data15.Location = new System.Drawing.Point(24, 189);
+            this.data15.Name = "data15";
+            this.data15.Size = new System.Drawing.Size(75, 34);
+            this.data15.TabIndex = 31;
+            this.data15.Text = "button24";
+            this.data15.UseVisualStyleBackColor = true;
             // 
-            // button11
+            // data14
             // 
-            this.button11.Location = new System.Drawing.Point(510, 145);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 34);
-            this.button11.TabIndex = 30;
-            this.button11.Text = "button11";
-            this.button11.UseVisualStyleBackColor = true;
+            this.data14.Location = new System.Drawing.Point(510, 145);
+            this.data14.Name = "data14";
+            this.data14.Size = new System.Drawing.Size(75, 34);
+            this.data14.TabIndex = 30;
+            this.data14.Text = "button11";
+            this.data14.UseVisualStyleBackColor = true;
             // 
-            // button12
+            // data13
             // 
-            this.button12.Location = new System.Drawing.Point(429, 145);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(75, 34);
-            this.button12.TabIndex = 29;
-            this.button12.Text = "button12";
-            this.button12.UseVisualStyleBackColor = true;
+            this.data13.Location = new System.Drawing.Point(429, 145);
+            this.data13.Name = "data13";
+            this.data13.Size = new System.Drawing.Size(75, 34);
+            this.data13.TabIndex = 29;
+            this.data13.Text = "button12";
+            this.data13.UseVisualStyleBackColor = true;
             // 
-            // button13
+            // data12
             // 
-            this.button13.Location = new System.Drawing.Point(348, 145);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(75, 34);
-            this.button13.TabIndex = 28;
-            this.button13.Text = "button13";
-            this.button13.UseVisualStyleBackColor = true;
+            this.data12.Location = new System.Drawing.Point(348, 145);
+            this.data12.Name = "data12";
+            this.data12.Size = new System.Drawing.Size(75, 34);
+            this.data12.TabIndex = 28;
+            this.data12.Text = "button13";
+            this.data12.UseVisualStyleBackColor = true;
             // 
-            // button14
+            // data11
             // 
-            this.button14.Location = new System.Drawing.Point(267, 145);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(75, 34);
-            this.button14.TabIndex = 27;
-            this.button14.Text = "button14";
-            this.button14.UseVisualStyleBackColor = true;
+            this.data11.Location = new System.Drawing.Point(267, 145);
+            this.data11.Name = "data11";
+            this.data11.Size = new System.Drawing.Size(75, 34);
+            this.data11.TabIndex = 27;
+            this.data11.Text = "button14";
+            this.data11.UseVisualStyleBackColor = true;
             // 
-            // button15
+            // data10
             // 
-            this.button15.Location = new System.Drawing.Point(186, 145);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(75, 34);
-            this.button15.TabIndex = 26;
-            this.button15.Text = "button15";
-            this.button15.UseVisualStyleBackColor = true;
+            this.data10.Location = new System.Drawing.Point(186, 145);
+            this.data10.Name = "data10";
+            this.data10.Size = new System.Drawing.Size(75, 34);
+            this.data10.TabIndex = 26;
+            this.data10.Text = "button15";
+            this.data10.UseVisualStyleBackColor = true;
             // 
-            // button16
+            // data9
             // 
-            this.button16.Location = new System.Drawing.Point(105, 145);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(75, 34);
-            this.button16.TabIndex = 25;
-            this.button16.Text = "button16";
-            this.button16.UseVisualStyleBackColor = true;
+            this.data9.Location = new System.Drawing.Point(105, 145);
+            this.data9.Name = "data9";
+            this.data9.Size = new System.Drawing.Size(75, 34);
+            this.data9.TabIndex = 25;
+            this.data9.Text = "button16";
+            this.data9.UseVisualStyleBackColor = true;
             // 
-            // button17
+            // data8
             // 
-            this.button17.Location = new System.Drawing.Point(24, 145);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(75, 34);
-            this.button17.TabIndex = 24;
-            this.button17.Text = "button17";
-            this.button17.UseVisualStyleBackColor = true;
+            this.data8.Location = new System.Drawing.Point(24, 145);
+            this.data8.Name = "data8";
+            this.data8.Size = new System.Drawing.Size(75, 34);
+            this.data8.TabIndex = 24;
+            this.data8.Text = "button17";
+            this.data8.UseVisualStyleBackColor = true;
             // 
-            // button10
+            // data7
             // 
-            this.button10.Location = new System.Drawing.Point(510, 105);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 34);
-            this.button10.TabIndex = 23;
-            this.button10.Text = "button10";
-            this.button10.UseVisualStyleBackColor = true;
+            this.data7.Location = new System.Drawing.Point(510, 105);
+            this.data7.Name = "data7";
+            this.data7.Size = new System.Drawing.Size(75, 34);
+            this.data7.TabIndex = 23;
+            this.data7.Text = "button10";
+            this.data7.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // data6
             // 
-            this.button9.Location = new System.Drawing.Point(429, 105);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 34);
-            this.button9.TabIndex = 22;
-            this.button9.Text = "button9";
-            this.button9.UseVisualStyleBackColor = true;
+            this.data6.Location = new System.Drawing.Point(429, 105);
+            this.data6.Name = "data6";
+            this.data6.Size = new System.Drawing.Size(75, 34);
+            this.data6.TabIndex = 22;
+            this.data6.Text = "button9";
+            this.data6.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // data5
             // 
-            this.button8.Location = new System.Drawing.Point(348, 105);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 34);
-            this.button8.TabIndex = 21;
-            this.button8.Text = "button8";
-            this.button8.UseVisualStyleBackColor = true;
+            this.data5.Location = new System.Drawing.Point(348, 105);
+            this.data5.Name = "data5";
+            this.data5.Size = new System.Drawing.Size(75, 34);
+            this.data5.TabIndex = 21;
+            this.data5.Text = "button8";
+            this.data5.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // data4
             // 
-            this.button7.Location = new System.Drawing.Point(267, 105);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 34);
-            this.button7.TabIndex = 20;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = true;
+            this.data4.Location = new System.Drawing.Point(267, 105);
+            this.data4.Name = "data4";
+            this.data4.Size = new System.Drawing.Size(75, 34);
+            this.data4.TabIndex = 20;
+            this.data4.Text = "button7";
+            this.data4.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // data3
             // 
-            this.button6.Location = new System.Drawing.Point(186, 105);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 34);
-            this.button6.TabIndex = 19;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
+            this.data3.Location = new System.Drawing.Point(186, 105);
+            this.data3.Name = "data3";
+            this.data3.Size = new System.Drawing.Size(75, 34);
+            this.data3.TabIndex = 19;
+            this.data3.Text = "button6";
+            this.data3.UseVisualStyleBackColor = true;
             // 
             // data2
             // 
@@ -1459,6 +1597,7 @@ namespace HOTEL_LUCIBLU
             this.button_indietro.TabIndex = 14;
             this.button_indietro.Text = "◀";
             this.button_indietro.UseVisualStyleBackColor = true;
+            this.button_indietro.Click += new System.EventHandler(this.button_indietro_Click);
             // 
             // button_avanti
             // 
@@ -1469,6 +1608,7 @@ namespace HOTEL_LUCIBLU
             this.button_avanti.TabIndex = 15;
             this.button_avanti.Text = "▶";
             this.button_avanti.UseVisualStyleBackColor = true;
+            this.button_avanti.Click += new System.EventHandler(this.button_avanti_Click);
             // 
             // label_nomeMese
             // 
@@ -1958,6 +2098,7 @@ namespace HOTEL_LUCIBLU
             // panel24
             // 
             this.panel24.BackColor = System.Drawing.Color.White;
+            this.panel24.Controls.Add(this.button7);
             this.panel24.Controls.Add(this.label79);
             this.panel24.Controls.Add(this.label78);
             this.panel24.Controls.Add(this.label69);
@@ -1975,10 +2116,22 @@ namespace HOTEL_LUCIBLU
             this.panel24.Size = new System.Drawing.Size(271, 351);
             this.panel24.TabIndex = 16;
             // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button7.ForeColor = System.Drawing.Color.Black;
+            this.button7.Location = new System.Drawing.Point(75, 304);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(117, 33);
+            this.button7.TabIndex = 32;
+            this.button7.Text = "Logout";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // label79
             // 
             this.label79.AutoSize = true;
-            this.label79.Location = new System.Drawing.Point(112, 314);
+            this.label79.Location = new System.Drawing.Point(197, 280);
             this.label79.Name = "label79";
             this.label79.Size = new System.Drawing.Size(44, 15);
             this.label79.TabIndex = 28;
@@ -1988,7 +2141,7 @@ namespace HOTEL_LUCIBLU
             // 
             this.label78.AutoSize = true;
             this.label78.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label78.Location = new System.Drawing.Point(74, 290);
+            this.label78.Location = new System.Drawing.Point(13, 280);
             this.label78.Name = "label78";
             this.label78.Size = new System.Drawing.Size(115, 20);
             this.label78.TabIndex = 27;
@@ -2234,6 +2387,7 @@ namespace HOTEL_LUCIBLU
             this.button42.TabIndex = 28;
             this.button42.Text = "◀ Home";
             this.button42.UseVisualStyleBackColor = false;
+            this.button42.Click += new System.EventHandler(this.button42_Click);
             // 
             // label95
             // 
@@ -3144,114 +3298,6 @@ namespace HOTEL_LUCIBLU
             this.tabPage6.Text = "Admin";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
-            // panel32
-            // 
-            this.panel32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel32.Controls.Add(this.panel33);
-            this.panel32.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel32.Location = new System.Drawing.Point(3, 3);
-            this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(200, 478);
-            this.panel32.TabIndex = 0;
-            // 
-            // panel33
-            // 
-            this.panel33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.panel33.Controls.Add(this.label128);
-            this.panel33.Controls.Add(this.button47);
-            this.panel33.Controls.Add(this.label104);
-            this.panel33.Controls.Add(this.button46);
-            this.panel33.Controls.Add(this.label103);
-            this.panel33.Controls.Add(this.button44);
-            this.panel33.Controls.Add(this.label102);
-            this.panel33.Controls.Add(this.button45);
-            this.panel33.Controls.Add(this.label101);
-            this.panel33.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel33.Location = new System.Drawing.Point(0, 0);
-            this.panel33.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
-            this.panel33.Name = "panel33";
-            this.panel33.Size = new System.Drawing.Size(200, 478);
-            this.panel33.TabIndex = 1;
-            // 
-            // label101
-            // 
-            this.label101.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label101.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label101.Location = new System.Drawing.Point(0, 0);
-            this.label101.Name = "label101";
-            this.label101.Size = new System.Drawing.Size(200, 68);
-            this.label101.TabIndex = 1;
-            this.label101.Text = "Pannello Admin";
-            this.label101.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // button45
-            // 
-            this.button45.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button45.Location = new System.Drawing.Point(0, 68);
-            this.button45.Margin = new System.Windows.Forms.Padding(0);
-            this.button45.Name = "button45";
-            this.button45.Size = new System.Drawing.Size(200, 38);
-            this.button45.TabIndex = 2;
-            this.button45.Text = "📊 Dashboard";
-            this.button45.UseVisualStyleBackColor = true;
-            // 
-            // label102
-            // 
-            this.label102.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label102.Location = new System.Drawing.Point(0, 106);
-            this.label102.Name = "label102";
-            this.label102.Size = new System.Drawing.Size(200, 35);
-            this.label102.TabIndex = 3;
-            // 
-            // button44
-            // 
-            this.button44.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button44.Location = new System.Drawing.Point(0, 141);
-            this.button44.Margin = new System.Windows.Forms.Padding(0);
-            this.button44.Name = "button44";
-            this.button44.Size = new System.Drawing.Size(200, 38);
-            this.button44.TabIndex = 4;
-            this.button44.Text = "📋 Prenotazioni";
-            this.button44.UseVisualStyleBackColor = true;
-            // 
-            // label103
-            // 
-            this.label103.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label103.Location = new System.Drawing.Point(0, 179);
-            this.label103.Name = "label103";
-            this.label103.Size = new System.Drawing.Size(200, 35);
-            this.label103.TabIndex = 5;
-            // 
-            // button46
-            // 
-            this.button46.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button46.Location = new System.Drawing.Point(0, 214);
-            this.button46.Margin = new System.Windows.Forms.Padding(0);
-            this.button46.Name = "button46";
-            this.button46.Size = new System.Drawing.Size(200, 38);
-            this.button46.TabIndex = 6;
-            this.button46.Text = "🛏 Gestione Camere";
-            this.button46.UseVisualStyleBackColor = true;
-            // 
-            // label104
-            // 
-            this.label104.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label104.Location = new System.Drawing.Point(0, 252);
-            this.label104.Name = "label104";
-            this.label104.Size = new System.Drawing.Size(200, 35);
-            this.label104.TabIndex = 7;
-            // 
-            // button47
-            // 
-            this.button47.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button47.Location = new System.Drawing.Point(0, 287);
-            this.button47.Margin = new System.Windows.Forms.Padding(0);
-            this.button47.Name = "button47";
-            this.button47.Size = new System.Drawing.Size(200, 38);
-            this.button47.TabIndex = 8;
-            this.button47.Text = "👥 Clienti / Admin";
-            this.button47.UseVisualStyleBackColor = true;
-            // 
             // tabControl2
             // 
             this.tabControl2.Controls.Add(this.tabPage9);
@@ -3285,261 +3331,25 @@ namespace HOTEL_LUCIBLU
             this.tabPage9.TabIndex = 0;
             this.tabPage9.Text = "Dashboard";
             // 
-            // tabPage11
+            // label121
             // 
-            this.tabPage11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.tabPage11.Controls.Add(this.label127);
-            this.tabPage11.Controls.Add(this.button49);
-            this.tabPage11.Controls.Add(this.textBox5);
-            this.tabPage11.Controls.Add(this.button48);
-            this.tabPage11.Controls.Add(this.panel42);
-            this.tabPage11.Controls.Add(this.panel43);
-            this.tabPage11.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tabPage11.Location = new System.Drawing.Point(4, 24);
-            this.tabPage11.Name = "tabPage11";
-            this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage11.Size = new System.Drawing.Size(787, 450);
-            this.tabPage11.TabIndex = 1;
-            this.tabPage11.Text = "Prenotazioni";
+            this.label121.AutoSize = true;
+            this.label121.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label121.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label121.Location = new System.Drawing.Point(47, 224);
+            this.label121.Name = "label121";
+            this.label121.Size = new System.Drawing.Size(149, 20);
+            this.label121.TabIndex = 2;
+            this.label121.Text = "Prenotazioni recenti";
             // 
-            // tabPage12
+            // listBox2
             // 
-            this.tabPage12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.tabPage12.Controls.Add(this.label137);
-            this.tabPage12.Controls.Add(this.comboBox1);
-            this.tabPage12.Controls.Add(this.button52);
-            this.tabPage12.Controls.Add(this.button51);
-            this.tabPage12.Controls.Add(this.label136);
-            this.tabPage12.Controls.Add(this.button50);
-            this.tabPage12.Controls.Add(this.textBox6);
-            this.tabPage12.Controls.Add(this.panel44);
-            this.tabPage12.Controls.Add(this.panel45);
-            this.tabPage12.Location = new System.Drawing.Point(4, 24);
-            this.tabPage12.Name = "tabPage12";
-            this.tabPage12.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage12.Size = new System.Drawing.Size(787, 450);
-            this.tabPage12.TabIndex = 2;
-            this.tabPage12.Text = "GestioneCamere";
-            // 
-            // tabPage13
-            // 
-            this.tabPage13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.tabPage13.Controls.Add(this.button54);
-            this.tabPage13.Controls.Add(this.button55);
-            this.tabPage13.Controls.Add(this.label145);
-            this.tabPage13.Controls.Add(this.button53);
-            this.tabPage13.Controls.Add(this.textBox7);
-            this.tabPage13.Controls.Add(this.panel46);
-            this.tabPage13.Controls.Add(this.panel47);
-            this.tabPage13.Location = new System.Drawing.Point(4, 24);
-            this.tabPage13.Name = "tabPage13";
-            this.tabPage13.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage13.Size = new System.Drawing.Size(787, 450);
-            this.tabPage13.TabIndex = 3;
-            this.tabPage13.Text = "Clienti/Admin";
-            // 
-            // panel34
-            // 
-            this.panel34.BackColor = System.Drawing.Color.White;
-            this.panel34.Controls.Add(this.label106);
-            this.panel34.Controls.Add(this.label105);
-            this.panel34.Location = new System.Drawing.Point(47, 29);
-            this.panel34.Name = "panel34";
-            this.panel34.Size = new System.Drawing.Size(139, 80);
-            this.panel34.TabIndex = 0;
-            // 
-            // label105
-            // 
-            this.label105.AutoSize = true;
-            this.label105.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label105.Location = new System.Drawing.Point(51, 15);
-            this.label105.Name = "label105";
-            this.label105.Size = new System.Drawing.Size(37, 30);
-            this.label105.TabIndex = 0;
-            this.label105.Text = "XX";
-            // 
-            // label106
-            // 
-            this.label106.AutoSize = true;
-            this.label106.Location = new System.Drawing.Point(18, 53);
-            this.label106.Name = "label106";
-            this.label106.Size = new System.Drawing.Size(100, 15);
-            this.label106.TabIndex = 1;
-            this.label106.Text = "Prenotazioni oggi";
-            // 
-            // panel35
-            // 
-            this.panel35.BackColor = System.Drawing.Color.White;
-            this.panel35.Controls.Add(this.label107);
-            this.panel35.Controls.Add(this.label108);
-            this.panel35.Location = new System.Drawing.Point(227, 29);
-            this.panel35.Name = "panel35";
-            this.panel35.Size = new System.Drawing.Size(139, 80);
-            this.panel35.TabIndex = 2;
-            // 
-            // label107
-            // 
-            this.label107.AutoSize = true;
-            this.label107.Location = new System.Drawing.Point(18, 53);
-            this.label107.Name = "label107";
-            this.label107.Size = new System.Drawing.Size(100, 15);
-            this.label107.TabIndex = 1;
-            this.label107.Text = "Camere occupate";
-            // 
-            // label108
-            // 
-            this.label108.AutoSize = true;
-            this.label108.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label108.Location = new System.Drawing.Point(51, 15);
-            this.label108.Name = "label108";
-            this.label108.Size = new System.Drawing.Size(37, 30);
-            this.label108.TabIndex = 0;
-            this.label108.Text = "XX";
-            // 
-            // panel36
-            // 
-            this.panel36.BackColor = System.Drawing.Color.White;
-            this.panel36.Controls.Add(this.label109);
-            this.panel36.Controls.Add(this.label110);
-            this.panel36.Location = new System.Drawing.Point(406, 29);
-            this.panel36.Name = "panel36";
-            this.panel36.Size = new System.Drawing.Size(139, 80);
-            this.panel36.TabIndex = 3;
-            // 
-            // label109
-            // 
-            this.label109.AutoSize = true;
-            this.label109.Location = new System.Drawing.Point(18, 53);
-            this.label109.Name = "label109";
-            this.label109.Size = new System.Drawing.Size(80, 15);
-            this.label109.TabIndex = 1;
-            this.label109.Text = "Camere libere";
-            // 
-            // label110
-            // 
-            this.label110.AutoSize = true;
-            this.label110.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label110.Location = new System.Drawing.Point(51, 15);
-            this.label110.Name = "label110";
-            this.label110.Size = new System.Drawing.Size(37, 30);
-            this.label110.TabIndex = 0;
-            this.label110.Text = "XX";
-            // 
-            // panel37
-            // 
-            this.panel37.BackColor = System.Drawing.Color.White;
-            this.panel37.Controls.Add(this.label111);
-            this.panel37.Controls.Add(this.label112);
-            this.panel37.Location = new System.Drawing.Point(592, 29);
-            this.panel37.Name = "panel37";
-            this.panel37.Size = new System.Drawing.Size(139, 80);
-            this.panel37.TabIndex = 3;
-            // 
-            // label111
-            // 
-            this.label111.AutoSize = true;
-            this.label111.Location = new System.Drawing.Point(18, 53);
-            this.label111.Name = "label111";
-            this.label111.Size = new System.Drawing.Size(96, 15);
-            this.label111.TabIndex = 1;
-            this.label111.Text = "In manutenzione";
-            // 
-            // label112
-            // 
-            this.label112.AutoSize = true;
-            this.label112.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label112.Location = new System.Drawing.Point(51, 15);
-            this.label112.Name = "label112";
-            this.label112.Size = new System.Drawing.Size(37, 30);
-            this.label112.TabIndex = 0;
-            this.label112.Text = "XX";
-            // 
-            // panel38
-            // 
-            this.panel38.BackColor = System.Drawing.Color.White;
-            this.panel38.Controls.Add(this.label113);
-            this.panel38.Controls.Add(this.label114);
-            this.panel38.Location = new System.Drawing.Point(47, 126);
-            this.panel38.Name = "panel38";
-            this.panel38.Size = new System.Drawing.Size(139, 80);
-            this.panel38.TabIndex = 3;
-            // 
-            // label113
-            // 
-            this.label113.AutoSize = true;
-            this.label113.Location = new System.Drawing.Point(18, 53);
-            this.label113.Name = "label113";
-            this.label113.Size = new System.Drawing.Size(85, 15);
-            this.label113.TabIndex = 1;
-            this.label113.Text = "Guadagni oggi";
-            // 
-            // label114
-            // 
-            this.label114.AutoSize = true;
-            this.label114.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label114.Location = new System.Drawing.Point(51, 15);
-            this.label114.Name = "label114";
-            this.label114.Size = new System.Drawing.Size(37, 30);
-            this.label114.TabIndex = 0;
-            this.label114.Text = "XX";
-            // 
-            // panel39
-            // 
-            this.panel39.BackColor = System.Drawing.Color.White;
-            this.panel39.Controls.Add(this.label115);
-            this.panel39.Controls.Add(this.label116);
-            this.panel39.Location = new System.Drawing.Point(227, 126);
-            this.panel39.Name = "panel39";
-            this.panel39.Size = new System.Drawing.Size(139, 80);
-            this.panel39.TabIndex = 3;
-            // 
-            // label115
-            // 
-            this.label115.AutoSize = true;
-            this.label115.Location = new System.Drawing.Point(18, 53);
-            this.label115.Name = "label115";
-            this.label115.Size = new System.Drawing.Size(89, 15);
-            this.label115.TabIndex = 1;
-            this.label115.Text = "Guadagni mese";
-            // 
-            // label116
-            // 
-            this.label116.AutoSize = true;
-            this.label116.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label116.Location = new System.Drawing.Point(51, 15);
-            this.label116.Name = "label116";
-            this.label116.Size = new System.Drawing.Size(37, 30);
-            this.label116.TabIndex = 0;
-            this.label116.Text = "XX";
-            // 
-            // panel40
-            // 
-            this.panel40.BackColor = System.Drawing.Color.White;
-            this.panel40.Controls.Add(this.label117);
-            this.panel40.Controls.Add(this.label118);
-            this.panel40.Location = new System.Drawing.Point(406, 126);
-            this.panel40.Name = "panel40";
-            this.panel40.Size = new System.Drawing.Size(139, 80);
-            this.panel40.TabIndex = 3;
-            // 
-            // label117
-            // 
-            this.label117.AutoSize = true;
-            this.label117.Location = new System.Drawing.Point(18, 53);
-            this.label117.Name = "label117";
-            this.label117.Size = new System.Drawing.Size(106, 15);
-            this.label117.TabIndex = 1;
-            this.label117.Text = "Tasso occupazione";
-            // 
-            // label118
-            // 
-            this.label118.AutoSize = true;
-            this.label118.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label118.Location = new System.Drawing.Point(51, 15);
-            this.label118.Name = "label118";
-            this.label118.Size = new System.Drawing.Size(37, 30);
-            this.label118.TabIndex = 0;
-            this.label118.Text = "XX";
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 15;
+            this.listBox2.Location = new System.Drawing.Point(47, 251);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(684, 184);
+            this.listBox2.TabIndex = 4;
             // 
             // panel41
             // 
@@ -3570,25 +3380,251 @@ namespace HOTEL_LUCIBLU
             this.label120.TabIndex = 0;
             this.label120.Text = "XX";
             // 
-            // listBox2
+            // panel40
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 15;
-            this.listBox2.Location = new System.Drawing.Point(47, 251);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(684, 184);
-            this.listBox2.TabIndex = 4;
+            this.panel40.BackColor = System.Drawing.Color.White;
+            this.panel40.Controls.Add(this.label117);
+            this.panel40.Controls.Add(this.label118);
+            this.panel40.Location = new System.Drawing.Point(406, 126);
+            this.panel40.Name = "panel40";
+            this.panel40.Size = new System.Drawing.Size(139, 80);
+            this.panel40.TabIndex = 3;
             // 
-            // label121
+            // label117
             // 
-            this.label121.AutoSize = true;
-            this.label121.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label121.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label121.Location = new System.Drawing.Point(47, 224);
-            this.label121.Name = "label121";
-            this.label121.Size = new System.Drawing.Size(149, 20);
-            this.label121.TabIndex = 2;
-            this.label121.Text = "Prenotazioni recenti";
+            this.label117.AutoSize = true;
+            this.label117.Location = new System.Drawing.Point(18, 53);
+            this.label117.Name = "label117";
+            this.label117.Size = new System.Drawing.Size(106, 15);
+            this.label117.TabIndex = 1;
+            this.label117.Text = "Tasso occupazione";
+            // 
+            // label118
+            // 
+            this.label118.AutoSize = true;
+            this.label118.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label118.Location = new System.Drawing.Point(51, 15);
+            this.label118.Name = "label118";
+            this.label118.Size = new System.Drawing.Size(37, 30);
+            this.label118.TabIndex = 0;
+            this.label118.Text = "XX";
+            // 
+            // panel39
+            // 
+            this.panel39.BackColor = System.Drawing.Color.White;
+            this.panel39.Controls.Add(this.label115);
+            this.panel39.Controls.Add(this.label116);
+            this.panel39.Location = new System.Drawing.Point(227, 126);
+            this.panel39.Name = "panel39";
+            this.panel39.Size = new System.Drawing.Size(139, 80);
+            this.panel39.TabIndex = 3;
+            // 
+            // label115
+            // 
+            this.label115.AutoSize = true;
+            this.label115.Location = new System.Drawing.Point(18, 53);
+            this.label115.Name = "label115";
+            this.label115.Size = new System.Drawing.Size(89, 15);
+            this.label115.TabIndex = 1;
+            this.label115.Text = "Guadagni mese";
+            // 
+            // label116
+            // 
+            this.label116.AutoSize = true;
+            this.label116.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label116.Location = new System.Drawing.Point(51, 15);
+            this.label116.Name = "label116";
+            this.label116.Size = new System.Drawing.Size(37, 30);
+            this.label116.TabIndex = 0;
+            this.label116.Text = "XX";
+            // 
+            // panel38
+            // 
+            this.panel38.BackColor = System.Drawing.Color.White;
+            this.panel38.Controls.Add(this.label113);
+            this.panel38.Controls.Add(this.label114);
+            this.panel38.Location = new System.Drawing.Point(47, 126);
+            this.panel38.Name = "panel38";
+            this.panel38.Size = new System.Drawing.Size(139, 80);
+            this.panel38.TabIndex = 3;
+            // 
+            // label113
+            // 
+            this.label113.AutoSize = true;
+            this.label113.Location = new System.Drawing.Point(18, 53);
+            this.label113.Name = "label113";
+            this.label113.Size = new System.Drawing.Size(85, 15);
+            this.label113.TabIndex = 1;
+            this.label113.Text = "Guadagni oggi";
+            // 
+            // label114
+            // 
+            this.label114.AutoSize = true;
+            this.label114.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label114.Location = new System.Drawing.Point(51, 15);
+            this.label114.Name = "label114";
+            this.label114.Size = new System.Drawing.Size(37, 30);
+            this.label114.TabIndex = 0;
+            this.label114.Text = "XX";
+            // 
+            // panel37
+            // 
+            this.panel37.BackColor = System.Drawing.Color.White;
+            this.panel37.Controls.Add(this.label111);
+            this.panel37.Controls.Add(this.label112);
+            this.panel37.Location = new System.Drawing.Point(592, 29);
+            this.panel37.Name = "panel37";
+            this.panel37.Size = new System.Drawing.Size(139, 80);
+            this.panel37.TabIndex = 3;
+            // 
+            // label111
+            // 
+            this.label111.AutoSize = true;
+            this.label111.Location = new System.Drawing.Point(18, 53);
+            this.label111.Name = "label111";
+            this.label111.Size = new System.Drawing.Size(96, 15);
+            this.label111.TabIndex = 1;
+            this.label111.Text = "In manutenzione";
+            // 
+            // label112
+            // 
+            this.label112.AutoSize = true;
+            this.label112.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label112.Location = new System.Drawing.Point(51, 15);
+            this.label112.Name = "label112";
+            this.label112.Size = new System.Drawing.Size(37, 30);
+            this.label112.TabIndex = 0;
+            this.label112.Text = "XX";
+            // 
+            // panel36
+            // 
+            this.panel36.BackColor = System.Drawing.Color.White;
+            this.panel36.Controls.Add(this.label109);
+            this.panel36.Controls.Add(this.label110);
+            this.panel36.Location = new System.Drawing.Point(406, 29);
+            this.panel36.Name = "panel36";
+            this.panel36.Size = new System.Drawing.Size(139, 80);
+            this.panel36.TabIndex = 3;
+            // 
+            // label109
+            // 
+            this.label109.AutoSize = true;
+            this.label109.Location = new System.Drawing.Point(18, 53);
+            this.label109.Name = "label109";
+            this.label109.Size = new System.Drawing.Size(80, 15);
+            this.label109.TabIndex = 1;
+            this.label109.Text = "Camere libere";
+            // 
+            // label110
+            // 
+            this.label110.AutoSize = true;
+            this.label110.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label110.Location = new System.Drawing.Point(51, 15);
+            this.label110.Name = "label110";
+            this.label110.Size = new System.Drawing.Size(37, 30);
+            this.label110.TabIndex = 0;
+            this.label110.Text = "XX";
+            // 
+            // panel35
+            // 
+            this.panel35.BackColor = System.Drawing.Color.White;
+            this.panel35.Controls.Add(this.label107);
+            this.panel35.Controls.Add(this.label108);
+            this.panel35.Location = new System.Drawing.Point(227, 29);
+            this.panel35.Name = "panel35";
+            this.panel35.Size = new System.Drawing.Size(139, 80);
+            this.panel35.TabIndex = 2;
+            // 
+            // label107
+            // 
+            this.label107.AutoSize = true;
+            this.label107.Location = new System.Drawing.Point(18, 53);
+            this.label107.Name = "label107";
+            this.label107.Size = new System.Drawing.Size(100, 15);
+            this.label107.TabIndex = 1;
+            this.label107.Text = "Camere occupate";
+            // 
+            // label108
+            // 
+            this.label108.AutoSize = true;
+            this.label108.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label108.Location = new System.Drawing.Point(51, 15);
+            this.label108.Name = "label108";
+            this.label108.Size = new System.Drawing.Size(37, 30);
+            this.label108.TabIndex = 0;
+            this.label108.Text = "XX";
+            // 
+            // panel34
+            // 
+            this.panel34.BackColor = System.Drawing.Color.White;
+            this.panel34.Controls.Add(this.label106);
+            this.panel34.Controls.Add(this.label105);
+            this.panel34.Location = new System.Drawing.Point(47, 29);
+            this.panel34.Name = "panel34";
+            this.panel34.Size = new System.Drawing.Size(139, 80);
+            this.panel34.TabIndex = 0;
+            // 
+            // label106
+            // 
+            this.label106.AutoSize = true;
+            this.label106.Location = new System.Drawing.Point(18, 53);
+            this.label106.Name = "label106";
+            this.label106.Size = new System.Drawing.Size(100, 15);
+            this.label106.TabIndex = 1;
+            this.label106.Text = "Prenotazioni oggi";
+            // 
+            // label105
+            // 
+            this.label105.AutoSize = true;
+            this.label105.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label105.Location = new System.Drawing.Point(51, 15);
+            this.label105.Name = "label105";
+            this.label105.Size = new System.Drawing.Size(37, 30);
+            this.label105.TabIndex = 0;
+            this.label105.Text = "XX";
+            // 
+            // tabPage11
+            // 
+            this.tabPage11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.tabPage11.Controls.Add(this.label127);
+            this.tabPage11.Controls.Add(this.button49);
+            this.tabPage11.Controls.Add(this.textBox5);
+            this.tabPage11.Controls.Add(this.button48);
+            this.tabPage11.Controls.Add(this.panel42);
+            this.tabPage11.Controls.Add(this.panel43);
+            this.tabPage11.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.tabPage11.Location = new System.Drawing.Point(4, 24);
+            this.tabPage11.Name = "tabPage11";
+            this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage11.Size = new System.Drawing.Size(787, 450);
+            this.tabPage11.TabIndex = 1;
+            this.tabPage11.Text = "Prenotazioni";
+            // 
+            // label127
+            // 
+            this.label127.AutoSize = true;
+            this.label127.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label127.Location = new System.Drawing.Point(31, 407);
+            this.label127.Name = "label127";
+            this.label127.Size = new System.Drawing.Size(116, 20);
+            this.label127.TabIndex = 37;
+            this.label127.Text = "Filtra per Utente";
+            // 
+            // button49
+            // 
+            this.button49.Location = new System.Drawing.Point(361, 406);
+            this.button49.Name = "button49";
+            this.button49.Size = new System.Drawing.Size(75, 23);
+            this.button49.TabIndex = 36;
+            this.button49.Text = "Filtra";
+            this.button49.UseVisualStyleBackColor = true;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(153, 408);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(195, 23);
+            this.textBox5.TabIndex = 35;
             // 
             // button48
             // 
@@ -3687,49 +3723,90 @@ namespace HOTEL_LUCIBLU
             this.listBox3.Size = new System.Drawing.Size(689, 304);
             this.listBox3.TabIndex = 0;
             // 
-            // textBox5
+            // tabPage12
             // 
-            this.textBox5.Location = new System.Drawing.Point(153, 408);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(195, 23);
-            this.textBox5.TabIndex = 35;
+            this.tabPage12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.tabPage12.Controls.Add(this.label137);
+            this.tabPage12.Controls.Add(this.comboBox1);
+            this.tabPage12.Controls.Add(this.button52);
+            this.tabPage12.Controls.Add(this.button51);
+            this.tabPage12.Controls.Add(this.label136);
+            this.tabPage12.Controls.Add(this.button50);
+            this.tabPage12.Controls.Add(this.textBox6);
+            this.tabPage12.Controls.Add(this.panel44);
+            this.tabPage12.Controls.Add(this.panel45);
+            this.tabPage12.Location = new System.Drawing.Point(4, 24);
+            this.tabPage12.Name = "tabPage12";
+            this.tabPage12.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage12.Size = new System.Drawing.Size(787, 450);
+            this.tabPage12.TabIndex = 2;
+            this.tabPage12.Text = "GestioneCamere";
             // 
-            // button49
+            // label137
             // 
-            this.button49.Location = new System.Drawing.Point(361, 406);
-            this.button49.Name = "button49";
-            this.button49.Size = new System.Drawing.Size(75, 23);
-            this.button49.TabIndex = 36;
-            this.button49.Text = "Filtra";
-            this.button49.UseVisualStyleBackColor = true;
+            this.label137.AutoSize = true;
+            this.label137.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label137.Location = new System.Drawing.Point(31, 414);
+            this.label137.Name = "label137";
+            this.label137.Size = new System.Drawing.Size(77, 20);
+            this.label137.TabIndex = 44;
+            this.label137.Text = "Filtro Stati";
             // 
-            // label127
+            // comboBox1
             // 
-            this.label127.AutoSize = true;
-            this.label127.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label127.Location = new System.Drawing.Point(31, 407);
-            this.label127.Name = "label127";
-            this.label127.Size = new System.Drawing.Size(116, 20);
-            this.label127.TabIndex = 37;
-            this.label127.Text = "Filtra per Utente";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(138, 414);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(195, 23);
+            this.comboBox1.TabIndex = 43;
             // 
-            // label128
+            // button52
             // 
-            this.label128.Location = new System.Drawing.Point(0, 441);
-            this.label128.Name = "label128";
-            this.label128.Size = new System.Drawing.Size(197, 23);
-            this.label128.TabIndex = 0;
-            this.label128.Text = "email admin";
-            this.label128.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.button52.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button52.ForeColor = System.Drawing.Color.Black;
+            this.button52.Location = new System.Drawing.Point(482, 391);
+            this.button52.Name = "button52";
+            this.button52.Size = new System.Drawing.Size(117, 33);
+            this.button52.TabIndex = 42;
+            this.button52.Text = "Cancella";
+            this.button52.UseVisualStyleBackColor = false;
             // 
-            // listBox4
+            // button51
             // 
-            this.listBox4.FormattingEnabled = true;
-            this.listBox4.ItemHeight = 15;
-            this.listBox4.Location = new System.Drawing.Point(16, 14);
-            this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(689, 274);
-            this.listBox4.TabIndex = 0;
+            this.button51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(111)))), ((int)(((byte)(196)))));
+            this.button51.ForeColor = System.Drawing.Color.White;
+            this.button51.Location = new System.Drawing.Point(615, 389);
+            this.button51.Name = "button51";
+            this.button51.Size = new System.Drawing.Size(141, 37);
+            this.button51.TabIndex = 41;
+            this.button51.Text = "Aggiungi Camera";
+            this.button51.UseVisualStyleBackColor = false;
+            // 
+            // label136
+            // 
+            this.label136.AutoSize = true;
+            this.label136.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label136.Location = new System.Drawing.Point(31, 374);
+            this.label136.Name = "label136";
+            this.label136.Size = new System.Drawing.Size(101, 20);
+            this.label136.TabIndex = 40;
+            this.label136.Text = "Cerca Camera";
+            // 
+            // button50
+            // 
+            this.button50.Location = new System.Drawing.Point(351, 375);
+            this.button50.Name = "button50";
+            this.button50.Size = new System.Drawing.Size(75, 23);
+            this.button50.TabIndex = 39;
+            this.button50.Text = "Filtra";
+            this.button50.UseVisualStyleBackColor = true;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(138, 375);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(195, 23);
+            this.textBox6.TabIndex = 38;
             // 
             // panel44
             // 
@@ -3745,6 +3822,28 @@ namespace HOTEL_LUCIBLU
             this.panel44.Name = "panel44";
             this.panel44.Size = new System.Drawing.Size(725, 41);
             this.panel44.TabIndex = 35;
+            // 
+            // label135
+            // 
+            this.label135.AutoSize = true;
+            this.label135.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label135.ForeColor = System.Drawing.Color.White;
+            this.label135.Location = new System.Drawing.Point(607, 10);
+            this.label135.Name = "label135";
+            this.label135.Size = new System.Drawing.Size(52, 20);
+            this.label135.TabIndex = 37;
+            this.label135.Text = "Servizi";
+            // 
+            // label134
+            // 
+            this.label134.AutoSize = true;
+            this.label134.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label134.ForeColor = System.Drawing.Color.White;
+            this.label134.Location = new System.Drawing.Point(288, 10);
+            this.label134.Name = "label134";
+            this.label134.Size = new System.Drawing.Size(38, 20);
+            this.label134.TabIndex = 36;
+            this.label134.Text = "Letti";
             // 
             // label129
             // 
@@ -3810,102 +3909,79 @@ namespace HOTEL_LUCIBLU
             this.panel45.Size = new System.Drawing.Size(725, 307);
             this.panel45.TabIndex = 34;
             // 
-            // label134
+            // listBox4
             // 
-            this.label134.AutoSize = true;
-            this.label134.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label134.ForeColor = System.Drawing.Color.White;
-            this.label134.Location = new System.Drawing.Point(288, 10);
-            this.label134.Name = "label134";
-            this.label134.Size = new System.Drawing.Size(38, 20);
-            this.label134.TabIndex = 36;
-            this.label134.Text = "Letti";
+            this.listBox4.FormattingEnabled = true;
+            this.listBox4.ItemHeight = 15;
+            this.listBox4.Location = new System.Drawing.Point(16, 14);
+            this.listBox4.Name = "listBox4";
+            this.listBox4.Size = new System.Drawing.Size(689, 274);
+            this.listBox4.TabIndex = 0;
             // 
-            // label135
+            // tabPage13
             // 
-            this.label135.AutoSize = true;
-            this.label135.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label135.ForeColor = System.Drawing.Color.White;
-            this.label135.Location = new System.Drawing.Point(607, 10);
-            this.label135.Name = "label135";
-            this.label135.Size = new System.Drawing.Size(52, 20);
-            this.label135.TabIndex = 37;
-            this.label135.Text = "Servizi";
+            this.tabPage13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.tabPage13.Controls.Add(this.button54);
+            this.tabPage13.Controls.Add(this.button55);
+            this.tabPage13.Controls.Add(this.label145);
+            this.tabPage13.Controls.Add(this.button53);
+            this.tabPage13.Controls.Add(this.textBox7);
+            this.tabPage13.Controls.Add(this.panel46);
+            this.tabPage13.Controls.Add(this.panel47);
+            this.tabPage13.Location = new System.Drawing.Point(4, 24);
+            this.tabPage13.Name = "tabPage13";
+            this.tabPage13.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage13.Size = new System.Drawing.Size(787, 450);
+            this.tabPage13.TabIndex = 3;
+            this.tabPage13.Text = "Clienti/Admin";
             // 
-            // label136
+            // button54
             // 
-            this.label136.AutoSize = true;
-            this.label136.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label136.Location = new System.Drawing.Point(31, 374);
-            this.label136.Name = "label136";
-            this.label136.Size = new System.Drawing.Size(101, 20);
-            this.label136.TabIndex = 40;
-            this.label136.Text = "Cerca Camera";
+            this.button54.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button54.ForeColor = System.Drawing.Color.Black;
+            this.button54.Location = new System.Drawing.Point(478, 391);
+            this.button54.Name = "button54";
+            this.button54.Size = new System.Drawing.Size(117, 33);
+            this.button54.TabIndex = 45;
+            this.button54.Text = "Rimuovi";
+            this.button54.UseVisualStyleBackColor = false;
             // 
-            // button50
+            // button55
             // 
-            this.button50.Location = new System.Drawing.Point(351, 375);
-            this.button50.Name = "button50";
-            this.button50.Size = new System.Drawing.Size(75, 23);
-            this.button50.TabIndex = 39;
-            this.button50.Text = "Filtra";
-            this.button50.UseVisualStyleBackColor = true;
+            this.button55.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(111)))), ((int)(((byte)(196)))));
+            this.button55.ForeColor = System.Drawing.Color.White;
+            this.button55.Location = new System.Drawing.Point(611, 389);
+            this.button55.Name = "button55";
+            this.button55.Size = new System.Drawing.Size(141, 37);
+            this.button55.TabIndex = 44;
+            this.button55.Text = "Aggiungi Utente";
+            this.button55.UseVisualStyleBackColor = false;
             // 
-            // textBox6
+            // label145
             // 
-            this.textBox6.Location = new System.Drawing.Point(138, 375);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(195, 23);
-            this.textBox6.TabIndex = 38;
+            this.label145.AutoSize = true;
+            this.label145.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label145.Location = new System.Drawing.Point(32, 396);
+            this.label145.Name = "label145";
+            this.label145.Size = new System.Drawing.Size(96, 20);
+            this.label145.TabIndex = 43;
+            this.label145.Text = "Cerca Cliente";
             // 
-            // button51
+            // button53
             // 
-            this.button51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(111)))), ((int)(((byte)(196)))));
-            this.button51.ForeColor = System.Drawing.Color.White;
-            this.button51.Location = new System.Drawing.Point(615, 389);
-            this.button51.Name = "button51";
-            this.button51.Size = new System.Drawing.Size(141, 37);
-            this.button51.TabIndex = 41;
-            this.button51.Text = "Aggiungi Camera";
-            this.button51.UseVisualStyleBackColor = false;
+            this.button53.Location = new System.Drawing.Point(352, 397);
+            this.button53.Name = "button53";
+            this.button53.Size = new System.Drawing.Size(75, 23);
+            this.button53.TabIndex = 42;
+            this.button53.Text = "Filtra";
+            this.button53.UseVisualStyleBackColor = true;
             // 
-            // button52
+            // textBox7
             // 
-            this.button52.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button52.ForeColor = System.Drawing.Color.Black;
-            this.button52.Location = new System.Drawing.Point(482, 391);
-            this.button52.Name = "button52";
-            this.button52.Size = new System.Drawing.Size(117, 33);
-            this.button52.TabIndex = 42;
-            this.button52.Text = "Cancella";
-            this.button52.UseVisualStyleBackColor = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(138, 414);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(195, 23);
-            this.comboBox1.TabIndex = 43;
-            // 
-            // label137
-            // 
-            this.label137.AutoSize = true;
-            this.label137.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label137.Location = new System.Drawing.Point(31, 414);
-            this.label137.Name = "label137";
-            this.label137.Size = new System.Drawing.Size(77, 20);
-            this.label137.TabIndex = 44;
-            this.label137.Text = "Filtro Stati";
-            // 
-            // listBox5
-            // 
-            this.listBox5.FormattingEnabled = true;
-            this.listBox5.ItemHeight = 15;
-            this.listBox5.Location = new System.Drawing.Point(16, 14);
-            this.listBox5.Name = "listBox5";
-            this.listBox5.Size = new System.Drawing.Size(689, 274);
-            this.listBox5.TabIndex = 0;
+            this.textBox7.Location = new System.Drawing.Point(139, 397);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(195, 23);
+            this.textBox7.TabIndex = 41;
             // 
             // panel46
             // 
@@ -4008,53 +4084,159 @@ namespace HOTEL_LUCIBLU
             this.panel47.Size = new System.Drawing.Size(725, 307);
             this.panel47.TabIndex = 36;
             // 
-            // label145
+            // listBox5
             // 
-            this.label145.AutoSize = true;
-            this.label145.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label145.Location = new System.Drawing.Point(32, 396);
-            this.label145.Name = "label145";
-            this.label145.Size = new System.Drawing.Size(96, 20);
-            this.label145.TabIndex = 43;
-            this.label145.Text = "Cerca Cliente";
+            this.listBox5.FormattingEnabled = true;
+            this.listBox5.ItemHeight = 15;
+            this.listBox5.Location = new System.Drawing.Point(16, 14);
+            this.listBox5.Name = "listBox5";
+            this.listBox5.Size = new System.Drawing.Size(689, 274);
+            this.listBox5.TabIndex = 0;
             // 
-            // button53
+            // panel32
             // 
-            this.button53.Location = new System.Drawing.Point(352, 397);
-            this.button53.Name = "button53";
-            this.button53.Size = new System.Drawing.Size(75, 23);
-            this.button53.TabIndex = 42;
-            this.button53.Text = "Filtra";
-            this.button53.UseVisualStyleBackColor = true;
+            this.panel32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel32.Controls.Add(this.panel33);
+            this.panel32.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel32.Location = new System.Drawing.Point(3, 3);
+            this.panel32.Name = "panel32";
+            this.panel32.Size = new System.Drawing.Size(200, 478);
+            this.panel32.TabIndex = 0;
             // 
-            // textBox7
+            // panel33
             // 
-            this.textBox7.Location = new System.Drawing.Point(139, 397);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(195, 23);
-            this.textBox7.TabIndex = 41;
+            this.panel33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.panel33.Controls.Add(this.button8);
+            this.panel33.Controls.Add(this.label146);
+            this.panel33.Controls.Add(this.label128);
+            this.panel33.Controls.Add(this.button47);
+            this.panel33.Controls.Add(this.label104);
+            this.panel33.Controls.Add(this.button46);
+            this.panel33.Controls.Add(this.label103);
+            this.panel33.Controls.Add(this.button44);
+            this.panel33.Controls.Add(this.label102);
+            this.panel33.Controls.Add(this.button45);
+            this.panel33.Controls.Add(this.label101);
+            this.panel33.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel33.Location = new System.Drawing.Point(0, 0);
+            this.panel33.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
+            this.panel33.Name = "panel33";
+            this.panel33.Size = new System.Drawing.Size(200, 478);
+            this.panel33.TabIndex = 1;
             // 
-            // button54
+            // button8
             // 
-            this.button54.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button54.ForeColor = System.Drawing.Color.Black;
-            this.button54.Location = new System.Drawing.Point(478, 391);
-            this.button54.Name = "button54";
-            this.button54.Size = new System.Drawing.Size(117, 33);
-            this.button54.TabIndex = 45;
-            this.button54.Text = "Rimuovi";
-            this.button54.UseVisualStyleBackColor = false;
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(111)))), ((int)(((byte)(196)))));
+            this.button8.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Location = new System.Drawing.Point(0, 396);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(200, 37);
+            this.button8.TabIndex = 38;
+            this.button8.Text = "Account";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
-            // button55
+            // label146
             // 
-            this.button55.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(111)))), ((int)(((byte)(196)))));
-            this.button55.ForeColor = System.Drawing.Color.White;
-            this.button55.Location = new System.Drawing.Point(611, 389);
-            this.button55.Name = "button55";
-            this.button55.Size = new System.Drawing.Size(141, 37);
-            this.button55.TabIndex = 44;
-            this.button55.Text = "Aggiungi Utente";
-            this.button55.UseVisualStyleBackColor = false;
+            this.label146.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label146.Location = new System.Drawing.Point(0, 325);
+            this.label146.Name = "label146";
+            this.label146.Size = new System.Drawing.Size(200, 35);
+            this.label146.TabIndex = 37;
+            // 
+            // label128
+            // 
+            this.label128.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label128.Location = new System.Drawing.Point(0, 433);
+            this.label128.Name = "label128";
+            this.label128.Size = new System.Drawing.Size(200, 45);
+            this.label128.TabIndex = 0;
+            this.label128.Text = "email admin";
+            this.label128.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button47
+            // 
+            this.button47.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button47.Location = new System.Drawing.Point(0, 287);
+            this.button47.Margin = new System.Windows.Forms.Padding(0);
+            this.button47.Name = "button47";
+            this.button47.Size = new System.Drawing.Size(200, 38);
+            this.button47.TabIndex = 8;
+            this.button47.Text = "👥 Clienti / Admin";
+            this.button47.UseVisualStyleBackColor = true;
+            this.button47.Click += new System.EventHandler(this.button47_Click);
+            // 
+            // label104
+            // 
+            this.label104.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label104.Location = new System.Drawing.Point(0, 252);
+            this.label104.Name = "label104";
+            this.label104.Size = new System.Drawing.Size(200, 35);
+            this.label104.TabIndex = 7;
+            // 
+            // button46
+            // 
+            this.button46.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button46.Location = new System.Drawing.Point(0, 214);
+            this.button46.Margin = new System.Windows.Forms.Padding(0);
+            this.button46.Name = "button46";
+            this.button46.Size = new System.Drawing.Size(200, 38);
+            this.button46.TabIndex = 6;
+            this.button46.Text = "🛏 Gestione Camere";
+            this.button46.UseVisualStyleBackColor = true;
+            this.button46.Click += new System.EventHandler(this.button46_Click);
+            // 
+            // label103
+            // 
+            this.label103.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label103.Location = new System.Drawing.Point(0, 179);
+            this.label103.Name = "label103";
+            this.label103.Size = new System.Drawing.Size(200, 35);
+            this.label103.TabIndex = 5;
+            // 
+            // button44
+            // 
+            this.button44.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button44.Location = new System.Drawing.Point(0, 141);
+            this.button44.Margin = new System.Windows.Forms.Padding(0);
+            this.button44.Name = "button44";
+            this.button44.Size = new System.Drawing.Size(200, 38);
+            this.button44.TabIndex = 4;
+            this.button44.Text = "📋 Prenotazioni";
+            this.button44.UseVisualStyleBackColor = true;
+            this.button44.Click += new System.EventHandler(this.button44_Click);
+            // 
+            // label102
+            // 
+            this.label102.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label102.Location = new System.Drawing.Point(0, 106);
+            this.label102.Name = "label102";
+            this.label102.Size = new System.Drawing.Size(200, 35);
+            this.label102.TabIndex = 3;
+            // 
+            // button45
+            // 
+            this.button45.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button45.Location = new System.Drawing.Point(0, 68);
+            this.button45.Margin = new System.Windows.Forms.Padding(0);
+            this.button45.Name = "button45";
+            this.button45.Size = new System.Drawing.Size(200, 38);
+            this.button45.TabIndex = 2;
+            this.button45.Text = "📊 Dashboard";
+            this.button45.UseVisualStyleBackColor = true;
+            this.button45.Click += new System.EventHandler(this.button45_Click);
+            // 
+            // label101
+            // 
+            this.label101.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label101.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label101.Location = new System.Drawing.Point(0, 0);
+            this.label101.Name = "label101";
+            this.label101.Size = new System.Drawing.Size(200, 68);
+            this.label101.TabIndex = 1;
+            this.label101.Text = "Pannello Admin";
+            this.label101.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -4075,8 +4257,8 @@ namespace HOTEL_LUCIBLU
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
+            this.panel_calendario.ResumeLayout(false);
+            this.panel_calendario.PerformLayout();
             this.panel23.ResumeLayout(false);
             this.panel23.PerformLayout();
             this.panel22.ResumeLayout(false);
@@ -4124,42 +4306,42 @@ namespace HOTEL_LUCIBLU
             this.panel28.ResumeLayout(false);
             this.panel28.PerformLayout();
             this.tabPage6.ResumeLayout(false);
-            this.panel32.ResumeLayout(false);
-            this.panel33.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.tabPage9.ResumeLayout(false);
             this.tabPage9.PerformLayout();
-            this.tabPage11.ResumeLayout(false);
-            this.tabPage11.PerformLayout();
-            this.tabPage12.ResumeLayout(false);
-            this.tabPage12.PerformLayout();
-            this.tabPage13.ResumeLayout(false);
-            this.tabPage13.PerformLayout();
-            this.panel34.ResumeLayout(false);
-            this.panel34.PerformLayout();
-            this.panel35.ResumeLayout(false);
-            this.panel35.PerformLayout();
-            this.panel36.ResumeLayout(false);
-            this.panel36.PerformLayout();
-            this.panel37.ResumeLayout(false);
-            this.panel37.PerformLayout();
-            this.panel38.ResumeLayout(false);
-            this.panel38.PerformLayout();
-            this.panel39.ResumeLayout(false);
-            this.panel39.PerformLayout();
-            this.panel40.ResumeLayout(false);
-            this.panel40.PerformLayout();
             this.panel41.ResumeLayout(false);
             this.panel41.PerformLayout();
+            this.panel40.ResumeLayout(false);
+            this.panel40.PerformLayout();
+            this.panel39.ResumeLayout(false);
+            this.panel39.PerformLayout();
+            this.panel38.ResumeLayout(false);
+            this.panel38.PerformLayout();
+            this.panel37.ResumeLayout(false);
+            this.panel37.PerformLayout();
+            this.panel36.ResumeLayout(false);
+            this.panel36.PerformLayout();
+            this.panel35.ResumeLayout(false);
+            this.panel35.PerformLayout();
+            this.panel34.ResumeLayout(false);
+            this.panel34.PerformLayout();
+            this.tabPage11.ResumeLayout(false);
+            this.tabPage11.PerformLayout();
             this.panel42.ResumeLayout(false);
             this.panel42.PerformLayout();
             this.panel43.ResumeLayout(false);
+            this.tabPage12.ResumeLayout(false);
+            this.tabPage12.PerformLayout();
             this.panel44.ResumeLayout(false);
             this.panel44.PerformLayout();
             this.panel45.ResumeLayout(false);
+            this.tabPage13.ResumeLayout(false);
+            this.tabPage13.PerformLayout();
             this.panel46.ResumeLayout(false);
             this.panel46.PerformLayout();
             this.panel47.ResumeLayout(false);
+            this.panel32.ResumeLayout(false);
+            this.panel33.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -4296,39 +4478,39 @@ namespace HOTEL_LUCIBLU
         private System.Windows.Forms.Button camera3;
         private System.Windows.Forms.Button camera2;
         private System.Windows.Forms.Button button_indietro;
-        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panel_calendario;
         private System.Windows.Forms.Button button_avanti;
         private System.Windows.Forms.Label label_nomeMese;
         private System.Windows.Forms.Button data1;
-        private System.Windows.Forms.Button button34;
-        private System.Windows.Forms.Button button33;
-        private System.Windows.Forms.Button button32;
-        private System.Windows.Forms.Button button25;
-        private System.Windows.Forms.Button button26;
-        private System.Windows.Forms.Button button27;
-        private System.Windows.Forms.Button button28;
-        private System.Windows.Forms.Button button29;
-        private System.Windows.Forms.Button button30;
-        private System.Windows.Forms.Button button31;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button23;
-        private System.Windows.Forms.Button button24;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button data31;
+        private System.Windows.Forms.Button data30;
+        private System.Windows.Forms.Button data29;
+        private System.Windows.Forms.Button data28;
+        private System.Windows.Forms.Button data27;
+        private System.Windows.Forms.Button data26;
+        private System.Windows.Forms.Button data25;
+        private System.Windows.Forms.Button data24;
+        private System.Windows.Forms.Button data23;
+        private System.Windows.Forms.Button data22;
+        private System.Windows.Forms.Button data21;
+        private System.Windows.Forms.Button data20;
+        private System.Windows.Forms.Button data19;
+        private System.Windows.Forms.Button data18;
+        private System.Windows.Forms.Button data17;
+        private System.Windows.Forms.Button data16;
+        private System.Windows.Forms.Button data15;
+        private System.Windows.Forms.Button data14;
+        private System.Windows.Forms.Button data13;
+        private System.Windows.Forms.Button data12;
+        private System.Windows.Forms.Button data11;
+        private System.Windows.Forms.Button data10;
+        private System.Windows.Forms.Button data9;
+        private System.Windows.Forms.Button data8;
+        private System.Windows.Forms.Button data7;
+        private System.Windows.Forms.Button data6;
+        private System.Windows.Forms.Button data5;
+        private System.Windows.Forms.Button data4;
+        private System.Windows.Forms.Button data3;
         private System.Windows.Forms.Button data2;
         private System.Windows.Forms.Panel panel23;
         private System.Windows.Forms.Label label48;
@@ -4502,6 +4684,21 @@ namespace HOTEL_LUCIBLU
         private System.Windows.Forms.Label label102;
         private System.Windows.Forms.Button button45;
         private System.Windows.Forms.Label label101;
+        private System.Windows.Forms.Button data35;
+        private System.Windows.Forms.Button data34;
+        private System.Windows.Forms.Button data33;
+        private System.Windows.Forms.Button data32;
+        private System.Windows.Forms.Button data42;
+        private System.Windows.Forms.Button data41;
+        private System.Windows.Forms.Button data40;
+        private System.Windows.Forms.Button data39;
+        private System.Windows.Forms.Button data38;
+        private System.Windows.Forms.Button data37;
+        private System.Windows.Forms.Button data36;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Label label146;
     }
 }
 

@@ -16,7 +16,6 @@ namespace HOTEL_LUCIBLU
         public string Servizio2 { get; set; }
         public string Servizio3 { get; set; }
 
-        // Restituisce il nome del piano
     }
     #endregion
 }

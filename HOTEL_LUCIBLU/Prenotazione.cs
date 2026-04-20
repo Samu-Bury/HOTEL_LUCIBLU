@@ -16,9 +16,6 @@ namespace HOTEL_LUCIBLU
         public DateTime DataPrenotazione { get; set; }
         public string Stato { get; set; }   // Confermata, Cancellata, Completata
 
-        public bool IsFutura => DataCheckIn > DateTime.Today;
-        public bool IsPassata => DataCheckOut < DateTime.Today;
-        public bool IsInCorso => DataCheckIn <= DateTime.Today && DataCheckOut >= DateTime.Today;
 
        
     }

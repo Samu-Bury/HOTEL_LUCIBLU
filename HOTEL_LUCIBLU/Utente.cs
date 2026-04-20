@@ -13,8 +13,7 @@ namespace HOTEL_LUCIBLU
         public DateTime DataRegistrazione { get; set; }
         public string Ruolo { get; set; }   // "utente" oppure "admin"
 
-        public string NomeCompleto => $"{Nome} {Cognome}";
-        public bool IsAdmin => Ruolo == "admin";
+        
 
         
     }
