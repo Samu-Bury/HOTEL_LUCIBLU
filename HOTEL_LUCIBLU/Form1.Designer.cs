@@ -381,6 +381,7 @@ namespace HOTEL_LUCIBLU
             this.label102 = new System.Windows.Forms.Label();
             this.button45 = new System.Windows.Forms.Button();
             this.label101 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -3725,6 +3726,7 @@ namespace HOTEL_LUCIBLU
             // tabPage12
             // 
             this.tabPage12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.tabPage12.Controls.Add(this.button9);
             this.tabPage12.Controls.Add(this.label137);
             this.tabPage12.Controls.Add(this.comboBox1);
             this.tabPage12.Controls.Add(this.button52);
@@ -3763,9 +3765,9 @@ namespace HOTEL_LUCIBLU
             // 
             this.button52.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button52.ForeColor = System.Drawing.Color.Black;
-            this.button52.Location = new System.Drawing.Point(482, 391);
+            this.button52.Location = new System.Drawing.Point(615, 409);
             this.button52.Name = "button52";
-            this.button52.Size = new System.Drawing.Size(117, 33);
+            this.button52.Size = new System.Drawing.Size(141, 33);
             this.button52.TabIndex = 42;
             this.button52.Text = "Cancella";
             this.button52.UseVisualStyleBackColor = false;
@@ -3774,7 +3776,7 @@ namespace HOTEL_LUCIBLU
             // 
             this.button51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(111)))), ((int)(((byte)(196)))));
             this.button51.ForeColor = System.Drawing.Color.White;
-            this.button51.Location = new System.Drawing.Point(615, 389);
+            this.button51.Location = new System.Drawing.Point(615, 367);
             this.button51.Name = "button51";
             this.button51.Size = new System.Drawing.Size(141, 37);
             this.button51.TabIndex = 41;
@@ -4237,6 +4239,17 @@ namespace HOTEL_LUCIBLU
             this.label101.Text = "Pannello Admin";
             this.label101.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button9.ForeColor = System.Drawing.Color.Black;
+            this.button9.Location = new System.Drawing.Point(458, 370);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(141, 33);
+            this.button9.TabIndex = 45;
+            this.button9.Text = "Modifica";
+            this.button9.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -4698,6 +4711,7 @@ namespace HOTEL_LUCIBLU
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label146;
+        private System.Windows.Forms.Button button9;
     }
 }
 

@@ -13,9 +13,27 @@ namespace HOTEL_LUCIBLU
         public DateTime DataRegistrazione { get; set; }
         public string Ruolo { get; set; }   // "utente" oppure "admin"
 
-        
 
-        
+        public void Login()
+        {
+
+        }
+
+        public void ModificaProfilo()
+        {
+
+        }
+
+        public void CancellaPrenotazione(int ID_Prenotazione)
+        {
+
+        }
+
+
+
+
+
+
     }
     #endregion
 }
