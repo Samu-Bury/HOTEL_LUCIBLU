@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace HOTEL_LUCIBLU
 {
@@ -27,6 +28,7 @@ namespace HOTEL_LUCIBLU
         public Form1()
         {
             InitializeComponent();
+            
             this.AutoScaleMode = AutoScaleMode.None; //Non deforma la form su altri dispositivi
             tabControl1.SelectedIndex = 2; // Home come pagina iniziale
             AggiornaVisibilitaBottoniHome(); //Visualizzazione bottoni in base all'accesso se presente o meno
@@ -143,9 +145,33 @@ namespace HOTEL_LUCIBLU
         //Accedi
         private void button_login_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedIndex = 2; // Home
-            accesso = true;
-            AggiornaVisibilitaBottoniHome();
+            string email = textBox_email_login.Text.Trim();
+            string password = textBox_password_login.Text;
+
+            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("Inserisci email e password.");
+                return;
+            }
+
+            DatabaseHelper db = new DatabaseHelper();
+
+            if (db.Login(email, password, out string nome, out string tipo))
+            {
+                MessageBox.Show($"Benvenuto, {nome}! Tipo account: {tipo}");
+                tabControl1.SelectedIndex = 2; // Home
+                accesso = true;
+                AggiornaVisibilitaBottoniHome();
+            }
+            else
+            {
+                MessageBox.Show("Email o password errata.");
+            }
+
+
+
+
+            
         }
 
         //Registrati (non registrato)
@@ -172,8 +198,30 @@ namespace HOTEL_LUCIBLU
         //Registrati
         private void button_register_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedIndex = 2; // Home
+            DatabaseHelper db = new DatabaseHelper();
+
+            bool successo = db.Registra(
+                textBox_email_register.Text.Trim(),
+                textBox_password_register.Text,
+                textBox_nome_register.Text.Trim(),
+                textBox_cognome_register.Text.Trim(),
+                dateTimePicker_data_register.Value
+            );
+
+            if (successo)
+            {
+                MessageBox.Show("Registrazione completata!");
+                tabControl1.SelectedIndex = 2; // Home
+            }
+            else
+            {
+                MessageBox.Show("Email già in uso.");
+            }
+
+                
         }
+
+
 
         //Accedi (gia registrato)
         private void label_accedi_register_Click(object sender, EventArgs e)
@@ -313,6 +361,7 @@ namespace HOTEL_LUCIBLU
         private void button47_Click(object sender, EventArgs e)
         {
             tabControl2.SelectedIndex = 3;
+            CaricaUtenti();
         }
 
         //Account
@@ -440,6 +489,117 @@ namespace HOTEL_LUCIBLU
 
         #endregion
 
-        
+
+        #region Carica Utenti Sezione Admin
+        private void CaricaUtenti()
+        {
+            listView_user.Items.Clear();
+            listView_user.View = View.Details;
+            listView_user.FullRowSelect = true;
+            listView_user.GridLines = true;
+
+            // Colonne (solo la prima volta)
+            if (listView_prenotazione.Columns.Count == 0)
+            {
+                listView_user.Columns.Add("Email", 200);
+                listView_user.Columns.Add("Nome", 100);
+                listView_user.Columns.Add("Cognome", 100);
+                listView_user.Columns.Add("Data Nascita", 100);
+                listView_user.Columns.Add("Registrato il", 130);
+                listView_user.Columns.Add("Tipo", 70);
+            }
+
+            DatabaseHelper db = new DatabaseHelper();
+            List<Utente> utenti = db.GetUtenti();
+
+            foreach (Utente u in utenti)
+            {
+                ListViewItem item = new ListViewItem(u.Email);
+                item.SubItems.Add(u.Nome);
+                item.SubItems.Add(u.Cognome);
+                item.SubItems.Add(u.DataNascita.HasValue ? u.DataNascita.Value.ToString("dd/MM/yyyy") : "—");
+                item.SubItems.Add(u.DataCreazione.ToString("dd/MM/yyyy HH:mm"));
+                item.SubItems.Add(u.Tipo);
+
+                // Colora gli admin in blu
+                if (u.Tipo == "admin")
+                    item.ForeColor = Color.RoyalBlue;
+
+                listView_user.Items.Add(item);
+            }
+        }
+
+
+        #endregion
+
+        //Elimina utente (admin)
+        private void button54_Click(object sender, EventArgs e)
+        {
+            if (listView_user.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Seleziona un utente da eliminare.", "Attenzione",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string emailSelezionata = listView_user.SelectedItems[0].Text;
+
+            DialogResult conferma = MessageBox.Show(
+                $"Sei sicuro di voler eliminare l'utente:\n{emailSelezionata}?",
+                "Conferma eliminazione",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (conferma == DialogResult.Yes)
+            {
+                DatabaseHelper db = new DatabaseHelper();
+                if (db.EliminaUtente(emailSelezionata))
+                {
+                    MessageBox.Show("Utente eliminato con successo.");
+                    CaricaUtenti(); // Aggiorna la lista
+                }
+                else
+                {
+                    MessageBox.Show("Errore durante l'eliminazione.");
+                }
+            }
+        }
+
+        //Aggiungi nuovo utente
+        private void button55_Click(object sender, EventArgs e)
+        {
+            FormAggiungiUtente finestra = new FormAggiungiUtente();
+
+            if (finestra.ShowDialog() == DialogResult.OK)
+            {
+                DatabaseHelper db = new DatabaseHelper();
+
+                // Controlla email duplicata
+                if (db.EmailEsiste(finestra.EmailInserita))
+                {
+                    MessageBox.Show("Email già in uso.", "Errore",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                bool successo = db.Registra(
+                    finestra.EmailInserita,
+                    finestra.PasswordInserita,
+                    finestra.NomeInserito,
+                    finestra.CognomeInserito,
+                    finestra.DataNascitaInserita
+                );
+
+                if (successo)
+                {
+                    MessageBox.Show("Utente aggiunto con successo!");
+                    CaricaUtenti(); // Aggiorna la lista
+                }
+                else
+                {
+                    MessageBox.Show("Errore durante l'aggiunta.");
+                }
+            }
+        }
     }
 }

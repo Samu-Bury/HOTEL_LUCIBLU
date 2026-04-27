@@ -6,34 +6,11 @@ namespace HOTEL_LUCIBLU
     public class Utente
     {
         public string Email { get; set; }
-        public string Password { get; set; }
         public string Nome { get; set; }
         public string Cognome { get; set; }
-        public DateTime DataNascita { get; set; }
-        public DateTime DataRegistrazione { get; set; }
-        public string Ruolo { get; set; }   // "utente" oppure "admin"
-
-
-        public void Login()
-        {
-
-        }
-
-        public void ModificaProfilo()
-        {
-
-        }
-
-        public void CancellaPrenotazione(int ID_Prenotazione)
-        {
-
-        }
-
-
-
-
-
-
+        public DateTime? DataNascita { get; set; }      // nullable perché può essere vuota nel DB
+        public DateTime DataCreazione { get; set; }     // rinominata per corrispondere al DB e a DatabaseHelper
+        public string Tipo { get; set; }                // "utente" oppure "admin" — rinominato da Ruolo
     }
     #endregion
 }
