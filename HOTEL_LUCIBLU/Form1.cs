@@ -158,10 +158,19 @@ namespace HOTEL_LUCIBLU
 
             if (db.Login(email, password, out string nome, out string tipo))
             {
-                MessageBox.Show($"Benvenuto, {nome}! Tipo account: {tipo}");
-                tabControl1.SelectedIndex = 2; // Home
                 accesso = true;
                 AggiornaVisibilitaBottoniHome();
+
+                if (tipo == "admin")
+                {
+                    tabControl1.SelectedIndex = 8; // Pannello Admin
+                }
+                else
+                {
+                    tabControl1.SelectedIndex = 2; // Home utente normale
+                }
+
+                MessageBox.Show($"Benvenuto, {nome}!");
             }
             else
             {
@@ -171,7 +180,7 @@ namespace HOTEL_LUCIBLU
 
 
 
-            
+
         }
 
         //Registrati (non registrato)
@@ -587,7 +596,8 @@ namespace HOTEL_LUCIBLU
                     finestra.PasswordInserita,
                     finestra.NomeInserito,
                     finestra.CognomeInserito,
-                    finestra.DataNascitaInserita
+                    finestra.DataNascitaInserita,
+                    finestra.TipoInserito
                 );
 
                 if (successo)

@@ -32,7 +32,6 @@ namespace HOTEL_LUCIBLU
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button6 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label_registrati_login = new System.Windows.Forms.Label();
             this.button_login = new System.Windows.Forms.Button();
@@ -450,7 +449,6 @@ namespace HOTEL_LUCIBLU
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.tabPage1.Controls.Add(this.button6);
             this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
@@ -458,18 +456,6 @@ namespace HOTEL_LUCIBLU
             this.tabPage1.Size = new System.Drawing.Size(1004, 484);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Login";
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(111)))), ((int)(((byte)(196)))));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(835, 423);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(141, 37);
-            this.button6.TabIndex = 13;
-            this.button6.Text = "Test Accesso Admin";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // panel1
             // 
@@ -4594,7 +4580,6 @@ namespace HOTEL_LUCIBLU
         private System.Windows.Forms.Button data38;
         private System.Windows.Forms.Button data37;
         private System.Windows.Forms.Button data36;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label146;

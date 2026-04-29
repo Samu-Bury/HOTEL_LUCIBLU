@@ -39,15 +39,15 @@ namespace HOTEL_LUCIBLU  // ← deve essere lo stesso namespace di Form1.cs
         }
 
         // REGISTRAZIONE
-        public bool Registra(string email, string password, string nome, string cognome, DateTime dataNascita)
+        public bool Registra(string email, string password, string nome, string cognome, DateTime dataNascita, string tipo = "utente")
         {
             if (EmailEsiste(email)) return false;
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                string query = @"INSERT INTO utenti (email, password, nome, cognome, dataDiNascita) 
-                                 VALUES (@email, @password, @nome, @cognome, @data)";
+                string query = @"INSERT INTO utenti (email, password, nome, cognome, dataDiNascita, tipo) 
+                 VALUES (@email, @password, @nome, @cognome, @data, @tipo)";
 
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
@@ -56,6 +56,7 @@ namespace HOTEL_LUCIBLU  // ← deve essere lo stesso namespace di Form1.cs
                     cmd.Parameters.AddWithValue("@nome", nome);
                     cmd.Parameters.AddWithValue("@cognome", cognome);
                     cmd.Parameters.AddWithValue("@data", dataNascita);
+                    cmd.Parameters.AddWithValue("@tipo", tipo);
                     cmd.ExecuteNonQuery();
                 }
             }
