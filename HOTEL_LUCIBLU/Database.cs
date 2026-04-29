@@ -6,7 +6,7 @@ namespace HOTEL_LUCIBLU  // ← deve essere lo stesso namespace di Form1.cs
 {
     public class DatabaseHelper
     {
-        private string connectionString = "Server=localhost;Database=luciblu_hotel;Uid=root;Pwd=root;";
+        private string connectionString = "Server=sql7.freesqldatabase.com;Database=sql7824799;Uid=root;Pwd=root;";
 
         // LOGIN
         public bool Login(string email, string password, out string nome, out string tipo)
