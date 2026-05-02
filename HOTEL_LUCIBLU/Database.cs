@@ -2,11 +2,14 @@
 using System;
 using System.Collections.Generic;
 
-namespace HOTEL_LUCIBLU  // ← deve essere lo stesso namespace di Form1.cs
+namespace HOTEL_LUCIBLU
 {
     public class DatabaseHelper
     {
         private string connectionString = "Server=sql7.freesqldatabase.com;Port=3306;Database=sql7824799;Uid=sql7824799;Pwd=Nb5nrBwXVC;";
+
+        #region GESTIONE ACCESSO E I VARI UTENTI 
+
 
         // LOGIN
         public bool Login(string email, string password, out string nome, out string tipo)
@@ -134,6 +137,210 @@ namespace HOTEL_LUCIBLU  // ← deve essere lo stesso namespace di Form1.cs
             }
         }
 
+        // OTTIENI SINGOLO UTENTE
+        public Utente GetUtente(string email)
+        {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "SELECT email, nome, cognome, dataDiNascita, dataDiCreazione, tipo FROM utenti WHERE email = @email";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@email", email);
+
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new Utente
+                            {
+                                Email = reader["email"].ToString(),
+                                Nome = reader["nome"].ToString(),
+                                Cognome = reader["cognome"].ToString(),
+                                DataNascita = reader["dataDiNascita"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(reader["dataDiNascita"]),
+                                DataCreazione = Convert.ToDateTime(reader["dataDiCreazione"]),
+                                Tipo = reader["tipo"].ToString()
+                            };
+                        }
+                    }
+                }
+            }
+            return null;
+        }
+
+        // MODIFICA UTENTE
+        public bool ModificaUtente(string emailOriginale, string nuovaEmail, string nome, string cognome, DateTime? dataNascita, string nuovaPassword = "")
+        {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+
+                string query;
+
+                if (!string.IsNullOrEmpty(nuovaPassword))
+                {
+                    query = @"UPDATE utenti SET email=@email, nome=@nome, cognome=@cognome, 
+                      dataDiNascita=@data, password=@password WHERE email=@emailOriginale";
+                }
+                else
+                {
+                    query = @"UPDATE utenti SET email=@email, nome=@nome, cognome=@cognome, 
+                      dataDiNascita=@data WHERE email=@emailOriginale";
+                }
+
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@emailOriginale", emailOriginale);
+                    cmd.Parameters.AddWithValue("@email", nuovaEmail);
+                    cmd.Parameters.AddWithValue("@nome", nome);
+                    cmd.Parameters.AddWithValue("@cognome", cognome);
+                    cmd.Parameters.AddWithValue("@data", dataNascita.HasValue ? (object)dataNascita.Value : DBNull.Value);
+
+                    if (!string.IsNullOrEmpty(nuovaPassword))
+                        cmd.Parameters.AddWithValue("@password", HashPassword(nuovaPassword));
+
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+            }
+        }
+
+        public bool ModificaUtente(string emailOriginale, string nuovaEmail, string nome,
+    string cognome, DateTime? dataNascita, string nuovaPassword = "", string tipo = "")
+        {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+
+                string query;
+
+                bool cambiaPassword = !string.IsNullOrEmpty(nuovaPassword);
+                bool cambiaTipo = !string.IsNullOrEmpty(tipo);
+
+                if (cambiaPassword && cambiaTipo)
+                    query = @"UPDATE utenti SET email=@email, nome=@nome, cognome=@cognome, 
+                      dataDiNascita=@data, password=@password, tipo=@tipo 
+                      WHERE email=@emailOriginale";
+                else if (cambiaPassword)
+                    query = @"UPDATE utenti SET email=@email, nome=@nome, cognome=@cognome, 
+                      dataDiNascita=@data, password=@password 
+                      WHERE email=@emailOriginale";
+                else if (cambiaTipo)
+                    query = @"UPDATE utenti SET email=@email, nome=@nome, cognome=@cognome, 
+                      dataDiNascita=@data, tipo=@tipo 
+                      WHERE email=@emailOriginale";
+                else
+                    query = @"UPDATE utenti SET email=@email, nome=@nome, cognome=@cognome, 
+                      dataDiNascita=@data 
+                      WHERE email=@emailOriginale";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@emailOriginale", emailOriginale);
+                    cmd.Parameters.AddWithValue("@email", nuovaEmail);
+                    cmd.Parameters.AddWithValue("@nome", nome);
+                    cmd.Parameters.AddWithValue("@cognome", cognome);
+                    cmd.Parameters.AddWithValue("@data", dataNascita.HasValue ? (object)dataNascita.Value : DBNull.Value);
+
+                    if (cambiaPassword)
+                        cmd.Parameters.AddWithValue("@password", HashPassword(nuovaPassword));
+                    if (cambiaTipo)
+                        cmd.Parameters.AddWithValue("@tipo", tipo);
+
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+            }
+        }
+
+        #endregion
+
+        #region GESTIONE CAMERE
+        // OTTIENI TUTTE LE CAMERE
+        public List<Camera> GetCamere()
+        {
+            List<Camera> camere = new List<Camera>();
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "SELECT numero, piano, tipo, prezzoNotte, stato, servizio1, servizio2 FROM camere";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                using (MySqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        camere.Add(new Camera
+                        {
+                            Numero = Convert.ToInt32(reader["numero"]),
+                            Piano = Convert.ToInt32(reader["piano"]),
+                            Tipo = reader["tipo"].ToString(),
+                            PrezzoNotte = Convert.ToDecimal(reader["prezzoNotte"]),
+                            Stato = reader["stato"].ToString(),
+                            Servizio1 = reader["servizio1"] == DBNull.Value ? "" : reader["servizio1"].ToString(),
+                            Servizio2 = reader["servizio2"] == DBNull.Value ? "" : reader["servizio2"].ToString()
+                        });
+                    }
+                }
+            }
+            return camere;
+        }
+
+        // AGGIUNGI CAMERA
+        public bool AggiungiCamera(Camera c)
+        {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = @"INSERT INTO camere (numero, piano, tipo, prezzoNotte, stato, servizio1, servizio2)
+                         VALUES (@numero, @piano, @tipo, @prezzo, @stato, @s1, @s2)";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@numero", c.Numero);
+                    cmd.Parameters.AddWithValue("@piano", c.Piano);
+                    cmd.Parameters.AddWithValue("@tipo", c.Tipo);
+                    cmd.Parameters.AddWithValue("@prezzo", c.PrezzoNotte);
+                    cmd.Parameters.AddWithValue("@stato", c.Stato);
+                    cmd.Parameters.AddWithValue("@s1", string.IsNullOrEmpty(c.Servizio1) ? (object)DBNull.Value : c.Servizio1);
+                    cmd.Parameters.AddWithValue("@s2", string.IsNullOrEmpty(c.Servizio2) ? (object)DBNull.Value : c.Servizio2);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            return true;
+        }
+
+        // ELIMINA CAMERA
+        public bool EliminaCamera(int numero)
+        {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "DELETE FROM camere WHERE numero = @numero";
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@numero", numero);
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+            }
+        }
+
+        // CONTROLLA SE NUMERO CAMERA ESISTE GIA
+        public bool CameraEsiste(int numero)
+        {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "SELECT COUNT(*) FROM camere WHERE numero = @numero";
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@numero", numero);
+                    return Convert.ToInt32(cmd.ExecuteScalar()) > 0;
+                }
+            }
+        }
+
+        #endregion
 
 
     }

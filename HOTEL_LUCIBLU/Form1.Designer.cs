@@ -163,34 +163,26 @@ namespace HOTEL_LUCIBLU
             this.label21 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel26 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.button_salva_account = new System.Windows.Forms.Button();
+            this.dateTimePicker_account = new System.Windows.Forms.DateTimePicker();
             this.label77 = new System.Windows.Forms.Label();
             this.label76 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox_password_account = new System.Windows.Forms.TextBox();
+            this.textBox_email_account = new System.Windows.Forms.TextBox();
             this.label75 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox_cognome_account = new System.Windows.Forms.TextBox();
             this.label74 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_nome_account = new System.Windows.Forms.TextBox();
             this.label73 = new System.Windows.Forms.Label();
             this.label58 = new System.Windows.Forms.Label();
-            this.panel25 = new System.Windows.Forms.Panel();
-            this.label72 = new System.Windows.Forms.Label();
-            this.label71 = new System.Windows.Forms.Label();
-            this.label70 = new System.Windows.Forms.Label();
-            this.label65 = new System.Windows.Forms.Label();
-            this.label64 = new System.Windows.Forms.Label();
-            this.label63 = new System.Windows.Forms.Label();
-            this.label53 = new System.Windows.Forms.Label();
             this.panel24 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
-            this.label79 = new System.Windows.Forms.Label();
+            this.label_dataCreazione_account = new System.Windows.Forms.Label();
             this.label78 = new System.Windows.Forms.Label();
-            this.label69 = new System.Windows.Forms.Label();
-            this.label68 = new System.Windows.Forms.Label();
-            this.label67 = new System.Windows.Forms.Label();
-            this.label66 = new System.Windows.Forms.Label();
+            this.label_dataNascita_account = new System.Windows.Forms.Label();
+            this.label_email_account = new System.Windows.Forms.Label();
+            this.label_cognome_account = new System.Windows.Forms.Label();
+            this.label_nome_account = new System.Windows.Forms.Label();
             this.panel27 = new System.Windows.Forms.Panel();
             this.label62 = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
@@ -235,30 +227,15 @@ namespace HOTEL_LUCIBLU
             this.button_piano3 = new System.Windows.Forms.Button();
             this.button_piano2 = new System.Windows.Forms.Button();
             this.button_piano1 = new System.Windows.Forms.Button();
-            this.comboBox_camera_filtroLetti = new System.Windows.Forms.ComboBox();
-            this.comboBox_camera_filtroPrezzoMax = new System.Windows.Forms.ComboBox();
-            this.label56 = new System.Windows.Forms.Label();
-            this.label55 = new System.Windows.Forms.Label();
-            this.comboBox_camera_filtroTipo = new System.Windows.Forms.ComboBox();
-            this.label54 = new System.Windows.Forms.Label();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.label_totPrezzoNotti_Camere = new System.Windows.Forms.Label();
-            this.label52 = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
-            this.label_camera_servizio3 = new System.Windows.Forms.Label();
             this.label_camera_servizio2 = new System.Windows.Forms.Label();
             this.label_camera_servizio1 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
             this.label_camera_piano = new System.Windows.Forms.Label();
             this.label_camera_prezzo = new System.Windows.Forms.Label();
-            this.label_camera_bagni = new System.Windows.Forms.Label();
-            this.label_camera_letti = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
             this.label_camera_tipo = new System.Windows.Forms.Label();
             this.panel_camera_foto = new System.Windows.Forms.Panel();
             this.label32 = new System.Windows.Forms.Label();
@@ -334,37 +311,22 @@ namespace HOTEL_LUCIBLU
             this.panel43 = new System.Windows.Forms.Panel();
             this.listView_prenotazione = new System.Windows.Forms.ListView();
             this.tabPage12 = new System.Windows.Forms.TabPage();
+            this.label53 = new System.Windows.Forms.Label();
+            this.comboBox_piano_admin = new System.Windows.Forms.ComboBox();
             this.button9 = new System.Windows.Forms.Button();
-            this.label137 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button52 = new System.Windows.Forms.Button();
-            this.button51 = new System.Windows.Forms.Button();
-            this.label136 = new System.Windows.Forms.Label();
-            this.button50 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.panel44 = new System.Windows.Forms.Panel();
-            this.label135 = new System.Windows.Forms.Label();
-            this.label134 = new System.Windows.Forms.Label();
-            this.label129 = new System.Windows.Forms.Label();
-            this.label130 = new System.Windows.Forms.Label();
-            this.label131 = new System.Windows.Forms.Label();
-            this.label132 = new System.Windows.Forms.Label();
-            this.label133 = new System.Windows.Forms.Label();
-            this.panel45 = new System.Windows.Forms.Panel();
+            this.button10 = new System.Windows.Forms.Button();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.listView_camere = new System.Windows.Forms.ListView();
             this.tabPage13 = new System.Windows.Forms.TabPage();
+            this.button5 = new System.Windows.Forms.Button();
             this.button54 = new System.Windows.Forms.Button();
             this.button55 = new System.Windows.Forms.Button();
-            this.label145 = new System.Windows.Forms.Label();
-            this.button53 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.panel47 = new System.Windows.Forms.Panel();
             this.listView_user = new System.Windows.Forms.ListView();
             this.panel32 = new System.Windows.Forms.Panel();
             this.panel33 = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
             this.label146 = new System.Windows.Forms.Label();
-            this.label128 = new System.Windows.Forms.Label();
             this.button47 = new System.Windows.Forms.Button();
             this.label104 = new System.Windows.Forms.Label();
             this.button46 = new System.Windows.Forms.Button();
@@ -392,14 +354,12 @@ namespace HOTEL_LUCIBLU
             this.panel7.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.panel26.SuspendLayout();
-            this.panel25.SuspendLayout();
             this.panel24.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.panel31.SuspendLayout();
             this.panel29.SuspendLayout();
             this.tabPage7.SuspendLayout();
             this.panel15.SuspendLayout();
-            this.panel14.SuspendLayout();
             this.panel18.SuspendLayout();
             this.panel_camera_foto.SuspendLayout();
             this.tabPage8.SuspendLayout();
@@ -420,8 +380,7 @@ namespace HOTEL_LUCIBLU
             this.panel42.SuspendLayout();
             this.panel43.SuspendLayout();
             this.tabPage12.SuspendLayout();
-            this.panel44.SuspendLayout();
-            this.panel45.SuspendLayout();
+            this.panel13.SuspendLayout();
             this.tabPage13.SuspendLayout();
             this.panel47.SuspendLayout();
             this.panel32.SuspendLayout();
@@ -1850,7 +1809,6 @@ namespace HOTEL_LUCIBLU
             // 
             this.tabPage4.BackgroundImage = global::HOTEL_LUCIBLU.Properties.Resources.Form__Prenota___Date;
             this.tabPage4.Controls.Add(this.panel26);
-            this.tabPage4.Controls.Add(this.panel25);
             this.tabPage4.Controls.Add(this.panel24);
             this.tabPage4.Controls.Add(this.label49);
             this.tabPage4.Controls.Add(this.button1);
@@ -1864,46 +1822,47 @@ namespace HOTEL_LUCIBLU
             // panel26
             // 
             this.panel26.BackColor = System.Drawing.Color.White;
-            this.panel26.Controls.Add(this.button5);
-            this.panel26.Controls.Add(this.dateTimePicker1);
+            this.panel26.Controls.Add(this.button_salva_account);
+            this.panel26.Controls.Add(this.dateTimePicker_account);
             this.panel26.Controls.Add(this.label77);
             this.panel26.Controls.Add(this.label76);
-            this.panel26.Controls.Add(this.textBox4);
-            this.panel26.Controls.Add(this.textBox3);
+            this.panel26.Controls.Add(this.textBox_password_account);
+            this.panel26.Controls.Add(this.textBox_email_account);
             this.panel26.Controls.Add(this.label75);
-            this.panel26.Controls.Add(this.textBox2);
+            this.panel26.Controls.Add(this.textBox_cognome_account);
             this.panel26.Controls.Add(this.label74);
-            this.panel26.Controls.Add(this.textBox1);
+            this.panel26.Controls.Add(this.textBox_nome_account);
             this.panel26.Controls.Add(this.label73);
             this.panel26.Controls.Add(this.label58);
-            this.panel26.Location = new System.Drawing.Point(422, 259);
+            this.panel26.Location = new System.Drawing.Point(420, 150);
             this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(474, 205);
+            this.panel26.Size = new System.Drawing.Size(482, 263);
             this.panel26.TabIndex = 18;
             // 
-            // button5
+            // button_salva_account
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(111)))), ((int)(((byte)(196)))));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(145, 157);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(189, 37);
-            this.button5.TabIndex = 35;
-            this.button5.Text = "Salva Modifiche";
-            this.button5.UseVisualStyleBackColor = false;
+            this.button_salva_account.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(111)))), ((int)(((byte)(196)))));
+            this.button_salva_account.ForeColor = System.Drawing.Color.White;
+            this.button_salva_account.Location = new System.Drawing.Point(148, 205);
+            this.button_salva_account.Name = "button_salva_account";
+            this.button_salva_account.Size = new System.Drawing.Size(189, 37);
+            this.button_salva_account.TabIndex = 35;
+            this.button_salva_account.Text = "Salva Modifiche";
+            this.button_salva_account.UseVisualStyleBackColor = false;
+            this.button_salva_account.Click += new System.EventHandler(this.button_salva_account_Click);
             // 
-            // dateTimePicker1
+            // dateTimePicker_account
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(20, 121);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(212, 23);
-            this.dateTimePicker1.TabIndex = 34;
+            this.dateTimePicker_account.Location = new System.Drawing.Point(260, 92);
+            this.dateTimePicker_account.Name = "dateTimePicker_account";
+            this.dateTimePicker_account.Size = new System.Drawing.Size(199, 23);
+            this.dateTimePicker_account.TabIndex = 34;
             // 
             // label77
             // 
             this.label77.AutoSize = true;
             this.label77.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label77.Location = new System.Drawing.Point(20, 98);
+            this.label77.Location = new System.Drawing.Point(260, 69);
             this.label77.Name = "label77";
             this.label77.Size = new System.Drawing.Size(116, 20);
             this.label77.TabIndex = 27;
@@ -1913,69 +1872,69 @@ namespace HOTEL_LUCIBLU
             // 
             this.label76.AutoSize = true;
             this.label76.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label76.Location = new System.Drawing.Point(253, 95);
+            this.label76.Location = new System.Drawing.Point(260, 128);
             this.label76.Name = "label76";
             this.label76.Size = new System.Drawing.Size(77, 20);
             this.label76.TabIndex = 33;
             this.label76.Text = "Password:";
             // 
-            // textBox4
+            // textBox_password_account
             // 
-            this.textBox4.Location = new System.Drawing.Point(249, 118);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(199, 26);
-            this.textBox4.TabIndex = 32;
+            this.textBox_password_account.Location = new System.Drawing.Point(260, 151);
+            this.textBox_password_account.Multiline = true;
+            this.textBox_password_account.Name = "textBox_password_account";
+            this.textBox_password_account.Size = new System.Drawing.Size(199, 26);
+            this.textBox_password_account.TabIndex = 32;
             // 
-            // textBox3
+            // textBox_email_account
             // 
-            this.textBox3.Location = new System.Drawing.Point(249, 59);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(199, 26);
-            this.textBox3.TabIndex = 31;
+            this.textBox_email_account.Location = new System.Drawing.Point(20, 151);
+            this.textBox_email_account.Multiline = true;
+            this.textBox_email_account.Name = "textBox_email_account";
+            this.textBox_email_account.Size = new System.Drawing.Size(199, 26);
+            this.textBox_email_account.TabIndex = 31;
             // 
             // label75
             // 
             this.label75.AutoSize = true;
             this.label75.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label75.Location = new System.Drawing.Point(253, 36);
+            this.label75.Location = new System.Drawing.Point(20, 128);
             this.label75.Name = "label75";
             this.label75.Size = new System.Drawing.Size(50, 20);
             this.label75.TabIndex = 27;
             this.label75.Text = "Email:";
             // 
-            // textBox2
+            // textBox_cognome_account
             // 
-            this.textBox2.Location = new System.Drawing.Point(134, 59);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(98, 26);
-            this.textBox2.TabIndex = 30;
+            this.textBox_cognome_account.Location = new System.Drawing.Point(142, 89);
+            this.textBox_cognome_account.Multiline = true;
+            this.textBox_cognome_account.Name = "textBox_cognome_account";
+            this.textBox_cognome_account.Size = new System.Drawing.Size(98, 26);
+            this.textBox_cognome_account.TabIndex = 30;
             // 
             // label74
             // 
             this.label74.AutoSize = true;
             this.label74.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label74.Location = new System.Drawing.Point(134, 36);
+            this.label74.Location = new System.Drawing.Point(142, 66);
             this.label74.Name = "label74";
             this.label74.Size = new System.Drawing.Size(79, 20);
             this.label74.TabIndex = 29;
             this.label74.Text = "Cognome:";
             // 
-            // textBox1
+            // textBox_nome_account
             // 
-            this.textBox1.Location = new System.Drawing.Point(20, 59);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(98, 26);
-            this.textBox1.TabIndex = 28;
+            this.textBox_nome_account.Location = new System.Drawing.Point(20, 89);
+            this.textBox_nome_account.Multiline = true;
+            this.textBox_nome_account.Name = "textBox_nome_account";
+            this.textBox_nome_account.Size = new System.Drawing.Size(98, 26);
+            this.textBox_nome_account.TabIndex = 28;
             // 
             // label73
             // 
             this.label73.AutoSize = true;
             this.label73.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label73.Location = new System.Drawing.Point(20, 36);
+            this.label73.Location = new System.Drawing.Point(20, 66);
             this.label73.Name = "label73";
             this.label73.Size = new System.Drawing.Size(55, 20);
             this.label73.TabIndex = 27;
@@ -1985,104 +1944,22 @@ namespace HOTEL_LUCIBLU
             // 
             this.label58.AutoSize = true;
             this.label58.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label58.Location = new System.Drawing.Point(162, 5);
+            this.label58.Location = new System.Drawing.Point(161, 28);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(153, 25);
             this.label58.TabIndex = 2;
             this.label58.Text = "MODIFICA DATI";
             // 
-            // panel25
-            // 
-            this.panel25.BackColor = System.Drawing.Color.White;
-            this.panel25.Controls.Add(this.label72);
-            this.panel25.Controls.Add(this.label71);
-            this.panel25.Controls.Add(this.label70);
-            this.panel25.Controls.Add(this.label65);
-            this.panel25.Controls.Add(this.label64);
-            this.panel25.Controls.Add(this.label63);
-            this.panel25.Controls.Add(this.label53);
-            this.panel25.Location = new System.Drawing.Point(422, 113);
-            this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(474, 128);
-            this.panel25.TabIndex = 17;
-            // 
-            // label72
-            // 
-            this.label72.AutoSize = true;
-            this.label72.Location = new System.Drawing.Point(370, 82);
-            this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(44, 15);
-            this.label72.TabIndex = 29;
-            this.label72.Text = "label72";
-            // 
-            // label71
-            // 
-            this.label71.AutoSize = true;
-            this.label71.Location = new System.Drawing.Point(216, 82);
-            this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(44, 15);
-            this.label71.TabIndex = 28;
-            this.label71.Text = "label71";
-            // 
-            // label70
-            // 
-            this.label70.AutoSize = true;
-            this.label70.Location = new System.Drawing.Point(65, 82);
-            this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(44, 15);
-            this.label70.TabIndex = 27;
-            this.label70.Text = "label70";
-            // 
-            // label65
-            // 
-            this.label65.AutoSize = true;
-            this.label65.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label65.Location = new System.Drawing.Point(348, 44);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(85, 20);
-            this.label65.TabIndex = 4;
-            this.label65.Text = "Notti Totali";
-            // 
-            // label64
-            // 
-            this.label64.AutoSize = true;
-            this.label64.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label64.Location = new System.Drawing.Point(192, 44);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(96, 20);
-            this.label64.TabIndex = 3;
-            this.label64.Text = "Prenotazioni";
-            // 
-            // label63
-            // 
-            this.label63.AutoSize = true;
-            this.label63.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label63.Location = new System.Drawing.Point(44, 44);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(93, 20);
-            this.label63.TabIndex = 2;
-            this.label63.Text = "Spesa Totale";
-            // 
-            // label53
-            // 
-            this.label53.AutoSize = true;
-            this.label53.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label53.Location = new System.Drawing.Point(176, 4);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(127, 25);
-            this.label53.TabIndex = 1;
-            this.label53.Text = "STATISTICHE";
-            // 
             // panel24
             // 
             this.panel24.BackColor = System.Drawing.Color.White;
             this.panel24.Controls.Add(this.button7);
-            this.panel24.Controls.Add(this.label79);
+            this.panel24.Controls.Add(this.label_dataCreazione_account);
             this.panel24.Controls.Add(this.label78);
-            this.panel24.Controls.Add(this.label69);
-            this.panel24.Controls.Add(this.label68);
-            this.panel24.Controls.Add(this.label67);
-            this.panel24.Controls.Add(this.label66);
+            this.panel24.Controls.Add(this.label_dataNascita_account);
+            this.panel24.Controls.Add(this.label_email_account);
+            this.panel24.Controls.Add(this.label_cognome_account);
+            this.panel24.Controls.Add(this.label_nome_account);
             this.panel24.Controls.Add(this.panel27);
             this.panel24.Controls.Add(this.label62);
             this.panel24.Controls.Add(this.label61);
@@ -2106,14 +1983,14 @@ namespace HOTEL_LUCIBLU
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // label79
+            // label_dataCreazione_account
             // 
-            this.label79.AutoSize = true;
-            this.label79.Location = new System.Drawing.Point(197, 280);
-            this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(44, 15);
-            this.label79.TabIndex = 28;
-            this.label79.Text = "label79";
+            this.label_dataCreazione_account.Location = new System.Drawing.Point(134, 280);
+            this.label_dataCreazione_account.Name = "label_dataCreazione_account";
+            this.label_dataCreazione_account.Size = new System.Drawing.Size(123, 15);
+            this.label_dataCreazione_account.TabIndex = 28;
+            this.label_dataCreazione_account.Text = "label79";
+            this.label_dataCreazione_account.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label78
             // 
@@ -2125,41 +2002,41 @@ namespace HOTEL_LUCIBLU
             this.label78.TabIndex = 27;
             this.label78.Text = "Data creazione:";
             // 
-            // label69
+            // label_dataNascita_account
             // 
-            this.label69.AutoSize = true;
-            this.label69.Location = new System.Drawing.Point(197, 248);
-            this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(44, 15);
-            this.label69.TabIndex = 26;
-            this.label69.Text = "label69";
+            this.label_dataNascita_account.Location = new System.Drawing.Point(134, 248);
+            this.label_dataNascita_account.Name = "label_dataNascita_account";
+            this.label_dataNascita_account.Size = new System.Drawing.Size(123, 15);
+            this.label_dataNascita_account.TabIndex = 26;
+            this.label_dataNascita_account.Text = "label69";
+            this.label_dataNascita_account.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label68
+            // label_email_account
             // 
-            this.label68.AutoSize = true;
-            this.label68.Location = new System.Drawing.Point(197, 216);
-            this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(44, 15);
-            this.label68.TabIndex = 25;
-            this.label68.Text = "label68";
+            this.label_email_account.Location = new System.Drawing.Point(105, 216);
+            this.label_email_account.Name = "label_email_account";
+            this.label_email_account.Size = new System.Drawing.Size(152, 15);
+            this.label_email_account.TabIndex = 25;
+            this.label_email_account.Text = "label68";
+            this.label_email_account.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label67
+            // label_cognome_account
             // 
-            this.label67.AutoSize = true;
-            this.label67.Location = new System.Drawing.Point(197, 182);
-            this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(44, 15);
-            this.label67.TabIndex = 24;
-            this.label67.Text = "label67";
+            this.label_cognome_account.Location = new System.Drawing.Point(105, 183);
+            this.label_cognome_account.Name = "label_cognome_account";
+            this.label_cognome_account.Size = new System.Drawing.Size(152, 15);
+            this.label_cognome_account.TabIndex = 24;
+            this.label_cognome_account.Text = "label67";
+            this.label_cognome_account.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label66
+            // label_nome_account
             // 
-            this.label66.AutoSize = true;
-            this.label66.Location = new System.Drawing.Point(197, 151);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(44, 15);
-            this.label66.TabIndex = 23;
-            this.label66.Text = "label66";
+            this.label_nome_account.Location = new System.Drawing.Point(105, 150);
+            this.label_nome_account.Name = "label_nome_account";
+            this.label_nome_account.Size = new System.Drawing.Size(152, 15);
+            this.label_nome_account.TabIndex = 23;
+            this.label_nome_account.Text = "label66";
+            this.label_nome_account.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // panel27
             // 
@@ -2225,7 +2102,7 @@ namespace HOTEL_LUCIBLU
             this.label49.AutoSize = true;
             this.label49.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label49.ForeColor = System.Drawing.Color.Black;
-            this.label49.Location = new System.Drawing.Point(860, 22);
+            this.label49.Location = new System.Drawing.Point(151, 22);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(113, 25);
             this.label49.TabIndex = 15;
@@ -2372,7 +2249,7 @@ namespace HOTEL_LUCIBLU
             this.label95.AutoSize = true;
             this.label95.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label95.ForeColor = System.Drawing.Color.Black;
-            this.label95.Location = new System.Drawing.Point(762, 23);
+            this.label95.Location = new System.Drawing.Point(147, 23);
             this.label95.Name = "label95";
             this.label95.Size = new System.Drawing.Size(215, 25);
             this.label95.TabIndex = 15;
@@ -2401,13 +2278,6 @@ namespace HOTEL_LUCIBLU
             this.tabPage7.Controls.Add(this.button4);
             this.tabPage7.Controls.Add(this.button3);
             this.tabPage7.Controls.Add(this.panel15);
-            this.tabPage7.Controls.Add(this.comboBox_camera_filtroLetti);
-            this.tabPage7.Controls.Add(this.comboBox_camera_filtroPrezzoMax);
-            this.tabPage7.Controls.Add(this.label56);
-            this.tabPage7.Controls.Add(this.label55);
-            this.tabPage7.Controls.Add(this.comboBox_camera_filtroTipo);
-            this.tabPage7.Controls.Add(this.label54);
-            this.tabPage7.Controls.Add(this.panel14);
             this.tabPage7.Controls.Add(this.label47);
             this.tabPage7.Controls.Add(this.panel18);
             this.tabPage7.Controls.Add(this.label44);
@@ -2457,7 +2327,7 @@ namespace HOTEL_LUCIBLU
             // 
             // camera11
             // 
-            this.camera11.Location = new System.Drawing.Point(29, 287);
+            this.camera11.Location = new System.Drawing.Point(29, 282);
             this.camera11.Name = "camera11";
             this.camera11.Size = new System.Drawing.Size(96, 52);
             this.camera11.TabIndex = 40;
@@ -2656,108 +2526,6 @@ namespace HOTEL_LUCIBLU
             this.button_piano1.Text = "1° Piano";
             this.button_piano1.UseVisualStyleBackColor = true;
             // 
-            // comboBox_camera_filtroLetti
-            // 
-            this.comboBox_camera_filtroLetti.FormattingEnabled = true;
-            this.comboBox_camera_filtroLetti.Location = new System.Drawing.Point(580, 76);
-            this.comboBox_camera_filtroLetti.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox_camera_filtroLetti.Name = "comboBox_camera_filtroLetti";
-            this.comboBox_camera_filtroLetti.Size = new System.Drawing.Size(106, 23);
-            this.comboBox_camera_filtroLetti.TabIndex = 26;
-            // 
-            // comboBox_camera_filtroPrezzoMax
-            // 
-            this.comboBox_camera_filtroPrezzoMax.FormattingEnabled = true;
-            this.comboBox_camera_filtroPrezzoMax.Location = new System.Drawing.Point(392, 75);
-            this.comboBox_camera_filtroPrezzoMax.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox_camera_filtroPrezzoMax.Name = "comboBox_camera_filtroPrezzoMax";
-            this.comboBox_camera_filtroPrezzoMax.Size = new System.Drawing.Size(106, 23);
-            this.comboBox_camera_filtroPrezzoMax.TabIndex = 25;
-            // 
-            // label56
-            // 
-            this.label56.AutoSize = true;
-            this.label56.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label56.Location = new System.Drawing.Point(528, 75);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(42, 20);
-            this.label56.TabIndex = 24;
-            this.label56.Text = "Letti:";
-            // 
-            // label55
-            // 
-            this.label55.AutoSize = true;
-            this.label55.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label55.Location = new System.Drawing.Point(290, 77);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(92, 20);
-            this.label55.TabIndex = 23;
-            this.label55.Text = "Prezzo max:";
-            // 
-            // comboBox_camera_filtroTipo
-            // 
-            this.comboBox_camera_filtroTipo.FormattingEnabled = true;
-            this.comboBox_camera_filtroTipo.Location = new System.Drawing.Point(138, 75);
-            this.comboBox_camera_filtroTipo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox_camera_filtroTipo.Name = "comboBox_camera_filtroTipo";
-            this.comboBox_camera_filtroTipo.Size = new System.Drawing.Size(106, 23);
-            this.comboBox_camera_filtroTipo.TabIndex = 22;
-            // 
-            // label54
-            // 
-            this.label54.AutoSize = true;
-            this.label54.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label54.Location = new System.Drawing.Point(19, 74);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(106, 20);
-            this.label54.TabIndex = 21;
-            this.label54.Text = "Filtra per tipo:";
-            // 
-            // panel14
-            // 
-            this.panel14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel14.Controls.Add(this.label_totPrezzoNotti_Camere);
-            this.panel14.Controls.Add(this.label52);
-            this.panel14.Controls.Add(this.label51);
-            this.panel14.Location = new System.Drawing.Point(19, 420);
-            this.panel14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(244, 50);
-            this.panel14.TabIndex = 6;
-            // 
-            // label_totPrezzoNotti_Camere
-            // 
-            this.label_totPrezzoNotti_Camere.AutoSize = true;
-            this.label_totPrezzoNotti_Camere.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_totPrezzoNotti_Camere.ForeColor = System.Drawing.Color.White;
-            this.label_totPrezzoNotti_Camere.Location = new System.Drawing.Point(161, 12);
-            this.label_totPrezzoNotti_Camere.Name = "label_totPrezzoNotti_Camere";
-            this.label_totPrezzoNotti_Camere.Size = new System.Drawing.Size(60, 25);
-            this.label_totPrezzoNotti_Camere.TabIndex = 22;
-            this.label_totPrezzoNotti_Camere.Text = "€ XXX";
-            // 
-            // label52
-            // 
-            this.label52.AutoSize = true;
-            this.label52.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label52.ForeColor = System.Drawing.Color.White;
-            this.label52.Location = new System.Drawing.Point(10, 26);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(118, 15);
-            this.label52.TabIndex = 21;
-            this.label52.Text = "X camera selezionata";
-            // 
-            // label51
-            // 
-            this.label51.AutoSize = true;
-            this.label51.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label51.ForeColor = System.Drawing.Color.White;
-            this.label51.Location = new System.Drawing.Point(10, 10);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(85, 15);
-            this.label51.TabIndex = 20;
-            this.label51.Text = "Totale (X notti)";
-            // 
             // label47
             // 
             this.label47.AutoSize = true;
@@ -2771,18 +2539,13 @@ namespace HOTEL_LUCIBLU
             this.panel18.BackColor = System.Drawing.Color.Transparent;
             this.panel18.BackgroundImage = global::HOTEL_LUCIBLU.Properties.Resources.Group_98;
             this.panel18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel18.Controls.Add(this.label_camera_servizio3);
             this.panel18.Controls.Add(this.label_camera_servizio2);
             this.panel18.Controls.Add(this.label_camera_servizio1);
             this.panel18.Controls.Add(this.label46);
             this.panel18.Controls.Add(this.label_camera_piano);
             this.panel18.Controls.Add(this.label_camera_prezzo);
-            this.panel18.Controls.Add(this.label_camera_bagni);
-            this.panel18.Controls.Add(this.label_camera_letti);
             this.panel18.Controls.Add(this.label37);
             this.panel18.Controls.Add(this.label36);
-            this.panel18.Controls.Add(this.label35);
-            this.panel18.Controls.Add(this.label34);
             this.panel18.Controls.Add(this.label_camera_tipo);
             this.panel18.Controls.Add(this.panel_camera_foto);
             this.panel18.Controls.Add(this.label42);
@@ -2792,20 +2555,10 @@ namespace HOTEL_LUCIBLU
             this.panel18.Size = new System.Drawing.Size(248, 348);
             this.panel18.TabIndex = 16;
             // 
-            // label_camera_servizio3
-            // 
-            this.label_camera_servizio3.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_camera_servizio3.Location = new System.Drawing.Point(148, 298);
-            this.label_camera_servizio3.Name = "label_camera_servizio3";
-            this.label_camera_servizio3.Size = new System.Drawing.Size(45, 19);
-            this.label_camera_servizio3.TabIndex = 18;
-            this.label_camera_servizio3.Text = "..";
-            this.label_camera_servizio3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label_camera_servizio2
             // 
             this.label_camera_servizio2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_camera_servizio2.Location = new System.Drawing.Point(81, 298);
+            this.label_camera_servizio2.Location = new System.Drawing.Point(25, 284);
             this.label_camera_servizio2.Name = "label_camera_servizio2";
             this.label_camera_servizio2.Size = new System.Drawing.Size(45, 19);
             this.label_camera_servizio2.TabIndex = 17;
@@ -2815,7 +2568,7 @@ namespace HOTEL_LUCIBLU
             // label_camera_servizio1
             // 
             this.label_camera_servizio1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_camera_servizio1.Location = new System.Drawing.Point(20, 298);
+            this.label_camera_servizio1.Location = new System.Drawing.Point(20, 247);
             this.label_camera_servizio1.Name = "label_camera_servizio1";
             this.label_camera_servizio1.Size = new System.Drawing.Size(45, 19);
             this.label_camera_servizio1.TabIndex = 16;
@@ -2827,7 +2580,7 @@ namespace HOTEL_LUCIBLU
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label46.ForeColor = System.Drawing.Color.Red;
-            this.label46.Location = new System.Drawing.Point(18, 279);
+            this.label46.Location = new System.Drawing.Point(20, 228);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(59, 19);
             this.label46.TabIndex = 15;
@@ -2836,7 +2589,7 @@ namespace HOTEL_LUCIBLU
             // label_camera_piano
             // 
             this.label_camera_piano.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_camera_piano.Location = new System.Drawing.Point(81, 249);
+            this.label_camera_piano.Location = new System.Drawing.Point(81, 195);
             this.label_camera_piano.Name = "label_camera_piano";
             this.label_camera_piano.Size = new System.Drawing.Size(143, 19);
             this.label_camera_piano.TabIndex = 14;
@@ -2847,38 +2600,18 @@ namespace HOTEL_LUCIBLU
             // 
             this.label_camera_prezzo.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label_camera_prezzo.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label_camera_prezzo.Location = new System.Drawing.Point(81, 226);
+            this.label_camera_prezzo.Location = new System.Drawing.Point(81, 172);
             this.label_camera_prezzo.Name = "label_camera_prezzo";
             this.label_camera_prezzo.Size = new System.Drawing.Size(143, 19);
             this.label_camera_prezzo.TabIndex = 13;
             this.label_camera_prezzo.Text = "..";
             this.label_camera_prezzo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label_camera_bagni
-            // 
-            this.label_camera_bagni.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_camera_bagni.Location = new System.Drawing.Point(81, 200);
-            this.label_camera_bagni.Name = "label_camera_bagni";
-            this.label_camera_bagni.Size = new System.Drawing.Size(143, 19);
-            this.label_camera_bagni.TabIndex = 12;
-            this.label_camera_bagni.Text = "..";
-            this.label_camera_bagni.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label_camera_letti
-            // 
-            this.label_camera_letti.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_camera_letti.Location = new System.Drawing.Point(81, 175);
-            this.label_camera_letti.Name = "label_camera_letti";
-            this.label_camera_letti.Size = new System.Drawing.Size(143, 19);
-            this.label_camera_letti.TabIndex = 11;
-            this.label_camera_letti.Text = "..";
-            this.label_camera_letti.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // label37
             // 
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label37.Location = new System.Drawing.Point(18, 249);
+            this.label37.Location = new System.Drawing.Point(18, 195);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(47, 19);
             this.label37.TabIndex = 10;
@@ -2888,31 +2621,11 @@ namespace HOTEL_LUCIBLU
             // 
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label36.Location = new System.Drawing.Point(18, 226);
+            this.label36.Location = new System.Drawing.Point(18, 172);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(54, 19);
             this.label36.TabIndex = 9;
             this.label36.Text = "Prezzo:";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label35.Location = new System.Drawing.Point(18, 200);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(47, 19);
-            this.label35.TabIndex = 8;
-            this.label35.Text = "Bagni:";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label34.Location = new System.Drawing.Point(18, 175);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(40, 19);
-            this.label34.TabIndex = 7;
-            this.label34.Text = "Letti:";
             // 
             // label_camera_tipo
             // 
@@ -3703,16 +3416,11 @@ namespace HOTEL_LUCIBLU
             // tabPage12
             // 
             this.tabPage12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.tabPage12.Controls.Add(this.label53);
+            this.tabPage12.Controls.Add(this.comboBox_piano_admin);
             this.tabPage12.Controls.Add(this.button9);
-            this.tabPage12.Controls.Add(this.label137);
-            this.tabPage12.Controls.Add(this.comboBox1);
-            this.tabPage12.Controls.Add(this.button52);
-            this.tabPage12.Controls.Add(this.button51);
-            this.tabPage12.Controls.Add(this.label136);
-            this.tabPage12.Controls.Add(this.button50);
-            this.tabPage12.Controls.Add(this.textBox6);
-            this.tabPage12.Controls.Add(this.panel44);
-            this.tabPage12.Controls.Add(this.panel45);
+            this.tabPage12.Controls.Add(this.button10);
+            this.tabPage12.Controls.Add(this.panel13);
             this.tabPage12.Location = new System.Drawing.Point(4, 24);
             this.tabPage12.Name = "tabPage12";
             this.tabPage12.Padding = new System.Windows.Forms.Padding(3);
@@ -3720,201 +3428,72 @@ namespace HOTEL_LUCIBLU
             this.tabPage12.TabIndex = 2;
             this.tabPage12.Text = "GestioneCamere";
             // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(360, 386);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(67, 15);
+            this.label53.TabIndex = 51;
+            this.label53.Text = "Filtro Piano";
+            // 
+            // comboBox_piano_admin
+            // 
+            this.comboBox_piano_admin.FormattingEnabled = true;
+            this.comboBox_piano_admin.Location = new System.Drawing.Point(334, 404);
+            this.comboBox_piano_admin.Name = "comboBox_piano_admin";
+            this.comboBox_piano_admin.Size = new System.Drawing.Size(121, 23);
+            this.comboBox_piano_admin.TabIndex = 50;
+            this.comboBox_piano_admin.SelectedIndexChanged += new System.EventHandler(this.comboBox_piano_admin_SelectedIndexChanged);
+            // 
             // button9
             // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button9.ForeColor = System.Drawing.Color.Black;
-            this.button9.Location = new System.Drawing.Point(458, 370);
+            this.button9.Location = new System.Drawing.Point(29, 392);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(141, 33);
-            this.button9.TabIndex = 45;
-            this.button9.Text = "Modifica";
+            this.button9.Size = new System.Drawing.Size(122, 35);
+            this.button9.TabIndex = 49;
+            this.button9.Text = "Rimuovi";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // label137
+            // button10
             // 
-            this.label137.AutoSize = true;
-            this.label137.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label137.Location = new System.Drawing.Point(31, 414);
-            this.label137.Name = "label137";
-            this.label137.Size = new System.Drawing.Size(77, 20);
-            this.label137.TabIndex = 44;
-            this.label137.Text = "Filtro Stati";
+            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(111)))), ((int)(((byte)(196)))));
+            this.button10.ForeColor = System.Drawing.Color.White;
+            this.button10.Location = new System.Drawing.Point(636, 392);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(122, 37);
+            this.button10.TabIndex = 48;
+            this.button10.Text = "Aggiungi Camera";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
-            // comboBox1
+            // panel13
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(138, 414);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(195, 23);
-            this.comboBox1.TabIndex = 43;
-            // 
-            // button52
-            // 
-            this.button52.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button52.ForeColor = System.Drawing.Color.Black;
-            this.button52.Location = new System.Drawing.Point(615, 409);
-            this.button52.Name = "button52";
-            this.button52.Size = new System.Drawing.Size(141, 33);
-            this.button52.TabIndex = 42;
-            this.button52.Text = "Cancella";
-            this.button52.UseVisualStyleBackColor = false;
-            // 
-            // button51
-            // 
-            this.button51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(111)))), ((int)(((byte)(196)))));
-            this.button51.ForeColor = System.Drawing.Color.White;
-            this.button51.Location = new System.Drawing.Point(615, 367);
-            this.button51.Name = "button51";
-            this.button51.Size = new System.Drawing.Size(141, 37);
-            this.button51.TabIndex = 41;
-            this.button51.Text = "Aggiungi Camera";
-            this.button51.UseVisualStyleBackColor = false;
-            // 
-            // label136
-            // 
-            this.label136.AutoSize = true;
-            this.label136.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label136.Location = new System.Drawing.Point(31, 374);
-            this.label136.Name = "label136";
-            this.label136.Size = new System.Drawing.Size(101, 20);
-            this.label136.TabIndex = 40;
-            this.label136.Text = "Cerca Camera";
-            // 
-            // button50
-            // 
-            this.button50.Location = new System.Drawing.Point(351, 375);
-            this.button50.Name = "button50";
-            this.button50.Size = new System.Drawing.Size(75, 23);
-            this.button50.TabIndex = 39;
-            this.button50.Text = "Filtra";
-            this.button50.UseVisualStyleBackColor = true;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(138, 375);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(195, 23);
-            this.textBox6.TabIndex = 38;
-            // 
-            // panel44
-            // 
-            this.panel44.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel44.Controls.Add(this.label135);
-            this.panel44.Controls.Add(this.label134);
-            this.panel44.Controls.Add(this.label129);
-            this.panel44.Controls.Add(this.label130);
-            this.panel44.Controls.Add(this.label131);
-            this.panel44.Controls.Add(this.label132);
-            this.panel44.Controls.Add(this.label133);
-            this.panel44.Location = new System.Drawing.Point(31, 18);
-            this.panel44.Name = "panel44";
-            this.panel44.Size = new System.Drawing.Size(725, 41);
-            this.panel44.TabIndex = 35;
-            // 
-            // label135
-            // 
-            this.label135.AutoSize = true;
-            this.label135.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label135.ForeColor = System.Drawing.Color.White;
-            this.label135.Location = new System.Drawing.Point(607, 10);
-            this.label135.Name = "label135";
-            this.label135.Size = new System.Drawing.Size(52, 20);
-            this.label135.TabIndex = 37;
-            this.label135.Text = "Servizi";
-            // 
-            // label134
-            // 
-            this.label134.AutoSize = true;
-            this.label134.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label134.ForeColor = System.Drawing.Color.White;
-            this.label134.Location = new System.Drawing.Point(288, 10);
-            this.label134.Name = "label134";
-            this.label134.Size = new System.Drawing.Size(38, 20);
-            this.label134.TabIndex = 36;
-            this.label134.Text = "Letti";
-            // 
-            // label129
-            // 
-            this.label129.AutoSize = true;
-            this.label129.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label129.ForeColor = System.Drawing.Color.White;
-            this.label129.Location = new System.Drawing.Point(513, 12);
-            this.label129.Name = "label129";
-            this.label129.Size = new System.Drawing.Size(44, 20);
-            this.label129.TabIndex = 35;
-            this.label129.Text = "Stato";
-            // 
-            // label130
-            // 
-            this.label130.AutoSize = true;
-            this.label130.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label130.ForeColor = System.Drawing.Color.White;
-            this.label130.Location = new System.Drawing.Point(375, 12);
-            this.label130.Name = "label130";
-            this.label130.Size = new System.Drawing.Size(94, 20);
-            this.label130.TabIndex = 34;
-            this.label130.Text = "Prezzo/notte";
-            // 
-            // label131
-            // 
-            this.label131.AutoSize = true;
-            this.label131.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label131.ForeColor = System.Drawing.Color.White;
-            this.label131.Location = new System.Drawing.Point(189, 12);
-            this.label131.Name = "label131";
-            this.label131.Size = new System.Drawing.Size(46, 20);
-            this.label131.TabIndex = 33;
-            this.label131.Text = "Piano";
-            // 
-            // label132
-            // 
-            this.label132.AutoSize = true;
-            this.label132.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label132.ForeColor = System.Drawing.Color.White;
-            this.label132.Location = new System.Drawing.Point(99, 12);
-            this.label132.Name = "label132";
-            this.label132.Size = new System.Drawing.Size(39, 20);
-            this.label132.TabIndex = 32;
-            this.label132.Text = "Tipo";
-            // 
-            // label133
-            // 
-            this.label133.AutoSize = true;
-            this.label133.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label133.ForeColor = System.Drawing.Color.White;
-            this.label133.Location = new System.Drawing.Point(25, 12);
-            this.label133.Name = "label133";
-            this.label133.Size = new System.Drawing.Size(23, 20);
-            this.label133.TabIndex = 31;
-            this.label133.Text = "N.";
-            // 
-            // panel45
-            // 
-            this.panel45.BackColor = System.Drawing.Color.White;
-            this.panel45.Controls.Add(this.listView_camere);
-            this.panel45.Location = new System.Drawing.Point(31, 53);
-            this.panel45.Name = "panel45";
-            this.panel45.Size = new System.Drawing.Size(725, 307);
-            this.panel45.TabIndex = 34;
+            this.panel13.BackColor = System.Drawing.Color.White;
+            this.panel13.Controls.Add(this.listView_camere);
+            this.panel13.Location = new System.Drawing.Point(29, 23);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(729, 345);
+            this.panel13.TabIndex = 47;
             // 
             // listView_camere
             // 
             this.listView_camere.HideSelection = false;
-            this.listView_camere.Location = new System.Drawing.Point(17, 12);
+            this.listView_camere.Location = new System.Drawing.Point(18, 13);
             this.listView_camere.Name = "listView_camere";
-            this.listView_camere.Size = new System.Drawing.Size(689, 281);
-            this.listView_camere.TabIndex = 0;
+            this.listView_camere.Size = new System.Drawing.Size(699, 317);
+            this.listView_camere.TabIndex = 2;
             this.listView_camere.UseCompatibleStateImageBehavior = false;
             // 
             // tabPage13
             // 
             this.tabPage13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.tabPage13.Controls.Add(this.button5);
             this.tabPage13.Controls.Add(this.button54);
             this.tabPage13.Controls.Add(this.button55);
-            this.tabPage13.Controls.Add(this.label145);
-            this.tabPage13.Controls.Add(this.button53);
-            this.tabPage13.Controls.Add(this.textBox7);
             this.tabPage13.Controls.Add(this.panel47);
             this.tabPage13.Location = new System.Drawing.Point(4, 24);
             this.tabPage13.Name = "tabPage13";
@@ -3923,13 +3502,25 @@ namespace HOTEL_LUCIBLU
             this.tabPage13.TabIndex = 3;
             this.tabPage13.Text = "Clienti/Admin";
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button5.ForeColor = System.Drawing.Color.Black;
+            this.button5.Location = new System.Drawing.Point(334, 390);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(122, 35);
+            this.button5.TabIndex = 46;
+            this.button5.Text = "Modifica";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // button54
             // 
             this.button54.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button54.ForeColor = System.Drawing.Color.Black;
-            this.button54.Location = new System.Drawing.Point(478, 391);
+            this.button54.Location = new System.Drawing.Point(627, 390);
             this.button54.Name = "button54";
-            this.button54.Size = new System.Drawing.Size(117, 33);
+            this.button54.Size = new System.Drawing.Size(122, 35);
             this.button54.TabIndex = 45;
             this.button54.Text = "Rimuovi";
             this.button54.UseVisualStyleBackColor = false;
@@ -3939,47 +3530,21 @@ namespace HOTEL_LUCIBLU
             // 
             this.button55.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(111)))), ((int)(((byte)(196)))));
             this.button55.ForeColor = System.Drawing.Color.White;
-            this.button55.Location = new System.Drawing.Point(611, 389);
+            this.button55.Location = new System.Drawing.Point(32, 388);
             this.button55.Name = "button55";
-            this.button55.Size = new System.Drawing.Size(141, 37);
+            this.button55.Size = new System.Drawing.Size(122, 37);
             this.button55.TabIndex = 44;
             this.button55.Text = "Aggiungi Utente";
             this.button55.UseVisualStyleBackColor = false;
             this.button55.Click += new System.EventHandler(this.button55_Click);
             // 
-            // label145
-            // 
-            this.label145.AutoSize = true;
-            this.label145.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label145.Location = new System.Drawing.Point(32, 396);
-            this.label145.Name = "label145";
-            this.label145.Size = new System.Drawing.Size(96, 20);
-            this.label145.TabIndex = 43;
-            this.label145.Text = "Cerca Cliente";
-            // 
-            // button53
-            // 
-            this.button53.Location = new System.Drawing.Point(352, 397);
-            this.button53.Name = "button53";
-            this.button53.Size = new System.Drawing.Size(75, 23);
-            this.button53.TabIndex = 42;
-            this.button53.Text = "Filtra";
-            this.button53.UseVisualStyleBackColor = true;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(139, 397);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(195, 23);
-            this.textBox7.TabIndex = 41;
-            // 
             // panel47
             // 
             this.panel47.BackColor = System.Drawing.Color.White;
             this.panel47.Controls.Add(this.listView_user);
-            this.panel47.Location = new System.Drawing.Point(32, 32);
+            this.panel47.Location = new System.Drawing.Point(32, 21);
             this.panel47.Name = "panel47";
-            this.panel47.Size = new System.Drawing.Size(725, 328);
+            this.panel47.Size = new System.Drawing.Size(729, 345);
             this.panel47.TabIndex = 36;
             // 
             // listView_user
@@ -3987,7 +3552,7 @@ namespace HOTEL_LUCIBLU
             this.listView_user.HideSelection = false;
             this.listView_user.Location = new System.Drawing.Point(18, 13);
             this.listView_user.Name = "listView_user";
-            this.listView_user.Size = new System.Drawing.Size(689, 291);
+            this.listView_user.Size = new System.Drawing.Size(699, 317);
             this.listView_user.TabIndex = 2;
             this.listView_user.UseCompatibleStateImageBehavior = false;
             // 
@@ -4006,7 +3571,6 @@ namespace HOTEL_LUCIBLU
             this.panel33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.panel33.Controls.Add(this.button8);
             this.panel33.Controls.Add(this.label146);
-            this.panel33.Controls.Add(this.label128);
             this.panel33.Controls.Add(this.button47);
             this.panel33.Controls.Add(this.label104);
             this.panel33.Controls.Add(this.button46);
@@ -4027,7 +3591,7 @@ namespace HOTEL_LUCIBLU
             this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(111)))), ((int)(((byte)(196)))));
             this.button8.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(0, 396);
+            this.button8.Location = new System.Drawing.Point(0, 441);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(200, 37);
             this.button8.TabIndex = 38;
@@ -4042,16 +3606,6 @@ namespace HOTEL_LUCIBLU
             this.label146.Name = "label146";
             this.label146.Size = new System.Drawing.Size(200, 35);
             this.label146.TabIndex = 37;
-            // 
-            // label128
-            // 
-            this.label128.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label128.Location = new System.Drawing.Point(0, 433);
-            this.label128.Name = "label128";
-            this.label128.Size = new System.Drawing.Size(200, 45);
-            this.label128.TabIndex = 0;
-            this.label128.Text = "email admin";
-            this.label128.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button47
             // 
@@ -4179,8 +3733,6 @@ namespace HOTEL_LUCIBLU
             this.tabPage4.PerformLayout();
             this.panel26.ResumeLayout(false);
             this.panel26.PerformLayout();
-            this.panel25.ResumeLayout(false);
-            this.panel25.PerformLayout();
             this.panel24.ResumeLayout(false);
             this.panel24.PerformLayout();
             this.tabPage5.ResumeLayout(false);
@@ -4191,8 +3743,6 @@ namespace HOTEL_LUCIBLU
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
             this.panel15.ResumeLayout(false);
-            this.panel14.ResumeLayout(false);
-            this.panel14.PerformLayout();
             this.panel18.ResumeLayout(false);
             this.panel18.PerformLayout();
             this.panel_camera_foto.ResumeLayout(false);
@@ -4230,11 +3780,8 @@ namespace HOTEL_LUCIBLU
             this.panel43.ResumeLayout(false);
             this.tabPage12.ResumeLayout(false);
             this.tabPage12.PerformLayout();
-            this.panel44.ResumeLayout(false);
-            this.panel44.PerformLayout();
-            this.panel45.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
             this.tabPage13.ResumeLayout(false);
-            this.tabPage13.PerformLayout();
             this.panel47.ResumeLayout(false);
             this.panel32.ResumeLayout(false);
             this.panel33.ResumeLayout(false);
@@ -4315,31 +3862,16 @@ namespace HOTEL_LUCIBLU
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.Label label_camera_piano;
         private System.Windows.Forms.Label label_camera_prezzo;
-        private System.Windows.Forms.Label label_camera_bagni;
-        private System.Windows.Forms.Label label_camera_letti;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label_camera_tipo;
-        private System.Windows.Forms.Label label_camera_servizio3;
         private System.Windows.Forms.Label label_camera_servizio2;
         private System.Windows.Forms.Label label_camera_servizio1;
-        private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.Label label_totPrezzoNotti_Camere;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Button button_pianoTerra;
         private System.Windows.Forms.Button button_piano3;
         private System.Windows.Forms.Button button_piano2;
         private System.Windows.Forms.Button button_piano1;
-        private System.Windows.Forms.ComboBox comboBox_camera_filtroLetti;
-        private System.Windows.Forms.ComboBox comboBox_camera_filtroPrezzoMax;
-        private System.Windows.Forms.Label label56;
-        private System.Windows.Forms.Label label55;
-        private System.Windows.Forms.ComboBox comboBox_camera_filtroTipo;
-        private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button button_prenota_home;
         private System.Windows.Forms.Button button_prenotazioni_home;
@@ -4426,11 +3958,6 @@ namespace HOTEL_LUCIBLU
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel26;
         private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.Panel panel25;
-        private System.Windows.Forms.Label label65;
-        private System.Windows.Forms.Label label64;
-        private System.Windows.Forms.Label label63;
-        private System.Windows.Forms.Label label53;
         private System.Windows.Forms.Panel panel24;
         private System.Windows.Forms.Panel panel27;
         private System.Windows.Forms.Label label62;
@@ -4439,24 +3966,21 @@ namespace HOTEL_LUCIBLU
         private System.Windows.Forms.Label label59;
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.Label label73;
-        private System.Windows.Forms.Label label72;
-        private System.Windows.Forms.Label label71;
-        private System.Windows.Forms.Label label70;
-        private System.Windows.Forms.Label label69;
-        private System.Windows.Forms.Label label68;
-        private System.Windows.Forms.Label label67;
-        private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.Label label_dataNascita_account;
+        private System.Windows.Forms.Label label_email_account;
+        private System.Windows.Forms.Label label_cognome_account;
+        private System.Windows.Forms.Label label_nome_account;
         private System.Windows.Forms.Label label75;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox_cognome_account;
         private System.Windows.Forms.Label label74;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox textBox_nome_account;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_account;
         private System.Windows.Forms.Label label77;
         private System.Windows.Forms.Label label76;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Label label79;
+        private System.Windows.Forms.TextBox textBox_password_account;
+        private System.Windows.Forms.TextBox textBox_email_account;
+        private System.Windows.Forms.Button button_salva_account;
+        private System.Windows.Forms.Label label_dataCreazione_account;
         private System.Windows.Forms.Label label78;
         private System.Windows.Forms.Panel panel28;
         private System.Windows.Forms.Button button39;
@@ -4537,30 +4061,10 @@ namespace HOTEL_LUCIBLU
         private System.Windows.Forms.Label label126;
         private System.Windows.Forms.Panel panel43;
         private System.Windows.Forms.TabPage tabPage12;
-        private System.Windows.Forms.Label label137;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button52;
-        private System.Windows.Forms.Button button51;
-        private System.Windows.Forms.Label label136;
-        private System.Windows.Forms.Button button50;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Panel panel44;
-        private System.Windows.Forms.Label label135;
-        private System.Windows.Forms.Label label134;
-        private System.Windows.Forms.Label label129;
-        private System.Windows.Forms.Label label130;
-        private System.Windows.Forms.Label label131;
-        private System.Windows.Forms.Label label132;
-        private System.Windows.Forms.Label label133;
-        private System.Windows.Forms.Panel panel45;
         private System.Windows.Forms.TabPage tabPage13;
         private System.Windows.Forms.Button button54;
         private System.Windows.Forms.Button button55;
-        private System.Windows.Forms.Label label145;
-        private System.Windows.Forms.Button button53;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Panel panel47;
-        private System.Windows.Forms.Label label128;
         private System.Windows.Forms.Button button47;
         private System.Windows.Forms.Label label104;
         private System.Windows.Forms.Button button46;
@@ -4583,10 +4087,15 @@ namespace HOTEL_LUCIBLU
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label146;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.ListView listView_camere;
         private System.Windows.Forms.ListView listView_prenotazione;
         private System.Windows.Forms.ListView listView_user;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.ListView listView_camere;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.ComboBox comboBox_piano_admin;
     }
 }
 
