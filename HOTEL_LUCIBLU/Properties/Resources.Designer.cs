@@ -63,6 +63,16 @@ namespace HOTEL_LUCIBLU.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2_2_paypal_logo_transparent_png {
+            get {
+                object obj = ResourceManager.GetObject("2-2-paypal-logo-transparent-png", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CAMERA_HOTEL {
             get {
                 object obj = ResourceManager.GetObject("CAMERA-HOTEL", resourceCulture);
@@ -256,6 +266,16 @@ namespace HOTEL_LUCIBLU.Properties {
         internal static System.Drawing.Bitmap pagamento {
             get {
                 object obj = ResourceManager.GetObject("pagamento", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_clipart_paypal_logo_brand_font_payment_paypal_text_logo_thumbnail {
+            get {
+                object obj = ResourceManager.GetObject("png-clipart-paypal-logo-brand-font-payment-paypal-text-logo-thumbnail", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

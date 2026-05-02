@@ -385,23 +385,109 @@ namespace HOTEL_LUCIBLU
                     {
                         while (reader.Read())
                         {
+                            DateTime checkIn = Convert.ToDateTime(reader["dataCheckIn"]);
+                            DateTime checkOut = Convert.ToDateTime(reader["dataCheckOut"]);
+                            string statoDb = reader["stato"].ToString();
+
                             lista.Add(new Prenotazione
                             {
                                 CodicePrenotazione = reader["codicePrenotazione"].ToString(),
                                 Email = reader["email"].ToString(),
                                 NumeroCamera = reader["numCamera"].ToString(),
-                                DataCheckIn = Convert.ToDateTime(reader["dataCheckIn"]),
-                                DataCheckOut = Convert.ToDateTime(reader["dataCheckOut"]),
+                                DataCheckIn = checkIn,
+                                DataCheckOut = checkOut,
                                 PrezzoTotale = Convert.ToDecimal(reader["prezzoTot"]),
                                 MetodoPagamento = reader["metPagamento"].ToString(),
                                 DataPrenotazione = Convert.ToDateTime(reader["dataPrenotazione"]),
-                                Stato = reader["stato"].ToString()
+                                Stato = CalcolaStato(checkIn, checkOut, statoDb)
                             });
                         }
                     }
                 }
             }
             return lista;
+        }
+
+        private string CalcolaStato(DateTime checkIn, DateTime checkOut, string statoDb)
+        {
+            // Se è stata cancellata manualmente, mantieni cancellata
+            if (statoDb == "cancellata") return "cancellata";
+
+            DateTime oggi = DateTime.Today;
+
+            if (oggi < checkIn)
+                return "in attesa";
+            else if (oggi >= checkIn && oggi <= checkOut)
+                return "confermata";
+            else
+                return "conclusa";
+        }
+
+        // OTTIENI TUTTE LE PRENOTAZIONI (ADMIN)
+        public List<Prenotazione> GetTuttePrenotazioni()
+        {
+            List<Prenotazione> lista = new List<Prenotazione>();
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "SELECT * FROM prenotazioni ORDER BY dataPrenotazione DESC";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                using (MySqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        DateTime checkIn = Convert.ToDateTime(reader["dataCheckIn"]);
+                        DateTime checkOut = Convert.ToDateTime(reader["dataCheckOut"]);
+                        string statoDb = reader["stato"].ToString();
+
+                        lista.Add(new Prenotazione
+                        {
+                            CodicePrenotazione = reader["codicePrenotazione"].ToString(),
+                            Email = reader["email"].ToString(),
+                            NumeroCamera = reader["numCamera"].ToString(),
+                            DataCheckIn = checkIn,
+                            DataCheckOut = checkOut,
+                            PrezzoTotale = Convert.ToDecimal(reader["prezzoTot"]),
+                            MetodoPagamento = reader["metPagamento"].ToString(),
+                            DataPrenotazione = Convert.ToDateTime(reader["dataPrenotazione"]),
+                            Stato = CalcolaStato(checkIn, checkOut, statoDb)
+                        });
+                    }
+                }
+            }
+            return lista;
+        }
+
+        // CANCELLA PRENOTAZIONE
+        public bool CancellaPrenotazione(int codice)
+        {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "UPDATE prenotazioni SET stato='cancellata' WHERE codicePrenotazione = @codice";
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@codice", codice);
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+            }
+        }
+
+        // ELIMINA PRENOTAZIONE (rimozione fisica)
+        public bool EliminaPrenotazione(int codice)
+        {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "DELETE FROM prenotazioni WHERE codicePrenotazione = @codice";
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@codice", codice);
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+            }
         }
 
         #endregion
