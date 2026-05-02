@@ -63,6 +63,16 @@ namespace HOTEL_LUCIBLU.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CAMERA_HOTEL {
+            get {
+                object obj = ResourceManager.GetObject("CAMERA-HOTEL", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Firefly__1__1 {
             get {
                 object obj = ResourceManager.GetObject("Firefly (1) 1", resourceCulture);

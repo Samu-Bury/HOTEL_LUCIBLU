@@ -22,6 +22,11 @@ namespace HOTEL_LUCIBLU
         private Camera cameraSelezionata = null;
         private Button bottoneSelezionato = null;
 
+        //Prenotazione
+        private DateTime? dataCheckIn = null;
+        private DateTime? dataCheckOut = null;
+        private string metodoPagamento = "";
+
         #region Calendario
         //Calendario
         int anno = 2026;
@@ -300,6 +305,8 @@ namespace HOTEL_LUCIBLU
         private void button_prosegui_prenotaDate_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 6;
+            pianoCameraSelezionato = 1;
+            AggiornaBottoniCamere();
         }
 
         //Home
@@ -448,9 +455,16 @@ namespace HOTEL_LUCIBLU
             label_camera_piano.Text = $"Piano {c.Piano}";
             label_camera_servizio1.Text = string.IsNullOrEmpty(c.Servizio1) ? "—" : c.Servizio1;
             label_camera_servizio2.Text = string.IsNullOrEmpty(c.Servizio2) ? "—" : c.Servizio2;
+            label_camera_numero.Text = $"🛏 Camera {c.Numero}";
         }
 
-        
+        //Click su una camera (bottone)
+        private void camera10_Click(object sender, EventArgs e)
+        {
+            SelezionaCamera(sender as Button);
+        }
+
+
 
         #endregion
 
@@ -566,7 +580,7 @@ namespace HOTEL_LUCIBLU
             listView_user.GridLines = true;
 
             // Colonne (solo la prima volta)
-            if (listView_prenotazione.Columns.Count == 0)
+            if (listView_user.Columns.Count == 0)
             {
                 listView_user.Columns.Add("Email", 200);
                 listView_user.Columns.Add("Nome", 100);
@@ -1061,8 +1075,29 @@ namespace HOTEL_LUCIBLU
 
 
 
+
+
         #endregion
 
-        
+        private void button_pianoTerra_Click(object sender, EventArgs e)
+        {
+            pianoCameraSelezionato = 1;
+            cameraSelezionata = null;
+            AggiornaBottoniCamere();
+        }
+
+        private void button_piano1_Click(object sender, EventArgs e)
+        {
+            pianoCameraSelezionato = 2;
+            cameraSelezionata = null;
+            AggiornaBottoniCamere();
+        }
+
+        private void button_piano2_Click(object sender, EventArgs e)
+        {
+            pianoCameraSelezionato = 3;
+            cameraSelezionata = null;
+            AggiornaBottoniCamere();
+        }
     }
 }

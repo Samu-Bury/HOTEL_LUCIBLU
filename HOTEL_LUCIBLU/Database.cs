@@ -342,6 +342,70 @@ namespace HOTEL_LUCIBLU
 
         #endregion
 
+        #region GESTIONE PRENOTAZIONI
+
+        // AGGIUNGI PRENOTAZIONE
+        public bool AggiungiPrenotazione(Prenotazione p)
+        {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = @"INSERT INTO prenotazioni (email, numCamera, dataCheckIn, dataCheckOut, notti, prezzoTot, metPagamento, stato)
+                         VALUES (@email, @camera, @checkin, @checkout, @notti, @prezzo, @metodo, 'in attesa')";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@email", p.Email);
+                    cmd.Parameters.AddWithValue("@camera", p.NumeroCamera);
+                    cmd.Parameters.AddWithValue("@checkin", p.DataCheckIn);
+                    cmd.Parameters.AddWithValue("@checkout", p.DataCheckOut);
+                    cmd.Parameters.AddWithValue("@notti", p.Notti);
+                    cmd.Parameters.AddWithValue("@prezzo", p.PrezzoTotale);
+                    cmd.Parameters.AddWithValue("@metodo", p.MetodoPagamento);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            return true;
+        }
+
+        // OTTIENI PRENOTAZIONI UTENTE
+        public List<Prenotazione> GetPrenotazioniUtente(string email)
+        {
+            List<Prenotazione> lista = new List<Prenotazione>();
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "SELECT * FROM prenotazioni WHERE email = @email ORDER BY dataPrenotazione DESC";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@email", email);
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            lista.Add(new Prenotazione
+                            {
+                                CodicePrenotazione = reader["codicePrenotazione"].ToString(),
+                                Email = reader["email"].ToString(),
+                                NumeroCamera = reader["numCamera"].ToString(),
+                                DataCheckIn = Convert.ToDateTime(reader["dataCheckIn"]),
+                                DataCheckOut = Convert.ToDateTime(reader["dataCheckOut"]),
+                                PrezzoTotale = Convert.ToDecimal(reader["prezzoTot"]),
+                                MetodoPagamento = reader["metPagamento"].ToString(),
+                                DataPrenotazione = Convert.ToDateTime(reader["dataPrenotazione"]),
+                                Stato = reader["stato"].ToString()
+                            });
+                        }
+                    }
+                }
+            }
+            return lista;
+        }
+
+        #endregion
+
 
     }
 }
