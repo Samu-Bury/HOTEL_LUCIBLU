@@ -700,21 +700,21 @@ namespace HOTEL_LUCIBLU
         //Prenotazioni
         private void button44_Click(object sender, EventArgs e)
         {
-            tabControl2.SelectedIndex = 1;
+            tabControl2.SelectedIndex = 0;
             CaricaPrenotazioni();
         }
 
         //Gestione camere
         private void button46_Click(object sender, EventArgs e)
         {
-            tabControl2.SelectedIndex = 2;
+            tabControl2.SelectedIndex = 1;
             CaricaCamere();
         }
 
         //Clienti/admin
         private void button47_Click(object sender, EventArgs e)
         {
-            tabControl2.SelectedIndex = 3;
+            tabControl2.SelectedIndex = 2;
             CaricaUtenti();
         }
 
