@@ -37,7 +37,7 @@ namespace HOTEL_LUCIBLU
             this.button_login = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.checkBox_ricordami_login = new System.Windows.Forms.CheckBox();
+            this.checkBox_mostraPassword = new System.Windows.Forms.CheckBox();
             this.textBox_password_login = new System.Windows.Forms.TextBox();
             this.textBox_email_login = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,6 +47,7 @@ namespace HOTEL_LUCIBLU
             this.panel2 = new System.Windows.Forms.Panel();
             this.tabPage10 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.checkBox_mostraPassword_register = new System.Windows.Forms.CheckBox();
             this.label_accedi_register = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button_register = new System.Windows.Forms.Button();
@@ -57,7 +58,6 @@ namespace HOTEL_LUCIBLU
             this.textBox_nome_register = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.checkBox_ricordami_register = new System.Windows.Forms.CheckBox();
             this.textBox_password_register = new System.Windows.Forms.TextBox();
             this.textBox_email_register = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -368,7 +368,7 @@ namespace HOTEL_LUCIBLU
             this.panel1.Controls.Add(this.button_login);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.checkBox_ricordami_login);
+            this.panel1.Controls.Add(this.checkBox_mostraPassword);
             this.panel1.Controls.Add(this.textBox_password_login);
             this.panel1.Controls.Add(this.textBox_email_login);
             this.panel1.Controls.Add(this.label4);
@@ -417,21 +417,22 @@ namespace HOTEL_LUCIBLU
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(255)))));
-            this.label5.Location = new System.Drawing.Point(151, 275);
+            this.label5.Location = new System.Drawing.Point(169, 276);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(128, 15);
             this.label5.TabIndex = 9;
             this.label5.Text = "Password dimenticata?";
             // 
-            // checkBox_ricordami_login
+            // checkBox_mostraPassword
             // 
-            this.checkBox_ricordami_login.AutoSize = true;
-            this.checkBox_ricordami_login.Location = new System.Drawing.Point(38, 275);
-            this.checkBox_ricordami_login.Name = "checkBox_ricordami_login";
-            this.checkBox_ricordami_login.Size = new System.Drawing.Size(80, 19);
-            this.checkBox_ricordami_login.TabIndex = 8;
-            this.checkBox_ricordami_login.Text = "Ricordami";
-            this.checkBox_ricordami_login.UseVisualStyleBackColor = true;
+            this.checkBox_mostraPassword.AutoSize = true;
+            this.checkBox_mostraPassword.Location = new System.Drawing.Point(38, 275);
+            this.checkBox_mostraPassword.Name = "checkBox_mostraPassword";
+            this.checkBox_mostraPassword.Size = new System.Drawing.Size(116, 19);
+            this.checkBox_mostraPassword.TabIndex = 8;
+            this.checkBox_mostraPassword.Text = "Mostra password";
+            this.checkBox_mostraPassword.UseVisualStyleBackColor = true;
+            this.checkBox_mostraPassword.CheckedChanged += new System.EventHandler(this.checkBox_mostraPassword_CheckedChanged);
             // 
             // textBox_password_login
             // 
@@ -439,6 +440,7 @@ namespace HOTEL_LUCIBLU
             this.textBox_password_login.Name = "textBox_password_login";
             this.textBox_password_login.Size = new System.Drawing.Size(241, 23);
             this.textBox_password_login.TabIndex = 7;
+            this.textBox_password_login.UseSystemPasswordChar = true;
             // 
             // textBox_email_login
             // 
@@ -511,6 +513,7 @@ namespace HOTEL_LUCIBLU
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Controls.Add(this.checkBox_mostraPassword_register);
             this.panel3.Controls.Add(this.label_accedi_register);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.button_register);
@@ -521,7 +524,6 @@ namespace HOTEL_LUCIBLU
             this.panel3.Controls.Add(this.textBox_nome_register);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.checkBox_ricordami_register);
             this.panel3.Controls.Add(this.textBox_password_register);
             this.panel3.Controls.Add(this.textBox_email_register);
             this.panel3.Controls.Add(this.label9);
@@ -532,6 +534,17 @@ namespace HOTEL_LUCIBLU
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(609, 416);
             this.panel3.TabIndex = 6;
+            // 
+            // checkBox_mostraPassword_register
+            // 
+            this.checkBox_mostraPassword_register.AutoSize = true;
+            this.checkBox_mostraPassword_register.Location = new System.Drawing.Point(455, 252);
+            this.checkBox_mostraPassword_register.Name = "checkBox_mostraPassword_register";
+            this.checkBox_mostraPassword_register.Size = new System.Drawing.Size(116, 19);
+            this.checkBox_mostraPassword_register.TabIndex = 19;
+            this.checkBox_mostraPassword_register.Text = "Mostra password";
+            this.checkBox_mostraPassword_register.UseVisualStyleBackColor = true;
+            this.checkBox_mostraPassword_register.CheckStateChanged += new System.EventHandler(this.checkBox_mostraPassword_register_CheckStateChanged);
             // 
             // label_accedi_register
             // 
@@ -576,9 +589,8 @@ namespace HOTEL_LUCIBLU
             // textBox_cognome_register
             // 
             this.textBox_cognome_register.Location = new System.Drawing.Point(158, 188);
-            this.textBox_cognome_register.Multiline = true;
             this.textBox_cognome_register.Name = "textBox_cognome_register";
-            this.textBox_cognome_register.Size = new System.Drawing.Size(116, 35);
+            this.textBox_cognome_register.Size = new System.Drawing.Size(116, 23);
             this.textBox_cognome_register.TabIndex = 16;
             // 
             // label14
@@ -604,9 +616,8 @@ namespace HOTEL_LUCIBLU
             // textBox_nome_register
             // 
             this.textBox_nome_register.Location = new System.Drawing.Point(33, 188);
-            this.textBox_nome_register.Multiline = true;
             this.textBox_nome_register.Name = "textBox_nome_register";
-            this.textBox_nome_register.Size = new System.Drawing.Size(116, 35);
+            this.textBox_nome_register.Size = new System.Drawing.Size(116, 23);
             this.textBox_nome_register.TabIndex = 12;
             // 
             // label8
@@ -628,30 +639,19 @@ namespace HOTEL_LUCIBLU
             this.label7.TabIndex = 10;
             this.label7.Text = "Hai un account?";
             // 
-            // checkBox_ricordami_register
-            // 
-            this.checkBox_ricordami_register.AutoSize = true;
-            this.checkBox_ricordami_register.Location = new System.Drawing.Point(391, 329);
-            this.checkBox_ricordami_register.Name = "checkBox_ricordami_register";
-            this.checkBox_ricordami_register.Size = new System.Drawing.Size(80, 19);
-            this.checkBox_ricordami_register.TabIndex = 8;
-            this.checkBox_ricordami_register.Text = "Ricordami";
-            this.checkBox_ricordami_register.UseVisualStyleBackColor = true;
-            // 
             // textBox_password_register
             // 
             this.textBox_password_register.Location = new System.Drawing.Point(330, 272);
-            this.textBox_password_register.Multiline = true;
             this.textBox_password_register.Name = "textBox_password_register";
-            this.textBox_password_register.Size = new System.Drawing.Size(241, 33);
+            this.textBox_password_register.Size = new System.Drawing.Size(241, 23);
             this.textBox_password_register.TabIndex = 7;
+            this.textBox_password_register.UseSystemPasswordChar = true;
             // 
             // textBox_email_register
             // 
             this.textBox_email_register.Location = new System.Drawing.Point(330, 188);
-            this.textBox_email_register.Multiline = true;
             this.textBox_email_register.Name = "textBox_email_register";
-            this.textBox_email_register.Size = new System.Drawing.Size(241, 35);
+            this.textBox_email_register.Size = new System.Drawing.Size(241, 23);
             this.textBox_email_register.TabIndex = 6;
             // 
             // label9
@@ -3275,7 +3275,7 @@ namespace HOTEL_LUCIBLU
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckBox checkBox_ricordami_login;
+        private System.Windows.Forms.CheckBox checkBox_mostraPassword;
         private System.Windows.Forms.TextBox textBox_password_login;
         private System.Windows.Forms.TextBox textBox_email_login;
         private System.Windows.Forms.Label label4;
@@ -3297,7 +3297,6 @@ namespace HOTEL_LUCIBLU
         private System.Windows.Forms.TextBox textBox_nome_register;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.CheckBox checkBox_ricordami_register;
         private System.Windows.Forms.TextBox textBox_password_register;
         private System.Windows.Forms.TextBox textBox_email_register;
         private System.Windows.Forms.Label label9;
@@ -3533,6 +3532,7 @@ namespace HOTEL_LUCIBLU
         private System.Windows.Forms.Panel panel25;
         private System.Windows.Forms.ListView listView_mieprenotazioni;
         private System.Windows.Forms.Panel panel29;
+        private System.Windows.Forms.CheckBox checkBox_mostraPassword_register;
     }
 }
 

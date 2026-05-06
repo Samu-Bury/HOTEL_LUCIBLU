@@ -49,7 +49,7 @@ namespace HOTEL_LUCIBLU
             {
                 accesso = true;
                 // Usiamo i dati salvati
-                utenteEmail = Properties.Settings.Default.UtenteEmail; // ← mancava!
+                utenteEmail = Properties.Settings.Default.UtenteEmail;
                 utenteNome = Properties.Settings.Default.UtenteNome;
                 utenteTipo = Properties.Settings.Default.UtenteTipo;
 
@@ -57,7 +57,12 @@ namespace HOTEL_LUCIBLU
                 AggiornaDatiAccount();
 
                 if (utenteTipo == "admin")
+                {
                     tabControl1.SelectedIndex = 8;
+                    CaricaUtenti();
+                    CaricaCamere();
+                    CaricaPrenotazioni();
+                } 
                 else
                     tabControl1.SelectedIndex = 2;
             }
@@ -1540,8 +1545,26 @@ namespace HOTEL_LUCIBLU
 
 
 
+
         #endregion
 
-        
+
+        //Mostra password login
+        private void checkBox_mostraPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox_mostraPassword.Checked == true)
+                textBox_password_login.UseSystemPasswordChar = false;
+            else
+                textBox_password_login.UseSystemPasswordChar = true;
+
+        }
+
+        private void checkBox_mostraPassword_register_CheckStateChanged(object sender, EventArgs e)
+        {
+            if (checkBox_mostraPassword_register.Checked == true)
+                textBox_password_register.UseSystemPasswordChar = false;
+            else
+                textBox_password_register.UseSystemPasswordChar = true;
+        }
     }
 }
