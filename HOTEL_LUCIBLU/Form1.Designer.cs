@@ -265,9 +265,6 @@ namespace HOTEL_LUCIBLU
             this.tabPage11 = new System.Windows.Forms.TabPage();
             this.panel14 = new System.Windows.Forms.Panel();
             this.listView_prenotazioni = new System.Windows.Forms.ListView();
-            this.label127 = new System.Windows.Forms.Label();
-            this.button49 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.button48 = new System.Windows.Forms.Button();
             this.tabPage12 = new System.Windows.Forms.TabPage();
             this.label53 = new System.Windows.Forms.Label();
@@ -2884,9 +2881,6 @@ namespace HOTEL_LUCIBLU
             // 
             this.tabPage11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tabPage11.Controls.Add(this.panel14);
-            this.tabPage11.Controls.Add(this.label127);
-            this.tabPage11.Controls.Add(this.button49);
-            this.tabPage11.Controls.Add(this.textBox5);
             this.tabPage11.Controls.Add(this.button48);
             this.tabPage11.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tabPage11.Location = new System.Drawing.Point(4, 24);
@@ -2913,32 +2907,6 @@ namespace HOTEL_LUCIBLU
             this.listView_prenotazioni.Size = new System.Drawing.Size(699, 317);
             this.listView_prenotazioni.TabIndex = 2;
             this.listView_prenotazioni.UseCompatibleStateImageBehavior = false;
-            // 
-            // label127
-            // 
-            this.label127.AutoSize = true;
-            this.label127.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label127.Location = new System.Drawing.Point(31, 407);
-            this.label127.Name = "label127";
-            this.label127.Size = new System.Drawing.Size(116, 20);
-            this.label127.TabIndex = 37;
-            this.label127.Text = "Filtra per Utente";
-            // 
-            // button49
-            // 
-            this.button49.Location = new System.Drawing.Point(361, 406);
-            this.button49.Name = "button49";
-            this.button49.Size = new System.Drawing.Size(75, 23);
-            this.button49.TabIndex = 36;
-            this.button49.Text = "Filtra";
-            this.button49.UseVisualStyleBackColor = true;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(153, 408);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(195, 23);
-            this.textBox5.TabIndex = 35;
             // 
             // button48
             // 
@@ -3279,7 +3247,6 @@ namespace HOTEL_LUCIBLU
             this.tabPage6.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.tabPage11.ResumeLayout(false);
-            this.tabPage11.PerformLayout();
             this.panel14.ResumeLayout(false);
             this.tabPage12.ResumeLayout(false);
             this.tabPage12.PerformLayout();
@@ -3513,9 +3480,6 @@ namespace HOTEL_LUCIBLU
         private System.Windows.Forms.Panel panel33;
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage tabPage11;
-        private System.Windows.Forms.Label label127;
-        private System.Windows.Forms.Button button49;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Button button48;
         private System.Windows.Forms.TabPage tabPage12;
         private System.Windows.Forms.TabPage tabPage13;
