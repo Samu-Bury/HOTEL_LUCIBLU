@@ -533,10 +533,11 @@ namespace HOTEL_LUCIBLU
             // Aggiorna le label con i dati della camera
             label_camera_tipo.Text = c.Tipo;
             label_camera_prezzo.Text = $"€ {c.PrezzoNotte:0.00} / notte";
-            label_camera_piano.Text = $"Piano {c.Piano}";
+            label_camera_piano.Text = $"{c.Piano}";
             label_camera_servizio1.Text = $"1) {(string.IsNullOrEmpty(c.Servizio1) ? "—" : c.Servizio1)}";
             label_camera_servizio2.Text = $"2) {(string.IsNullOrEmpty(c.Servizio2) ? "—" : c.Servizio2)}";
             label_camera_numero.Text = $"🛏 Camera {c.Numero}";
+            label_stato_camere.Text = $"{c.Stato}";
         }
 
         //Click su una camera (bottone)

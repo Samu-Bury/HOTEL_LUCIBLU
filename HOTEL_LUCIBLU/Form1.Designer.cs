@@ -226,6 +226,8 @@ namespace HOTEL_LUCIBLU
             this.label44 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.panel29 = new System.Windows.Forms.Panel();
+            this.label_stato_camere = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
             this.label_camera_servizio2 = new System.Windows.Forms.Label();
             this.label_camera_tipo = new System.Windows.Forms.Label();
@@ -2462,6 +2464,8 @@ namespace HOTEL_LUCIBLU
             // 
             this.panel29.BackColor = System.Drawing.Color.White;
             this.panel29.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel29.Controls.Add(this.label_stato_camere);
+            this.panel29.Controls.Add(this.label32);
             this.panel29.Controls.Add(this.label42);
             this.panel29.Controls.Add(this.label_camera_servizio2);
             this.panel29.Controls.Add(this.label_camera_tipo);
@@ -2473,6 +2477,26 @@ namespace HOTEL_LUCIBLU
             this.panel29.Name = "panel29";
             this.panel29.Size = new System.Drawing.Size(504, 89);
             this.panel29.TabIndex = 17;
+            // 
+            // label_stato_camere
+            // 
+            this.label_stato_camere.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label_stato_camere.Location = new System.Drawing.Point(393, 12);
+            this.label_stato_camere.Name = "label_stato_camere";
+            this.label_stato_camere.Size = new System.Drawing.Size(67, 19);
+            this.label_stato_camere.TabIndex = 19;
+            this.label_stato_camere.Text = "..";
+            this.label_stato_camere.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label32.Location = new System.Drawing.Point(342, 12);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(45, 19);
+            this.label32.TabIndex = 18;
+            this.label32.Text = "Stato:";
             // 
             // label42
             // 
@@ -2499,7 +2523,7 @@ namespace HOTEL_LUCIBLU
             this.label_camera_tipo.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label_camera_tipo.Location = new System.Drawing.Point(70, 12);
             this.label_camera_tipo.Name = "label_camera_tipo";
-            this.label_camera_tipo.Size = new System.Drawing.Size(143, 19);
+            this.label_camera_tipo.Size = new System.Drawing.Size(128, 19);
             this.label_camera_tipo.TabIndex = 6;
             this.label_camera_tipo.Text = "..";
             this.label_camera_tipo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -2508,7 +2532,7 @@ namespace HOTEL_LUCIBLU
             // 
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label37.Location = new System.Drawing.Point(243, 12);
+            this.label37.Location = new System.Drawing.Point(204, 12);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(47, 19);
             this.label37.TabIndex = 10;
@@ -2517,9 +2541,9 @@ namespace HOTEL_LUCIBLU
             // label_camera_piano
             // 
             this.label_camera_piano.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_camera_piano.Location = new System.Drawing.Point(317, 12);
+            this.label_camera_piano.Location = new System.Drawing.Point(257, 12);
             this.label_camera_piano.Name = "label_camera_piano";
-            this.label_camera_piano.Size = new System.Drawing.Size(143, 19);
+            this.label_camera_piano.Size = new System.Drawing.Size(67, 19);
             this.label_camera_piano.TabIndex = 14;
             this.label_camera_piano.Text = "..";
             this.label_camera_piano.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -3533,6 +3557,8 @@ namespace HOTEL_LUCIBLU
         private System.Windows.Forms.ListView listView_mieprenotazioni;
         private System.Windows.Forms.Panel panel29;
         private System.Windows.Forms.CheckBox checkBox_mostraPassword_register;
+        private System.Windows.Forms.Label label_stato_camere;
+        private System.Windows.Forms.Label label32;
     }
 }
 
