@@ -6,7 +6,7 @@ namespace HOTEL_LUCIBLU
 {
     public class DatabaseHelper
     {
-        private string connectionString = "Server=sql7.freesqldatabase.com;Port=3306;Database=sql7824799;Uid=sql7824799;Pwd=Nb5nrBwXVC;";
+        private string connectionString = "Server=localhost;Database=luciblu_hotel;Uid=root;Pwd=root;";
 
         #region GESTIONE ACCESSO E I VARI UTENTI 
 
