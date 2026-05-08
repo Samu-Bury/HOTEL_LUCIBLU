@@ -82,7 +82,7 @@ namespace HOTEL_LUCIBLU
             }
         }
 
-        // HASH PASSWORD SHA256
+        // HASH PASSWORD SHA256 (per criptografare la password)
         private string HashPassword(string password)
         {
             using (var sha = System.Security.Cryptography.SHA256.Create())

@@ -68,7 +68,7 @@ namespace HOTEL_LUCIBLU
             }
             else
             {
-                tabControl1.SelectedIndex = 2; // ← solo se NON c'è accesso salvato
+                tabControl1.SelectedIndex = 2; // solo se non c'è accesso salvato
                 AggiornaVisibilitaBottoniHome();
             }
             #endregion
@@ -99,7 +99,7 @@ namespace HOTEL_LUCIBLU
 
             #region Setting TabControl
             //Nasconde il menu dei TabControl
-            //TabControl1 (APP)
+            //TabControl1 (UTNETE)
             tabControl1.Appearance = TabAppearance.FlatButtons;
             tabControl1.ItemSize = new Size(0, 1);
             tabControl1.SizeMode = TabSizeMode.Fixed;
@@ -230,7 +230,7 @@ namespace HOTEL_LUCIBLU
                 Properties.Settings.Default.UtenteEmail = email;
                 Properties.Settings.Default.UtenteNome = nome;
                 Properties.Settings.Default.UtenteTipo = tipo;
-                Properties.Settings.Default.Save(); // ← scrive su disco
+                Properties.Settings.Default.Save(); // scrive su disco
 
                 utenteEmail = email;
                 utenteNome = nome;
@@ -249,16 +249,22 @@ namespace HOTEL_LUCIBLU
                     tabControl1.SelectedIndex = 2; // Home utente normale
                 }
 
-                MessageBox.Show($"Benvenuto, {nome}!");
+                MessageBox.Show($"Benvenuto, {nome}");
             }
             else
             {
                 MessageBox.Show("Email o password errata.");
             }
 
+        }
 
-
-
+        //Mostra password login
+        private void checkBox_mostraPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox_mostraPassword.Checked == true)
+                textBox_password_login.UseSystemPasswordChar = false;
+            else
+                textBox_password_login.UseSystemPasswordChar = true;
 
         }
 
@@ -268,12 +274,6 @@ namespace HOTEL_LUCIBLU
             tabControl1.SelectedIndex = 1; // Register
         }
 
-        //Test Admin
-        private void button6_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedIndex = 8;
-            posizioneHome = false;
-        }
         #endregion
 
         #endregion
@@ -298,15 +298,23 @@ namespace HOTEL_LUCIBLU
 
             if (successo)
             {
-                MessageBox.Show("Registrazione completata!");
+                MessageBox.Show("Registrazione completata");
                 tabControl1.SelectedIndex = 2; // Home
             }
             else
             {
-                MessageBox.Show("Email già in uso.");
+                MessageBox.Show("Email già in uso");
             }
 
-                
+        }
+
+        //Mostra password register
+        private void checkBox_mostraPassword_register_CheckStateChanged(object sender, EventArgs e)
+        {
+            if (checkBox_mostraPassword_register.Checked == true)
+                textBox_password_register.UseSystemPasswordChar = false;
+            else
+                textBox_password_register.UseSystemPasswordChar = true;
         }
 
 
@@ -347,6 +355,210 @@ namespace HOTEL_LUCIBLU
         {
             tabControl1.SelectedIndex = 2;
         }
+
+        #endregion
+
+        #region CARICAMENTO DATE CALENDARIO
+        //Trova il tabcontrol1 e il panel per individuare i bottoni del calendario
+        Control TrovaControllo(Control parent, string nome)
+        {
+            foreach (Control c in parent.Controls)
+            {
+                if (c.Name == nome)
+                    return c;
+
+                Control trovato = TrovaControllo(c, nome);
+                if (trovato != null)
+                    return trovato;
+            }
+            return null;
+        }
+
+        void AggiornaCalendario()
+        {
+            TabPage tab = tabPage3;
+            Panel panel = TrovaControllo(tab, "panel_calendario") as Panel;
+
+            if (panel == null) return;
+
+            DateTime primoGiorno = new DateTime(anno, meseCorrente, 1);
+            int giorniNelMese = DateTime.DaysInMonth(anno, meseCorrente);
+
+            label_nomeMese.Text = primoGiorno.ToString("MMMM yyyy");
+
+            int start = ((int)primoGiorno.DayOfWeek + 6) % 7;
+
+            int giorno = 1;
+
+            for (int i = 1; i <= 42; i++)
+            {
+                Button btn = TrovaControllo(panel, "data" + i) as Button;
+
+                if (btn == null) continue;
+
+                int index = i - 1;
+
+                if (index >= start && giorno <= giorniNelMese)
+                {
+                    btn.Visible = true;
+                    btn.Text = giorno.ToString();
+
+                    DateTime dataBtn = new DateTime(anno, meseCorrente, giorno);
+
+                    if (dataBtn < DateTime.Today)
+                    {
+                        btn.Enabled = false;
+                        btn.BackColor = Color.LightGray;
+                        btn.ForeColor = Color.DarkGray;
+                    }
+                    else
+                    {
+                        btn.Enabled = true;
+                        btn.BackColor = Color.White;
+                        btn.ForeColor = Color.Black;
+                    }
+
+                    if (dataBtn == DateTime.Today)
+                    {
+                        btn.BackColor = Color.LightGreen;
+                    }
+
+                    // ← RIGA AGGIUNTA: collega il click evitando duplicati
+                    btn.Click -= DataCalendario_Click;
+                    btn.Click += DataCalendario_Click;
+
+                    giorno++;
+                }
+                else
+                {
+                    btn.Visible = false;
+                    btn.Text = "";
+                    btn.Enabled = false;
+                }
+            }
+
+            // Ricolora il range selezionato dopo aver rigenerato i bottoni
+            Colora_Range_Calendario();
+        }
+
+        private void Colora_Range_Calendario()
+        {
+            TabPage tab = tabPage3;
+            Panel panel = TrovaControllo(tab, "panel_calendario") as Panel;
+            if (panel == null) return;
+
+            for (int i = 1; i <= 42; i++)
+            {
+                Button btn = TrovaControllo(panel, "data" + i) as Button;
+                if (btn == null || !btn.Visible || !btn.Enabled) continue;
+
+                if (!int.TryParse(btn.Text, out int giorno)) continue;
+                DateTime dataBtn = new DateTime(anno, meseCorrente, giorno);
+
+                // Reset colore base
+                if (dataBtn < DateTime.Today)
+                {
+                    btn.BackColor = Color.LightGray;
+                    btn.ForeColor = Color.DarkGray;
+                }
+                else if (dataBtn == DateTime.Today)
+                {
+                    btn.BackColor = Color.LightGreen;
+                    btn.ForeColor = Color.Black;
+                }
+                else
+                {
+                    btn.BackColor = Color.White;
+                    btn.ForeColor = Color.Black;
+                }
+
+                // Colora check-in e check-out (stesso colore)
+                if (dataCheckIn.HasValue && dataBtn == dataCheckIn.Value)
+                {
+                    btn.BackColor = Color.SteelBlue;
+                    btn.ForeColor = Color.White;
+                }
+                else if (dataCheckOut.HasValue && dataBtn == dataCheckOut.Value)
+                {
+                    btn.BackColor = Color.SteelBlue;
+                    btn.ForeColor = Color.White;
+                }
+                // Colora il range in mezzo
+                else if (dataCheckIn.HasValue && dataCheckOut.HasValue &&
+                         dataBtn > dataCheckIn.Value && dataBtn < dataCheckOut.Value)
+                {
+                    btn.BackColor = Color.LightSteelBlue;
+                    btn.ForeColor = Color.Black;
+                }
+            }
+        }
+
+        // Click su un giorno del calendario prenotazione
+        private void DataCalendario_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            if (btn == null || !int.TryParse(btn.Text, out int giorno)) return;
+
+            DateTime dataSelezionata = new DateTime(anno, meseCorrente, giorno);
+
+            if (dataSelezionata < DateTime.Today) return;
+
+            // Prima selezione = check-in, seconda = check-out
+            if (dataCheckIn == null || (dataCheckOut != null))
+            {
+                // Reset e imposta check-in
+                dataCheckIn = dataSelezionata;
+                dataCheckOut = null;
+            }
+            else
+            {
+                // Imposta check-out (deve essere dopo check-in)
+                if (dataSelezionata <= dataCheckIn.Value)
+                {
+                    dataCheckIn = dataSelezionata;
+                    dataCheckOut = null;
+                }
+                else
+                {
+                    dataCheckOut = dataSelezionata;
+                }
+            }
+
+            // Aggiorna label
+            label_checkin.Text = dataCheckIn.HasValue ? dataCheckIn.Value.ToString("dd/MM/yyyy") : "—";
+            label_checkout.Text = dataCheckOut.HasValue ? dataCheckOut.Value.ToString("dd/MM/yyyy") : "—";
+
+            if (dataCheckIn.HasValue && dataCheckOut.HasValue)
+            {
+                int notti = (int)(dataCheckOut.Value - dataCheckIn.Value).TotalDays;
+                label_notti.Text = $"{notti} nott{(notti == 1 ? "e" : "i")}";
+            }
+            else
+            {
+                label_notti.Text = "—";
+            }
+
+            Colora_Range_Calendario();
+        }
+
+        private void button_avanti_Click(object sender, EventArgs e)
+        {
+            if (meseCorrente < 12) meseCorrente++;
+            AggiornaCalendario();
+            Colora_Range_Calendario();
+        }
+
+        private void button_indietro_Click(object sender, EventArgs e)
+        {
+            if (meseCorrente > 1) meseCorrente--;
+            AggiornaCalendario();
+            Colora_Range_Calendario();
+        }
+
+
+
+
+
 
         #endregion
 
@@ -552,6 +764,7 @@ namespace HOTEL_LUCIBLU
 
         #endregion
 
+        // ACCOUNT
         #region ACCOUNT
 
         #region AZIONE BOTTONI
@@ -584,8 +797,6 @@ namespace HOTEL_LUCIBLU
             AggiornaVisibilitaBottoniHome();
 
         }
-
-
 
 
         #endregion
@@ -1257,7 +1468,7 @@ namespace HOTEL_LUCIBLU
                 }
                 else
                 {
-                    MessageBox.Show("Errore durante l'annullamento.");
+                    MessageBox.Show("Errore durante l'annullamento");
                 }
             }
         }
@@ -1330,7 +1541,7 @@ namespace HOTEL_LUCIBLU
                 Properties.Settings.Default.UtenteNome = nome;
                 Properties.Settings.Default.Save();
 
-                MessageBox.Show("Modifiche salvate con successo!");
+                MessageBox.Show("Modifiche salvate con successo");
                 AggiornaDatiAccount();
             }
             else
@@ -1345,227 +1556,8 @@ namespace HOTEL_LUCIBLU
 
         #endregion
 
-        #region CARICAMENTO DATE CALENDARIO
-        //Trova il tabcontrol1 e il panel per individuare i bottoni del calendario
-        Control TrovaControllo(Control parent, string nome)
-        {
-            foreach (Control c in parent.Controls)
-            {
-                if (c.Name == nome)
-                    return c;
-
-                Control trovato = TrovaControllo(c, nome);
-                if (trovato != null)
-                    return trovato;
-            }
-            return null;
-        }
-
-        void AggiornaCalendario()
-        {
-            TabPage tab = tabPage3;
-            Panel panel = TrovaControllo(tab, "panel_calendario") as Panel;
-
-            if (panel == null) return;
-
-            DateTime primoGiorno = new DateTime(anno, meseCorrente, 1);
-            int giorniNelMese = DateTime.DaysInMonth(anno, meseCorrente);
-
-            label_nomeMese.Text = primoGiorno.ToString("MMMM yyyy");
-
-            int start = ((int)primoGiorno.DayOfWeek + 6) % 7;
-
-            int giorno = 1;
-
-            for (int i = 1; i <= 42; i++)
-            {
-                Button btn = TrovaControllo(panel, "data" + i) as Button;
-
-                if (btn == null) continue;
-
-                int index = i - 1;
-
-                if (index >= start && giorno <= giorniNelMese)
-                {
-                    btn.Visible = true;
-                    btn.Text = giorno.ToString();
-
-                    DateTime dataBtn = new DateTime(anno, meseCorrente, giorno);
-
-                    if (dataBtn < DateTime.Today)
-                    {
-                        btn.Enabled = false;
-                        btn.BackColor = Color.LightGray;
-                        btn.ForeColor = Color.DarkGray;
-                    }
-                    else
-                    {
-                        btn.Enabled = true;
-                        btn.BackColor = Color.White;
-                        btn.ForeColor = Color.Black;
-                    }
-
-                    if (dataBtn == DateTime.Today)
-                    {
-                        btn.BackColor = Color.LightGreen;
-                    }
-
-                    // ← RIGA AGGIUNTA: collega il click evitando duplicati
-                    btn.Click -= DataCalendario_Click;
-                    btn.Click += DataCalendario_Click;
-
-                    giorno++;
-                }
-                else
-                {
-                    btn.Visible = false;
-                    btn.Text = "";
-                    btn.Enabled = false;
-                }
-            }
-
-            // Ricolora il range selezionato dopo aver rigenerato i bottoni
-            Colora_Range_Calendario();
-        }
-
-        private void Colora_Range_Calendario()
-        {
-            TabPage tab = tabPage3;
-            Panel panel = TrovaControllo(tab, "panel_calendario") as Panel;
-            if (panel == null) return;
-
-            for (int i = 1; i <= 42; i++)
-            {
-                Button btn = TrovaControllo(panel, "data" + i) as Button;
-                if (btn == null || !btn.Visible || !btn.Enabled) continue;
-
-                if (!int.TryParse(btn.Text, out int giorno)) continue;
-                DateTime dataBtn = new DateTime(anno, meseCorrente, giorno);
-
-                // Reset colore base
-                if (dataBtn < DateTime.Today)
-                {
-                    btn.BackColor = Color.LightGray;
-                    btn.ForeColor = Color.DarkGray;
-                }
-                else if (dataBtn == DateTime.Today)
-                {
-                    btn.BackColor = Color.LightGreen;
-                    btn.ForeColor = Color.Black;
-                }
-                else
-                {
-                    btn.BackColor = Color.White;
-                    btn.ForeColor = Color.Black;
-                }
-
-                // Colora check-in e check-out (stesso colore)
-                if (dataCheckIn.HasValue && dataBtn == dataCheckIn.Value)
-                {
-                    btn.BackColor = Color.SteelBlue;
-                    btn.ForeColor = Color.White;
-                }
-                else if (dataCheckOut.HasValue && dataBtn == dataCheckOut.Value)
-                {
-                    btn.BackColor = Color.SteelBlue;
-                    btn.ForeColor = Color.White;
-                }
-                // Colora il range in mezzo
-                else if (dataCheckIn.HasValue && dataCheckOut.HasValue &&
-                         dataBtn > dataCheckIn.Value && dataBtn < dataCheckOut.Value)
-                {
-                    btn.BackColor = Color.LightSteelBlue;
-                    btn.ForeColor = Color.Black;
-                }
-            }
-        }
-
-        // Click su un giorno del calendario prenotazione
-        private void DataCalendario_Click(object sender, EventArgs e)
-        {
-            Button btn = sender as Button;
-            if (btn == null || !int.TryParse(btn.Text, out int giorno)) return;
-
-            DateTime dataSelezionata = new DateTime(anno, meseCorrente, giorno);
-
-            if (dataSelezionata < DateTime.Today) return;
-
-            // Prima selezione = check-in, seconda = check-out
-            if (dataCheckIn == null || (dataCheckOut != null))
-            {
-                // Reset e imposta check-in
-                dataCheckIn = dataSelezionata;
-                dataCheckOut = null;
-            }
-            else
-            {
-                // Imposta check-out (deve essere dopo check-in)
-                if (dataSelezionata <= dataCheckIn.Value)
-                {
-                    dataCheckIn = dataSelezionata;
-                    dataCheckOut = null;
-                }
-                else
-                {
-                    dataCheckOut = dataSelezionata;
-                }
-            }
-
-            // Aggiorna label
-            label_checkin.Text = dataCheckIn.HasValue ? dataCheckIn.Value.ToString("dd/MM/yyyy") : "—";
-            label_checkout.Text = dataCheckOut.HasValue ? dataCheckOut.Value.ToString("dd/MM/yyyy") : "—";
-
-            if (dataCheckIn.HasValue && dataCheckOut.HasValue)
-            {
-                int notti = (int)(dataCheckOut.Value - dataCheckIn.Value).TotalDays;
-                label_notti.Text = $"{notti} nott{(notti == 1 ? "e" : "i")}";
-            }
-            else
-            {
-                label_notti.Text = "—";
-            }
-
-            Colora_Range_Calendario();
-        }
-
-        private void button_avanti_Click(object sender, EventArgs e)
-        {
-            if (meseCorrente < 12) meseCorrente++;
-            AggiornaCalendario();
-            Colora_Range_Calendario();
-        }
-
-        private void button_indietro_Click(object sender, EventArgs e)
-        {
-            if (meseCorrente > 1) meseCorrente--;
-            AggiornaCalendario();
-            Colora_Range_Calendario();
-        }
+        
 
 
-
-
-
-
-        #endregion
-
-
-        //Mostra password login
-        private void checkBox_mostraPassword_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox_mostraPassword.Checked == true)
-                textBox_password_login.UseSystemPasswordChar = false;
-            else
-                textBox_password_login.UseSystemPasswordChar = true;
-
-        }
-
-        private void checkBox_mostraPassword_register_CheckStateChanged(object sender, EventArgs e)
-        {
-            if (checkBox_mostraPassword_register.Checked == true)
-                textBox_password_register.UseSystemPasswordChar = false;
-            else
-                textBox_password_register.UseSystemPasswordChar = true;
-        }
     }
 }
