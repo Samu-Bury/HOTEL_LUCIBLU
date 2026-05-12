@@ -112,6 +112,7 @@ namespace HOTEL_LUCIBLU
             #endregion
         }
 
+        
         #region GESTIONE SCHERMATE
 
         // HOME
@@ -422,8 +423,7 @@ namespace HOTEL_LUCIBLU
 
         private void AggiornaBottoniCamere()
         {
-            // ← USA Camera.GetTutte() invece di DatabaseHelper
-            List<Camera> camere = Camera.GetTutte()
+            List<Camera> camere = Camera.GetTutteConDisponibilita(dataCheckIn.Value, dataCheckOut.Value)
                 .Where(c => c.Piano == pianoCameraSelezionato)
                 .ToList();
 
@@ -485,6 +485,17 @@ namespace HOTEL_LUCIBLU
         {
             if (btnPremuto.Tag == null) return;
             Camera c = btnPremuto.Tag as Camera;
+
+            // Blocca selezione se occupata o in manutenzione
+            if (c.Stato == "occupata" || c.Stato == "manutenzione")
+            {
+                MessageBox.Show(
+                    $"La camera {c.Numero} non è disponibile per il periodo selezionato.",
+                    "Camera non disponibile",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                return;
+            }
 
             if (bottoneSelezionato != null && bottoneSelezionato != btnPremuto)
             {
@@ -640,7 +651,6 @@ namespace HOTEL_LUCIBLU
                 listView_user.Columns.Add("Tipo", 70);
             }
 
-            // ← USA Admin.GetTuttiGliUtenti() invece di DatabaseHelper
             Admin admin = new Admin();
             List<Utente> utenti = admin.GetTuttiGliUtenti();
 
@@ -671,7 +681,6 @@ namespace HOTEL_LUCIBLU
             if (MessageBox.Show($"Sei sicuro di voler eliminare l'utente:\n{emailSelezionata}?",
                 "Conferma eliminazione", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                // ← USA Utente.Elimina() invece di DatabaseHelper
                 Utente u = new Utente { Email = emailSelezionata };
                 if (u.Elimina())
                 { MessageBox.Show("Utente eliminato con successo."); CaricaUtenti(); }
@@ -691,7 +700,6 @@ namespace HOTEL_LUCIBLU
                 return;
             }
 
-            // ← USA Utente.Registra() invece di DatabaseHelper
             if (Utente.Registra(finestra.EmailInserita, finestra.PasswordInserita,
                 finestra.NomeInserito, finestra.CognomeInserito,
                 finestra.DataNascitaInserita, finestra.TipoInserito))
@@ -711,14 +719,12 @@ namespace HOTEL_LUCIBLU
 
             string emailSelezionata = listView_user.SelectedItems[0].Text;
 
-            // ← USA Utente.GetUtente() invece di DatabaseHelper
             Utente u = Utente.GetUtente(emailSelezionata);
             if (u == null) return;
 
             FormAggiungiUtente finestra = new FormAggiungiUtente(u);
             if (finestra.ShowDialog() != DialogResult.OK) return;
 
-            // ← USA u.Modifica() invece di DatabaseHelper
             u.Nome = finestra.NomeInserito;
             u.Cognome = finestra.CognomeInserito;
             u.DataNascita = finestra.DataNascitaInserita;
@@ -765,7 +771,6 @@ namespace HOTEL_LUCIBLU
             FormAggiungiCamera finestra = new FormAggiungiCamera();
             if (finestra.ShowDialog() != DialogResult.OK) return;
 
-            // ← USA Camera.Esiste() e Camera.Salva() invece di DatabaseHelper
             if (Camera.Esiste(finestra.NumeroCamera))
             {
                 MessageBox.Show("Esiste già una camera con questo numero.", "Errore",
@@ -802,7 +807,7 @@ namespace HOTEL_LUCIBLU
             if (MessageBox.Show($"Sei sicuro di voler eliminare la camera n° {numero}?",
                 "Conferma eliminazione", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                // ← USA Camera.Elimina() invece di DatabaseHelper
+
                 if (Camera.Elimina(numero))
                 { MessageBox.Show("Camera eliminata con successo."); CaricaCamere(); }
                 else
@@ -818,7 +823,7 @@ namespace HOTEL_LUCIBLU
             string filtro = comboBox_piano_admin.SelectedItem?.ToString() ?? "Tutti";
             listView_camere.Items.Clear();
 
-            // ← USA Camera.GetTutte() invece di DatabaseHelper
+
             foreach (Camera c in Camera.GetTutte())
             {
                 if (filtro != "Tutti" && c.Piano.ToString() != filtro) continue;
@@ -834,7 +839,6 @@ namespace HOTEL_LUCIBLU
                 switch (c.Stato)
                 {
                     case "disponibile": item.ForeColor = Color.Green; break;
-                    case "occupata": item.ForeColor = Color.OrangeRed; break;
                     case "manutenzione": item.ForeColor = Color.Gray; break;
                 }
                 listView_camere.Items.Add(item);
@@ -866,7 +870,6 @@ namespace HOTEL_LUCIBLU
                 listView_prenotazioni.Columns.Add("Prenotato il", 130);
             }
 
-            // ← USA Prenotazione.GetTutte() invece di DatabaseHelper
             foreach (Prenotazione p in Prenotazione.GetTutte())
             {
                 ListViewItem item = new ListViewItem(p.CodicePrenotazione);
@@ -908,7 +911,6 @@ namespace HOTEL_LUCIBLU
                 if (MessageBox.Show("La prenotazione è già cancellata.\nVuoi eliminarla definitivamente?",
                     "Elimina definitivamente", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    // ← USA Prenotazione.EliminaFisicamente() invece di DatabaseHelper
                     if (Prenotazione.EliminaFisicamente(codice))
                     { MessageBox.Show("Prenotazione eliminata definitivamente."); CaricaPrenotazioni(); }
                 }
@@ -918,7 +920,6 @@ namespace HOTEL_LUCIBLU
             if (MessageBox.Show($"Sei sicuro di voler cancellare la prenotazione #{codiceStr}?",
                 "Conferma cancellazione", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                // ← USA Prenotazione.Cancella() invece di DatabaseHelper
                 if (Prenotazione.Cancella(codice))
                 { MessageBox.Show("Prenotazione cancellata."); CaricaPrenotazioni(); }
                 else
@@ -956,7 +957,6 @@ namespace HOTEL_LUCIBLU
                 listView_mieprenotazioni.Columns.Add("Prenotato il", 130);
             }
 
-            // ← USA Cliente.VisualizzaStorico() invece di DatabaseHelper
             Cliente cliente = new Cliente { Email = utenteEmail };
 
             foreach (Prenotazione p in cliente.VisualizzaStorico())
@@ -1003,7 +1003,6 @@ namespace HOTEL_LUCIBLU
             if (MessageBox.Show($"Sei sicuro di voler annullare la prenotazione #{codiceStr}?",
                 "Conferma annullamento", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                // ← USA Cliente.AnnullaPrenotazione() invece di DatabaseHelper
                 Cliente cliente = new Cliente { Email = utenteEmail };
                 if (cliente.AnnullaPrenotazione(int.Parse(codiceStr)))
                 { MessageBox.Show("Prenotazione annullata con successo."); CaricaMiePrenotazioni(); }
@@ -1019,7 +1018,6 @@ namespace HOTEL_LUCIBLU
 
         private void AggiornaDatiAccount()
         {
-            // ← USA Utente.GetUtente() invece di DatabaseHelper
             Utente u = Utente.GetUtente(utenteEmail);
             if (u == null) return;
 
@@ -1051,7 +1049,6 @@ namespace HOTEL_LUCIBLU
                 return;
             }
 
-            // ← USA u.Modifica() invece di DatabaseHelper
             Utente u = new Utente
             {
                 Email = utenteEmail,

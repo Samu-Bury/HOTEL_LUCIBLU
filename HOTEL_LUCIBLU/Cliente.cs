@@ -7,7 +7,7 @@ namespace HOTEL_LUCIBLU
     public class Cliente : Utente
     {
         private static readonly string ConnString =
-            "Server=localhost;Database=luciblu_hotel;Uid=root;Pwd=root;";
+            "Server=sql8.freesqldatabase.com;Port=3306;Database=sql8826545;Uid=sql8826545;Pwd=q2CdMiKtt9;";
 
         // Crea una nuova prenotazione per questo cliente
         public bool EffettuaPrenotazione(Prenotazione p)

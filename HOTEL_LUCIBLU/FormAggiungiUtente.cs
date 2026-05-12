@@ -15,7 +15,7 @@ namespace HOTEL_LUCIBLU
         public DateTime DataNascitaInserita => dateTimePicker_data_aggiungi.Value;
         public string TipoInserito => comboBox_tipo_aggiungi.SelectedItem?.ToString() ?? "utente";
 
-        // Costruttore AGGIUNGI (come prima)
+        // Costruttore AGGIUNGI
         public FormAggiungiUtente()
         {
             InitializeComponent();
@@ -23,7 +23,7 @@ namespace HOTEL_LUCIBLU
             comboBox_tipo_aggiungi.SelectedIndex = 0;
         }
 
-        // Costruttore MODIFICA (precompila i campi)
+        // Costruttore MODIFICA
         public FormAggiungiUtente(Utente u)
         {
             InitializeComponent();

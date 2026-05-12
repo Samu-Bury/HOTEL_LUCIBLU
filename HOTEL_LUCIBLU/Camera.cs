@@ -17,7 +17,7 @@ namespace HOTEL_LUCIBLU
         #endregion
 
         private static readonly string ConnString =
-            "Server=localhost;Database=luciblu_hotel;Uid=root;Pwd=root;";
+            "Server=sql8.freesqldatabase.com;Port=3306;Database=sql8826545;Uid=sql8826545;Pwd=q2CdMiKtt9;";
 
         // Inserisce questa camera nel DB
         public void Salva()
@@ -98,6 +98,42 @@ namespace HOTEL_LUCIBLU
             cmd.Parameters.AddWithValue("@st", Stato);
             cmd.Parameters.AddWithValue("@s1", string.IsNullOrEmpty(Servizio1) ? (object)DBNull.Value : Servizio1);
             cmd.Parameters.AddWithValue("@s2", string.IsNullOrEmpty(Servizio2) ? (object)DBNull.Value : Servizio2);
+        }
+
+        // Aggiunge alla classe Camera:
+
+        public static List<Camera> GetTutteConDisponibilita(DateTime checkIn, DateTime checkOut)
+        {
+            var lista = new List<Camera>();
+            using var conn = new MySqlConnection(ConnString);
+            conn.Open();
+
+            // Recupera tutti i numeri camera che hanno prenotazioni attive
+            using var cmdOccupate = new MySqlCommand(
+                @"SELECT DISTINCT numCamera FROM prenotazioni
+          WHERE stato != 'cancellata'
+          AND dataCheckIn < @co
+          AND dataCheckOut > @ci", conn);
+            cmdOccupate.Parameters.AddWithValue("@ci", checkIn);
+            cmdOccupate.Parameters.AddWithValue("@co", checkOut);
+
+            var camereOccupate = new HashSet<int>();
+            using (var r = cmdOccupate.ExecuteReader())
+                while (r.Read())
+                    camereOccupate.Add(Convert.ToInt32(r["numCamera"]));
+
+            using var cmd = new MySqlCommand(
+                "SELECT numero,piano,tipo,prezzoNotte,stato,servizio1,servizio2 FROM camere", conn);
+            using var rCamere = cmd.ExecuteReader();
+            while (rCamere.Read())
+            {
+                Camera c = DaReader(rCamere);
+                // Sovrascrive lo stato con "occupata" se la camera ha prenotazioni
+                if (camereOccupate.Contains(c.Numero))
+                    c.Stato = "occupata";
+                lista.Add(c);
+            }
+            return lista;
         }
     }
 }

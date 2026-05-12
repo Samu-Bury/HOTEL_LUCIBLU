@@ -2662,7 +2662,7 @@ namespace HOTEL_LUCIBLU
             this.button_conferma.Name = "button_conferma";
             this.button_conferma.Size = new System.Drawing.Size(204, 37);
             this.button_conferma.TabIndex = 36;
-            this.button_conferma.Text = "✓ Conferma e Paga € XXX";
+            this.button_conferma.Text = "✓ Conferma e Paga";
             this.button_conferma.UseVisualStyleBackColor = false;
             this.button_conferma.Click += new System.EventHandler(this.button_conferma_Click);
             // 
