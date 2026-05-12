@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace HOTEL_LUCIBLU
 {
@@ -28,14 +27,12 @@ namespace HOTEL_LUCIBLU
         private string metodoPagamento = "";
 
         #region Calendario
-        //Calendario
         int anno = 2026;
         int meseCorrente;
-
         #endregion
 
         //Account
-        bool posizioneHome = true; //Sono andato nella schermata account dalla Home o da ADMIN ? (true = home)
+        bool posizioneHome = true;
 
         #endregion
 
@@ -44,11 +41,9 @@ namespace HOTEL_LUCIBLU
             InitializeComponent();
 
             #region Ripristina accesso salvato
-            // Ripristina accesso salvato
             if (Properties.Settings.Default.AccessoSalvato)
             {
                 accesso = true;
-                // Usiamo i dati salvati
                 utenteEmail = Properties.Settings.Default.UtenteEmail;
                 utenteNome = Properties.Settings.Default.UtenteNome;
                 utenteTipo = Properties.Settings.Default.UtenteTipo;
@@ -62,62 +57,44 @@ namespace HOTEL_LUCIBLU
                     CaricaUtenti();
                     CaricaCamere();
                     CaricaPrenotazioni();
-                } 
+                }
                 else
                     tabControl1.SelectedIndex = 2;
             }
             else
             {
-                tabControl1.SelectedIndex = 2; // solo se non c'è accesso salvato
+                tabControl1.SelectedIndex = 2;
                 AggiornaVisibilitaBottoniHome();
             }
             #endregion
 
-            #region Aggiungi i bordi a tutti i componenti panel
-
-            // Crea una lista con tutti i nomi dei pannelli interessati
+            #region Bordi pannelli
             var panels = new List<Panel> {
                 panel8, panel1, panel3, panel24, panel26, panel25,
                 panel18, panel29, panel28, panel30,
                 panel14, panel13, panel47, panel7
-                };
-
-            // Ciclo per applicare lo stile
+            };
             foreach (var p in panels)
-            {
-                if (p != null)
-                {
-                    p.BorderStyle = BorderStyle.FixedSingle;
-                }
-            }
-
-
-
+                if (p != null) p.BorderStyle = BorderStyle.FixedSingle;
             #endregion
-            this.AutoScaleMode = AutoScaleMode.None; //Non deforma la form su altri dispositivi
-            AggiornaVisibilitaBottoniHome(); //Visualizzazione bottoni in base all'accesso se presente o meno
+
+            this.AutoScaleMode = AutoScaleMode.None;
+            AggiornaVisibilitaBottoniHome();
 
             #region Setting TabControl
-            //Nasconde il menu dei TabControl
-            //TabControl1 (UTNETE)
             tabControl1.Appearance = TabAppearance.FlatButtons;
             tabControl1.ItemSize = new Size(0, 1);
             tabControl1.SizeMode = TabSizeMode.Fixed;
-            //TabControl2 (ADMIN)
             tabControl2.Appearance = TabAppearance.FlatButtons;
             tabControl2.ItemSize = new Size(0, 1);
             tabControl2.SizeMode = TabSizeMode.Fixed;
-
             #endregion
 
-            #region SETTING BOTTONI HOME (RIMOZIONE SFONDO E ALTRO.)
+            #region Setting bottoni Home
             Button[] bottoni = {
-            button_accedi_home,
-            button_account_home,
-            button_prenotazioni_home,
-            button_prenota_home
+                button_accedi_home, button_account_home,
+                button_prenotazioni_home, button_prenota_home
             };
-
             foreach (Button btn in bottoni)
             {
                 btn.FlatStyle = FlatStyle.Flat;
@@ -127,19 +104,11 @@ namespace HOTEL_LUCIBLU
                 btn.BackColor = Color.Transparent;
                 btn.TabStop = false;
             }
-
             #endregion
 
-
-            #region CARICAMENTO DATE CALENDARIO (Chiama Funzione)
-
-            if (DateTime.Now.Year == 2026)
-                meseCorrente = DateTime.Now.Month;
-            else
-                meseCorrente = 1;
-
-            AggiornaCalendario(); //Carico i giorni
-
+            #region Caricamento calendario
+            meseCorrente = (DateTime.Now.Year == 2026) ? DateTime.Now.Month : 1;
+            AggiornaCalendario();
             #endregion
         }
 
@@ -148,67 +117,38 @@ namespace HOTEL_LUCIBLU
         // HOME
         #region HOME
 
-        #region Bottoni Home Aggiornamento (in base all'accesso)
-
         private void AggiornaVisibilitaBottoniHome()
         {
-            if (!accesso)
-            {
-                button_accedi_home.Visible = true;
-                button_account_home.Visible = false;
-                button_prenota_home.Visible = false;
-                button_prenotazioni_home.Visible = false;
-            }
-            else
-            {
-                button_accedi_home.Visible = false;
-                button_account_home.Visible = true;
-                button_prenota_home.Visible = true;
-                button_prenotazioni_home.Visible = true;
-            }
+            button_accedi_home.Visible = !accesso;
+            button_account_home.Visible = accesso;
+            button_prenota_home.Visible = accesso;
+            button_prenotazioni_home.Visible = accesso;
         }
 
-
-
-        #endregion
-
-        #region AZIONI BOTTONI
-        //Accedi (utente non registrato)
         private void button_accedi_home_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedIndex = 0; // Login
-        }
+            => tabControl1.SelectedIndex = 0;
 
-        //Prenota Ora
         private void button_prenota_home_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedIndex = 3; // Prenota-Date
-        }
+            => tabControl1.SelectedIndex = 3;
 
-        //Le mie prenotazioni
         private void button_prenotazioni_home_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 5;
             CaricaMiePrenotazioni();
         }
 
-        //Account
         private void button_account_home_Click(object sender, EventArgs e)
         {
             AggiornaDatiAccount();
             tabControl1.SelectedIndex = 4;
             posizioneHome = true;
         }
-        #endregion
 
         #endregion
 
         // LOGIN
         #region LOGIN
 
-        #region AZIONI BOTTONI
-
-        //Accedi
         private void button_login_Click(object sender, EventArgs e)
         {
             string email = textBox_email_login.Text.Trim();
@@ -220,75 +160,45 @@ namespace HOTEL_LUCIBLU
                 return;
             }
 
-            DatabaseHelper db = new DatabaseHelper();
-
-            if (db.Login(email, password, out string nome, out string tipo))
+            if (Utente.Login(email, password, out string nome, out string tipo))
             {
-
-                // Salva l'accesso
                 Properties.Settings.Default.AccessoSalvato = true;
                 Properties.Settings.Default.UtenteEmail = email;
                 Properties.Settings.Default.UtenteNome = nome;
                 Properties.Settings.Default.UtenteTipo = tipo;
-                Properties.Settings.Default.Save(); // scrive su disco
+                Properties.Settings.Default.Save();
 
                 utenteEmail = email;
                 utenteNome = nome;
                 utenteTipo = tipo;
-
                 accesso = true;
+
                 AggiornaVisibilitaBottoniHome();
-                AggiornaDatiAccount(); //aggiorna i dati nella pagina account
+                AggiornaDatiAccount();
 
-                if (tipo == "admin")
-                {
-                    tabControl1.SelectedIndex = 8; // Pannello Admin
-                }
-                else
-                {
-                    tabControl1.SelectedIndex = 2; // Home utente normale
-                }
-
+                tabControl1.SelectedIndex = (tipo == "admin") ? 8 : 2;
                 MessageBox.Show($"Benvenuto, {nome}");
             }
             else
             {
                 MessageBox.Show("Email o password errata.");
             }
-
         }
 
-        //Mostra password login
         private void checkBox_mostraPassword_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox_mostraPassword.Checked == true)
-                textBox_password_login.UseSystemPasswordChar = false;
-            else
-                textBox_password_login.UseSystemPasswordChar = true;
+            => textBox_password_login.UseSystemPasswordChar = !checkBox_mostraPassword.Checked;
 
-        }
-
-        //Registrati (non registrato)
         private void label_registrati_login_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedIndex = 1; // Register
-        }
-
-        #endregion
+            => tabControl1.SelectedIndex = 1;
 
         #endregion
 
         // REGISTER
         #region REGISTER
 
-        #region AZIONI BOTTONI
-
-        //Registrati
         private void button_register_Click(object sender, EventArgs e)
         {
-            DatabaseHelper db = new DatabaseHelper();
-
-            bool successo = db.Registra(
+            bool successo = Utente.Registra(
                 textBox_email_register.Text.Trim(),
                 textBox_password_register.Text,
                 textBox_nome_register.Text.Trim(),
@@ -299,43 +209,25 @@ namespace HOTEL_LUCIBLU
             if (successo)
             {
                 MessageBox.Show("Registrazione completata");
-                tabControl1.SelectedIndex = 2; // Home
+                tabControl1.SelectedIndex = 2;
             }
             else
             {
                 MessageBox.Show("Email già in uso");
             }
-
         }
 
-        //Mostra password register
         private void checkBox_mostraPassword_register_CheckStateChanged(object sender, EventArgs e)
-        {
-            if (checkBox_mostraPassword_register.Checked == true)
-                textBox_password_register.UseSystemPasswordChar = false;
-            else
-                textBox_password_register.UseSystemPasswordChar = true;
-        }
+            => textBox_password_register.UseSystemPasswordChar = !checkBox_mostraPassword_register.Checked;
 
-
-
-        //Accedi (gia registrato)
         private void label_accedi_register_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedIndex = 0; // Login
-        }
-
-
-
-        #endregion
+            => tabControl1.SelectedIndex = 0;
 
         #endregion
 
         // PRENOTA-DATA
         #region PRENOTA DATA
 
-        #region AZIONE BOTTONI
-        //Prosegui (Prenota-Camere)
         private void button_prosegui_prenotaDate_Click(object sender, EventArgs e)
         {
             if (dataCheckIn == null || dataCheckOut == null)
@@ -344,89 +236,55 @@ namespace HOTEL_LUCIBLU
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
             tabControl1.SelectedIndex = 6;
             pianoCameraSelezionato = 1;
             AggiornaBottoniCamere();
         }
 
-        //Home
         private void button2_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedIndex = 2;
-        }
+            => tabControl1.SelectedIndex = 2;
 
-        #endregion
+        #region Calendario
 
-        #region CARICAMENTO DATE CALENDARIO
-        //Trova il tabcontrol1 e il panel per individuare i bottoni del calendario
         Control TrovaControllo(Control parent, string nome)
         {
             foreach (Control c in parent.Controls)
             {
-                if (c.Name == nome)
-                    return c;
-
+                if (c.Name == nome) return c;
                 Control trovato = TrovaControllo(c, nome);
-                if (trovato != null)
-                    return trovato;
+                if (trovato != null) return trovato;
             }
             return null;
         }
 
         void AggiornaCalendario()
         {
-            TabPage tab = tabPage3;
-            Panel panel = TrovaControllo(tab, "panel_calendario") as Panel;
-
+            Panel panel = TrovaControllo(tabPage3, "panel_calendario") as Panel;
             if (panel == null) return;
 
             DateTime primoGiorno = new DateTime(anno, meseCorrente, 1);
             int giorniNelMese = DateTime.DaysInMonth(anno, meseCorrente);
-
             label_nomeMese.Text = primoGiorno.ToString("MMMM yyyy");
-
             int start = ((int)primoGiorno.DayOfWeek + 6) % 7;
-
             int giorno = 1;
 
             for (int i = 1; i <= 42; i++)
             {
                 Button btn = TrovaControllo(panel, "data" + i) as Button;
-
                 if (btn == null) continue;
 
-                int index = i - 1;
-
-                if (index >= start && giorno <= giorniNelMese)
+                if (i - 1 >= start && giorno <= giorniNelMese)
                 {
+                    DateTime dataBtn = new DateTime(anno, meseCorrente, giorno);
                     btn.Visible = true;
                     btn.Text = giorno.ToString();
+                    btn.Enabled = dataBtn >= DateTime.Today;
+                    btn.BackColor = dataBtn < DateTime.Today ? Color.LightGray :
+                                    dataBtn == DateTime.Today ? Color.LightGreen : Color.White;
+                    btn.ForeColor = dataBtn < DateTime.Today ? Color.DarkGray : Color.Black;
 
-                    DateTime dataBtn = new DateTime(anno, meseCorrente, giorno);
-
-                    if (dataBtn < DateTime.Today)
-                    {
-                        btn.Enabled = false;
-                        btn.BackColor = Color.LightGray;
-                        btn.ForeColor = Color.DarkGray;
-                    }
-                    else
-                    {
-                        btn.Enabled = true;
-                        btn.BackColor = Color.White;
-                        btn.ForeColor = Color.Black;
-                    }
-
-                    if (dataBtn == DateTime.Today)
-                    {
-                        btn.BackColor = Color.LightGreen;
-                    }
-
-                    // ← RIGA AGGIUNTA: collega il click evitando duplicati
                     btn.Click -= DataCalendario_Click;
                     btn.Click += DataCalendario_Click;
-
                     giorno++;
                 }
                 else
@@ -436,95 +294,58 @@ namespace HOTEL_LUCIBLU
                     btn.Enabled = false;
                 }
             }
-
-            // Ricolora il range selezionato dopo aver rigenerato i bottoni
             Colora_Range_Calendario();
         }
 
         private void Colora_Range_Calendario()
         {
-            TabPage tab = tabPage3;
-            Panel panel = TrovaControllo(tab, "panel_calendario") as Panel;
+            Panel panel = TrovaControllo(tabPage3, "panel_calendario") as Panel;
             if (panel == null) return;
 
             for (int i = 1; i <= 42; i++)
             {
                 Button btn = TrovaControllo(panel, "data" + i) as Button;
                 if (btn == null || !btn.Visible || !btn.Enabled) continue;
-
                 if (!int.TryParse(btn.Text, out int giorno)) continue;
+
                 DateTime dataBtn = new DateTime(anno, meseCorrente, giorno);
 
                 // Reset colore base
-                if (dataBtn < DateTime.Today)
-                {
-                    btn.BackColor = Color.LightGray;
-                    btn.ForeColor = Color.DarkGray;
-                }
-                else if (dataBtn == DateTime.Today)
-                {
-                    btn.BackColor = Color.LightGreen;
-                    btn.ForeColor = Color.Black;
-                }
-                else
-                {
-                    btn.BackColor = Color.White;
-                    btn.ForeColor = Color.Black;
-                }
+                btn.BackColor = dataBtn < DateTime.Today ? Color.LightGray :
+                                dataBtn == DateTime.Today ? Color.LightGreen : Color.White;
+                btn.ForeColor = dataBtn < DateTime.Today ? Color.DarkGray : Color.Black;
 
-                // Colora check-in e check-out (stesso colore)
+                // Colora selezione
                 if (dataCheckIn.HasValue && dataBtn == dataCheckIn.Value)
-                {
-                    btn.BackColor = Color.SteelBlue;
-                    btn.ForeColor = Color.White;
-                }
+                { btn.BackColor = Color.SteelBlue; btn.ForeColor = Color.White; }
                 else if (dataCheckOut.HasValue && dataBtn == dataCheckOut.Value)
-                {
-                    btn.BackColor = Color.SteelBlue;
-                    btn.ForeColor = Color.White;
-                }
-                // Colora il range in mezzo
+                { btn.BackColor = Color.SteelBlue; btn.ForeColor = Color.White; }
                 else if (dataCheckIn.HasValue && dataCheckOut.HasValue &&
                          dataBtn > dataCheckIn.Value && dataBtn < dataCheckOut.Value)
-                {
-                    btn.BackColor = Color.LightSteelBlue;
-                    btn.ForeColor = Color.Black;
-                }
+                { btn.BackColor = Color.LightSteelBlue; btn.ForeColor = Color.Black; }
             }
         }
 
-        // Click su un giorno del calendario prenotazione
         private void DataCalendario_Click(object sender, EventArgs e)
         {
-            Button btn = sender as Button;
-            if (btn == null || !int.TryParse(btn.Text, out int giorno)) return;
+            if (!(sender is Button btn) || !int.TryParse(btn.Text, out int giorno)) return;
 
             DateTime dataSelezionata = new DateTime(anno, meseCorrente, giorno);
-
             if (dataSelezionata < DateTime.Today) return;
 
-            // Prima selezione = check-in, seconda = check-out
-            if (dataCheckIn == null || (dataCheckOut != null))
+            if (dataCheckIn == null || dataCheckOut != null)
             {
-                // Reset e imposta check-in
                 dataCheckIn = dataSelezionata;
                 dataCheckOut = null;
             }
             else
             {
-                // Imposta check-out (deve essere dopo check-in)
                 if (dataSelezionata <= dataCheckIn.Value)
-                {
-                    dataCheckIn = dataSelezionata;
-                    dataCheckOut = null;
-                }
+                { dataCheckIn = dataSelezionata; dataCheckOut = null; }
                 else
-                {
                     dataCheckOut = dataSelezionata;
-                }
             }
 
-            // Aggiorna label
             label_checkin.Text = dataCheckIn.HasValue ? dataCheckIn.Value.ToString("dd/MM/yyyy") : "—";
             label_checkout.Text = dataCheckOut.HasValue ? dataCheckOut.Value.ToString("dd/MM/yyyy") : "—";
 
@@ -534,9 +355,7 @@ namespace HOTEL_LUCIBLU
                 label_notti.Text = $"{notti} nott{(notti == 1 ? "e" : "i")}";
             }
             else
-            {
                 label_notti.Text = "—";
-            }
 
             Colora_Range_Calendario();
         }
@@ -545,20 +364,13 @@ namespace HOTEL_LUCIBLU
         {
             if (meseCorrente < 12) meseCorrente++;
             AggiornaCalendario();
-            Colora_Range_Calendario();
         }
 
         private void button_indietro_Click(object sender, EventArgs e)
         {
             if (meseCorrente > 1) meseCorrente--;
             AggiornaCalendario();
-            Colora_Range_Calendario();
         }
-
-
-
-
-
 
         #endregion
 
@@ -567,8 +379,6 @@ namespace HOTEL_LUCIBLU
         // PRENOTA-CAMERA
         #region PRENOTA CAMERA
 
-        #region AZIONE BOTTONI
-        //Conferma e vai al pagamento
         private void button_prosegui_prenotaCamere_Click(object sender, EventArgs e)
         {
             if (cameraSelezionata == null)
@@ -577,7 +387,6 @@ namespace HOTEL_LUCIBLU
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
             if (cameraSelezionata.Stato != "disponibile")
             {
                 MessageBox.Show("La camera selezionata non è disponibile.", "Attenzione",
@@ -588,72 +397,42 @@ namespace HOTEL_LUCIBLU
             int notti = (int)(dataCheckOut.Value - dataCheckIn.Value).TotalDays;
             decimal totale = cameraSelezionata.PrezzoNotte * notti;
 
-            // Aggiorna label pagamento
             label_checkin_pagamento.Text = dataCheckIn.Value.ToString("dd/MM/yyyy");
             label_checkout_pagamento.Text = dataCheckOut.Value.ToString("dd/MM/yyyy");
             label_notti_pagamento.Text = $"{notti} nott{(notti == 1 ? "e" : "i")}";
             label_numCamera_pagamento.Text = $"Camera {cameraSelezionata.Numero} ({cameraSelezionata.Tipo})";
             label_prezzoNotte_pagamento.Text = $"€ {cameraSelezionata.PrezzoNotte:0.00} x {notti} notti";
             label_totale_pagamento.Text = $"€ {totale:0.00}";
-
-            metodoPagamento = ""; // reset metodo
+            metodoPagamento = "";
 
             tabControl1.SelectedIndex = 7;
         }
 
-        //Date
-        private void button4_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedIndex = 3;
-        }
+        private void button4_Click(object sender, EventArgs e) => tabControl1.SelectedIndex = 3;
+        private void button3_Click(object sender, EventArgs e) => tabControl1.SelectedIndex = 2;
 
-        //Home
-        private void button3_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedIndex = 2;
-        }
-
-        //Cambio piano
         private void button_pianoTerra_Click(object sender, EventArgs e)
-        {
-            pianoCameraSelezionato = 1;
-            cameraSelezionata = null;
-            AggiornaBottoniCamere();
-        }
+        { pianoCameraSelezionato = 1; cameraSelezionata = null; AggiornaBottoniCamere(); }
 
         private void button_piano1_Click(object sender, EventArgs e)
-        {
-            pianoCameraSelezionato = 2;
-            cameraSelezionata = null;
-            AggiornaBottoniCamere();
-        }
+        { pianoCameraSelezionato = 2; cameraSelezionata = null; AggiornaBottoniCamere(); }
 
         private void button_piano2_Click(object sender, EventArgs e)
-        {
-            pianoCameraSelezionato = 3;
-            cameraSelezionata = null;
-            AggiornaBottoniCamere();
-        }
-
-        #endregion
-
-        #region CARICMAMENTO (visualizzazione) CAMERE NEI BOTTONI
+        { pianoCameraSelezionato = 3; cameraSelezionata = null; AggiornaBottoniCamere(); }
 
         private void AggiornaBottoniCamere()
         {
-            DatabaseHelper db = new DatabaseHelper();
-            List<Camera> camere = db.GetCamere()
+            // ← USA Camera.GetTutte() invece di DatabaseHelper
+            List<Camera> camere = Camera.GetTutte()
                 .Where(c => c.Piano == pianoCameraSelezionato)
                 .ToList();
 
-            // Lista dei 15 bottoni in ordine
             Button[] bottonìCamere = {
                 camera1,  camera2,  camera3,  camera4,  camera5,
                 camera6,  camera7,  camera8,  camera9,  camera10,
                 camera11, camera12, camera13, camera14, camera15
-             };
+            };
 
-            // Reset tutti i bottoni
             foreach (Button btn in bottonìCamere)
             {
                 btn.Text = "—";
@@ -663,7 +442,6 @@ namespace HOTEL_LUCIBLU
                 btn.Tag = null;
             }
 
-            // Popola i bottoni con le camere del piano
             for (int i = 0; i < camere.Count && i < bottonìCamere.Length; i++)
             {
                 Camera c = camere[i];
@@ -675,22 +453,12 @@ namespace HOTEL_LUCIBLU
 
                 switch (c.Stato)
                 {
-                    case "disponibile":
-                        btn.BackColor = Color.MediumSeaGreen;
-                        btn.ForeColor = Color.White;
-                        break;
-                    case "occupata":
-                        btn.BackColor = Color.IndianRed;
-                        btn.ForeColor = Color.White;
-                        break;
-                    case "manutenzione":
-                        btn.BackColor = Color.Goldenrod;
-                        btn.ForeColor = Color.White;
-                        break;
+                    case "disponibile": btn.BackColor = Color.MediumSeaGreen; btn.ForeColor = Color.White; break;
+                    case "occupata": btn.BackColor = Color.IndianRed; btn.ForeColor = Color.White; break;
+                    case "manutenzione": btn.BackColor = Color.Goldenrod; btn.ForeColor = Color.White; break;
                 }
             }
 
-            // Evidenzia la camera precedentemente selezionata se è ancora visibile
             if (cameraSelezionata != null)
             {
                 foreach (Button btn in bottonìCamere)
@@ -705,11 +473,9 @@ namespace HOTEL_LUCIBLU
                 }
             }
 
-            // Aggiorna label piano attivo sui bottoni piano
             button_pianoTerra.BackColor = pianoCameraSelezionato == 1 ? Color.DodgerBlue : SystemColors.Control;
             button_piano1.BackColor = pianoCameraSelezionato == 2 ? Color.DodgerBlue : SystemColors.Control;
             button_piano2.BackColor = pianoCameraSelezionato == 3 ? Color.DodgerBlue : SystemColors.Control;
-
             button_pianoTerra.ForeColor = pianoCameraSelezionato == 1 ? Color.White : Color.Black;
             button_piano1.ForeColor = pianoCameraSelezionato == 2 ? Color.White : Color.Black;
             button_piano2.ForeColor = pianoCameraSelezionato == 3 ? Color.White : Color.Black;
@@ -718,74 +484,47 @@ namespace HOTEL_LUCIBLU
         private void SelezionaCamera(Button btnPremuto)
         {
             if (btnPremuto.Tag == null) return;
-
             Camera c = btnPremuto.Tag as Camera;
 
-            // Ripristina colore bottone precedente
             if (bottoneSelezionato != null && bottoneSelezionato != btnPremuto)
             {
                 Camera vecchia = bottoneSelezionato.Tag as Camera;
                 if (vecchia != null)
-                {
                     switch (vecchia.Stato)
                     {
                         case "disponibile": bottoneSelezionato.BackColor = Color.MediumSeaGreen; break;
                         case "occupata": bottoneSelezionato.BackColor = Color.IndianRed; break;
                         case "manutenzione": bottoneSelezionato.BackColor = Color.Goldenrod; break;
                     }
-                }
             }
 
-            // Evidenzia il bottone selezionato
             btnPremuto.BackColor = Color.DodgerBlue;
             btnPremuto.ForeColor = Color.White;
             bottoneSelezionato = btnPremuto;
             cameraSelezionata = c;
 
-            // Aggiorna le label con i dati della camera
             label_camera_tipo.Text = c.Tipo;
             label_camera_prezzo.Text = $"€ {c.PrezzoNotte:0.00} / notte";
             label_camera_piano.Text = $"{c.Piano}";
             label_camera_servizio1.Text = $"1) {(string.IsNullOrEmpty(c.Servizio1) ? "—" : c.Servizio1)}";
             label_camera_servizio2.Text = $"2) {(string.IsNullOrEmpty(c.Servizio2) ? "—" : c.Servizio2)}";
             label_camera_numero.Text = $"🛏 Camera {c.Numero}";
-            label_stato_camere.Text = $"{c.Stato}";
+            label_stato_camere.Text = c.Stato;
         }
 
-        //Click su una camera (bottone)
         private void camera10_Click(object sender, EventArgs e)
-        {
-            SelezionaCamera(sender as Button);
-        }
-
-
-
-        #endregion
+            => SelezionaCamera(sender as Button);
 
         #endregion
 
         // ACCOUNT
         #region ACCOUNT
 
-        #region AZIONE BOTTONI
-
-        //Home
         private void button1_Click(object sender, EventArgs e)
-        {
-            if (posizioneHome != true) // Sono partito dall HOME
-            {
-                tabControl1.SelectedIndex = 8; //Admin
-            }
-            else // Sono partito da Admin
-            {
-                tabControl1.SelectedIndex = 2; //Home
-            }
+            => tabControl1.SelectedIndex = posizioneHome ? 2 : 8;
 
-        }
-        //Logout
         private void button7_Click(object sender, EventArgs e)
         {
-            // Cancella l'accesso salvato
             Properties.Settings.Default.AccessoSalvato = false;
             Properties.Settings.Default.UtenteEmail = "";
             Properties.Settings.Default.UtenteNome = "";
@@ -795,66 +534,28 @@ namespace HOTEL_LUCIBLU
             accesso = false;
             tabControl1.SelectedIndex = 2;
             AggiornaVisibilitaBottoniHome();
-
         }
-
-
-        #endregion
 
         #endregion
 
         // PRENOTA-PAGAMENTO
         #region PRENOTA PAGAMENTO
 
-        #region AZIONE BOTTONI
-        //Home
-        private void button35_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedIndex = 2;
-        }
+        private void button35_Click(object sender, EventArgs e) => tabControl1.SelectedIndex = 2;
+        private void button41_Click(object sender, EventArgs e) => tabControl1.SelectedIndex = 6;
 
-        //Camere
-        private void button41_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedIndex = 6;
-        }
-
-        #endregion
-
-        #region METODO DI PAGAMENTO
-
-        //Carta di credito
         private void button_carta_Click(object sender, EventArgs e)
-        {
-            metodoPagamento = "Carta di Credito";
-            label_metodo_pagamento.Text = $"M.Pagamento = {metodoPagamento}";
-        }
+        { metodoPagamento = "Carta di Credito"; label_metodo_pagamento.Text = $"M.Pagamento = {metodoPagamento}"; }
 
-        //Paypal
         private void button_paypal_Click(object sender, EventArgs e)
-        {
-            metodoPagamento = "PayPal";
-            label_metodo_pagamento.Text = $"M.Pagamento = {metodoPagamento}";
-        }
+        { metodoPagamento = "PayPal"; label_metodo_pagamento.Text = $"M.Pagamento = {metodoPagamento}"; }
 
-        //Bonifico
         private void button_bonifico_Click(object sender, EventArgs e)
-        {
-            metodoPagamento = "Bonifico";
-            label_metodo_pagamento.Text = $"M.Pagamento = {metodoPagamento}";
-        }
+        { metodoPagamento = "Bonifico"; label_metodo_pagamento.Text = $"M.Pagamento = {metodoPagamento}"; }
 
-        //Pagamento in Hotel
         private void button_hotel_Click(object sender, EventArgs e)
-        {
-            metodoPagamento = "In Hotel";
-            label_metodo_pagamento.Text = $"M.Pagamento = {metodoPagamento}";
-        }
+        { metodoPagamento = "In Hotel"; label_metodo_pagamento.Text = $"M.Pagamento = {metodoPagamento}"; }
 
-        #endregion
-
-        #region Conferma pagamento
-        //Conferma e paga (conferma prenotazione)
         private void button_conferma_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(metodoPagamento))
@@ -877,21 +578,21 @@ namespace HOTEL_LUCIBLU
                 MetodoPagamento = metodoPagamento
             };
 
-            DatabaseHelper db = new DatabaseHelper();
+            Cliente cliente = new Cliente { Email = utenteEmail };
 
-            if (db.AggiungiPrenotazione(p))
+            if (cliente.EffettuaPrenotazione(p))
             {
-                MessageBox.Show($"Prenotazione confermata!\n\nCamera {cameraSelezionata.Numero} — {notti} notti\nTotale: € {totale:0.00}",
+                MessageBox.Show(
+                    $"Prenotazione confermata!\n\nCamera {cameraSelezionata.Numero} — {notti} notti\nTotale: € {totale:0.00}",
                     "Prenotazione effettuata", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Reset stato
                 dataCheckIn = null;
                 dataCheckOut = null;
                 cameraSelezionata = null;
                 bottoneSelezionato = null;
                 metodoPagamento = "";
 
-                tabControl1.SelectedIndex = 2; // Torna alla Home
+                tabControl1.SelectedIndex = 2;
                 AggiornaCalendario();
             }
             else
@@ -900,53 +601,28 @@ namespace HOTEL_LUCIBLU
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        #endregion
 
         #endregion
 
         // GESTIONE ADMIN
         #region GESTIONE ADMIN
 
-        #region AZIONE BOTTTONI
-        //Dashboard
-        private void button45_Click(object sender, EventArgs e)
-        {
-            tabControl2.SelectedIndex = 0;
-        }
+        private void button45_Click(object sender, EventArgs e) => tabControl2.SelectedIndex = 0;
 
-        //Prenotazioni
         private void button44_Click(object sender, EventArgs e)
-        {
-            tabControl2.SelectedIndex = 0;
-            CaricaPrenotazioni();
-        }
+        { tabControl2.SelectedIndex = 0; CaricaPrenotazioni(); }
 
-        //Gestione camere
         private void button46_Click(object sender, EventArgs e)
-        {
-            tabControl2.SelectedIndex = 1;
-            CaricaCamere();
-        }
+        { tabControl2.SelectedIndex = 1; CaricaCamere(); }
 
-        //Clienti/admin
         private void button47_Click(object sender, EventArgs e)
-        {
-            tabControl2.SelectedIndex = 2;
-            CaricaUtenti();
-        }
+        { tabControl2.SelectedIndex = 2; CaricaUtenti(); }
 
-        //Account
         private void button8_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedIndex = 4;
-            posizioneHome = false;
-            AggiornaDatiAccount();
-        }
-        #endregion
+        { tabControl1.SelectedIndex = 4; posizioneHome = false; AggiornaDatiAccount(); }
 
         #region UTENTI
 
-        #region Carica Utenti Sezione Admin
         private void CaricaUtenti()
         {
             listView_user.Items.Clear();
@@ -954,7 +630,6 @@ namespace HOTEL_LUCIBLU
             listView_user.FullRowSelect = true;
             listView_user.GridLines = true;
 
-            // Colonne (solo la prima volta)
             if (listView_user.Columns.Count == 0)
             {
                 listView_user.Columns.Add("Email", 200);
@@ -965,8 +640,9 @@ namespace HOTEL_LUCIBLU
                 listView_user.Columns.Add("Tipo", 70);
             }
 
-            DatabaseHelper db = new DatabaseHelper();
-            List<Utente> utenti = db.GetUtenti();
+            // ← USA Admin.GetTuttiGliUtenti() invece di DatabaseHelper
+            Admin admin = new Admin();
+            List<Utente> utenti = admin.GetTuttiGliUtenti();
 
             foreach (Utente u in utenti)
             {
@@ -976,20 +652,11 @@ namespace HOTEL_LUCIBLU
                 item.SubItems.Add(u.DataNascita.HasValue ? u.DataNascita.Value.ToString("dd/MM/yyyy") : "—");
                 item.SubItems.Add(u.DataCreazione.ToString("dd/MM/yyyy HH:mm"));
                 item.SubItems.Add(u.Tipo);
-
-                // Colora gli admin in blu
-                if (u.Tipo == "admin")
-                    item.ForeColor = Color.RoyalBlue;
-
+                if (u.Tipo == "admin") item.ForeColor = Color.RoyalBlue;
                 listView_user.Items.Add(item);
             }
         }
 
-
-        #endregion
-
-        #region Gestione Utenti (inserimento/rimozione/modifica)
-        //Elimina utente (admin)
         private void button54_Click(object sender, EventArgs e)
         {
             if (listView_user.SelectedItems.Count == 0)
@@ -1001,66 +668,38 @@ namespace HOTEL_LUCIBLU
 
             string emailSelezionata = listView_user.SelectedItems[0].Text;
 
-            DialogResult conferma = MessageBox.Show(
-                $"Sei sicuro di voler eliminare l'utente:\n{emailSelezionata}?",
-                "Conferma eliminazione",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
-
-            if (conferma == DialogResult.Yes)
+            if (MessageBox.Show($"Sei sicuro di voler eliminare l'utente:\n{emailSelezionata}?",
+                "Conferma eliminazione", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                DatabaseHelper db = new DatabaseHelper();
-                if (db.EliminaUtente(emailSelezionata))
-                {
-                    MessageBox.Show("Utente eliminato con successo.");
-                    CaricaUtenti(); // Aggiorna la lista
-                }
+                // ← USA Utente.Elimina() invece di DatabaseHelper
+                Utente u = new Utente { Email = emailSelezionata };
+                if (u.Elimina())
+                { MessageBox.Show("Utente eliminato con successo."); CaricaUtenti(); }
                 else
-                {
                     MessageBox.Show("Errore durante l'eliminazione.");
-                }
             }
         }
 
-        //Aggiungi nuovo utente
         private void button55_Click(object sender, EventArgs e)
         {
             FormAggiungiUtente finestra = new FormAggiungiUtente();
+            if (finestra.ShowDialog() != DialogResult.OK) return;
 
-            if (finestra.ShowDialog() == DialogResult.OK)
+            if (Utente.EmailEsiste(finestra.EmailInserita))
             {
-                DatabaseHelper db = new DatabaseHelper();
-
-                // Controlla email duplicata
-                if (db.EmailEsiste(finestra.EmailInserita))
-                {
-                    MessageBox.Show("Email già in uso.", "Errore",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                bool successo = db.Registra(
-                    finestra.EmailInserita,
-                    finestra.PasswordInserita,
-                    finestra.NomeInserito,
-                    finestra.CognomeInserito,
-                    finestra.DataNascitaInserita,
-                    finestra.TipoInserito
-                );
-
-                if (successo)
-                {
-                    MessageBox.Show("Utente aggiunto con successo!");
-                    CaricaUtenti(); // Aggiorna la lista
-                }
-                else
-                {
-                    MessageBox.Show("Errore durante l'aggiunta.");
-                }
+                MessageBox.Show("Email già in uso.", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
+
+            // ← USA Utente.Registra() invece di DatabaseHelper
+            if (Utente.Registra(finestra.EmailInserita, finestra.PasswordInserita,
+                finestra.NomeInserito, finestra.CognomeInserito,
+                finestra.DataNascitaInserita, finestra.TipoInserito))
+            { MessageBox.Show("Utente aggiunto con successo!"); CaricaUtenti(); }
+            else
+                MessageBox.Show("Errore durante l'aggiunta.");
         }
 
-        //Modifica utente (admin)
         private void button5_Click(object sender, EventArgs e)
         {
             if (listView_user.SelectedItems.Count == 0)
@@ -1071,38 +710,25 @@ namespace HOTEL_LUCIBLU
             }
 
             string emailSelezionata = listView_user.SelectedItems[0].Text;
-            DatabaseHelper db = new DatabaseHelper();
-            Utente u = db.GetUtente(emailSelezionata);
 
+            // ← USA Utente.GetUtente() invece di DatabaseHelper
+            Utente u = Utente.GetUtente(emailSelezionata);
             if (u == null) return;
 
-            // Apre la stessa form ma in modalità modifica
             FormAggiungiUtente finestra = new FormAggiungiUtente(u);
+            if (finestra.ShowDialog() != DialogResult.OK) return;
 
-            if (finestra.ShowDialog() == DialogResult.OK)
-            {
-                bool successo = db.ModificaUtente(
-                    emailSelezionata,
-                    finestra.EmailInserita,
-                    finestra.NomeInserito,
-                    finestra.CognomeInserito,
-                    finestra.DataNascitaInserita,
-                    finestra.PasswordInserita,  // vuota = non cambia password
-                    finestra.TipoInserito
-                );
+            // ← USA u.Modifica() invece di DatabaseHelper
+            u.Nome = finestra.NomeInserito;
+            u.Cognome = finestra.CognomeInserito;
+            u.DataNascita = finestra.DataNascitaInserita;
+            u.Tipo = finestra.TipoInserito;
 
-                if (successo)
-                {
-                    MessageBox.Show("Utente modificato con successo!");
-                    CaricaUtenti();
-                }
-                else
-                {
-                    MessageBox.Show("Errore durante la modifica.");
-                }
-            }
+            if (u.Modifica(finestra.EmailInserita, finestra.PasswordInserita))
+            { MessageBox.Show("Utente modificato con successo!"); CaricaUtenti(); }
+            else
+                MessageBox.Show("Errore durante la modifica.");
         }
-        #endregion
 
         #endregion
 
@@ -1125,55 +751,43 @@ namespace HOTEL_LUCIBLU
                 listView_camere.Columns.Add("Servizio 2", 130);
             }
 
-            // Popola ComboBox solo la prima volta
             if (comboBox_piano_admin.Items.Count == 0)
             {
-                comboBox_piano_admin.Items.Add("Tutti");
-                comboBox_piano_admin.Items.Add("1");
-                comboBox_piano_admin.Items.Add("2");
-                comboBox_piano_admin.Items.Add("3");
-                comboBox_piano_admin.SelectedIndex = 0; // ← triggera FiltraCamere automaticamente
+                comboBox_piano_admin.Items.AddRange(new[] { "Tutti", "1", "2", "3" });
+                comboBox_piano_admin.SelectedIndex = 0;
             }
             else
-            {
-                FiltraCamere(); // se ComboBox già popolato, aggiorna solo la lista
-            }
+                FiltraCamere();
         }
 
-        //Aggiungi camera
         private void button10_Click(object sender, EventArgs e)
         {
             FormAggiungiCamera finestra = new FormAggiungiCamera();
+            if (finestra.ShowDialog() != DialogResult.OK) return;
 
-            if (finestra.ShowDialog() == DialogResult.OK)
+            // ← USA Camera.Esiste() e Camera.Salva() invece di DatabaseHelper
+            if (Camera.Esiste(finestra.NumeroCamera))
             {
-                DatabaseHelper db = new DatabaseHelper();
-
-                if (db.CameraEsiste(finestra.NumeroCamera))
-                {
-                    MessageBox.Show("Esiste già una camera con questo numero.", "Errore",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                Camera nuova = new Camera
-                {
-                    Numero = finestra.NumeroCamera,
-                    Piano = finestra.PianoCamera,
-                    Tipo = finestra.TipoCamera,
-                    PrezzoNotte = finestra.PrezzoCamera,
-                    Stato = finestra.StatoCamera,
-                    Servizio1 = finestra.Servizio1,
-                    Servizio2 = finestra.Servizio2,
-                };
-
-                db.AggiungiCamera(nuova);
-                MessageBox.Show("Camera aggiunta con successo!");
-                CaricaCamere();
+                MessageBox.Show("Esiste già una camera con questo numero.", "Errore",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
+
+            Camera nuova = new Camera
+            {
+                Numero = finestra.NumeroCamera,
+                Piano = finestra.PianoCamera,
+                Tipo = finestra.TipoCamera,
+                PrezzoNotte = finestra.PrezzoCamera,
+                Stato = finestra.StatoCamera,
+                Servizio1 = finestra.Servizio1,
+                Servizio2 = finestra.Servizio2
+            };
+            nuova.Salva();
+            MessageBox.Show("Camera aggiunta con successo!");
+            CaricaCamere();
         }
 
-        //Elimina camera
         private void button9_Click(object sender, EventArgs e)
         {
             if (listView_camere.SelectedItems.Count == 0)
@@ -1183,49 +797,31 @@ namespace HOTEL_LUCIBLU
                 return;
             }
 
-            int numeroCamera = int.Parse(listView_camere.SelectedItems[0].Text);
+            int numero = int.Parse(listView_camere.SelectedItems[0].Text);
 
-            DialogResult conferma = MessageBox.Show(
-                $"Sei sicuro di voler eliminare la camera n° {numeroCamera}?",
-                "Conferma eliminazione",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
-
-            if (conferma == DialogResult.Yes)
+            if (MessageBox.Show($"Sei sicuro di voler eliminare la camera n° {numero}?",
+                "Conferma eliminazione", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                DatabaseHelper db = new DatabaseHelper();
-                if (db.EliminaCamera(numeroCamera))
-                {
-                    MessageBox.Show("Camera eliminata con successo.");
-                    CaricaCamere();
-                }
+                // ← USA Camera.Elimina() invece di DatabaseHelper
+                if (Camera.Elimina(numero))
+                { MessageBox.Show("Camera eliminata con successo."); CaricaCamere(); }
                 else
-                {
                     MessageBox.Show("Errore durante l'eliminazione.");
-                }
             }
         }
 
-        //Filtro per piano (admin)
         private void comboBox_piano_admin_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            FiltraCamere();
-        }
+            => FiltraCamere();
 
         private void FiltraCamere()
         {
             string filtro = comboBox_piano_admin.SelectedItem?.ToString() ?? "Tutti";
-
             listView_camere.Items.Clear();
 
-            DatabaseHelper db = new DatabaseHelper();
-            List<Camera> camere = db.GetCamere();
-
-            foreach (Camera c in camere)
+            // ← USA Camera.GetTutte() invece di DatabaseHelper
+            foreach (Camera c in Camera.GetTutte())
             {
-                // Se "Tutti" mostra tutto, altrimenti filtra per piano
-                if (filtro != "Tutti" && c.Piano.ToString() != filtro)
-                    continue;
+                if (filtro != "Tutti" && c.Piano.ToString() != filtro) continue;
 
                 ListViewItem item = new ListViewItem(c.Numero.ToString());
                 item.SubItems.Add(c.Piano.ToString());
@@ -1241,15 +837,13 @@ namespace HOTEL_LUCIBLU
                     case "occupata": item.ForeColor = Color.OrangeRed; break;
                     case "manutenzione": item.ForeColor = Color.Gray; break;
                 }
-
                 listView_camere.Items.Add(item);
             }
         }
 
-
         #endregion
 
-        #region PRENOTAZIONE
+        #region PRENOTAZIONI
 
         private void CaricaPrenotazioni()
         {
@@ -1272,39 +866,30 @@ namespace HOTEL_LUCIBLU
                 listView_prenotazioni.Columns.Add("Prenotato il", 130);
             }
 
-            DatabaseHelper db = new DatabaseHelper();
-            List<Prenotazione> prenotazioni = db.GetTuttePrenotazioni();
-
-            foreach (Prenotazione p in prenotazioni)
+            // ← USA Prenotazione.GetTutte() invece di DatabaseHelper
+            foreach (Prenotazione p in Prenotazione.GetTutte())
             {
-                int notti = (int)(p.DataCheckOut - p.DataCheckIn).TotalDays;
-
                 ListViewItem item = new ListViewItem(p.CodicePrenotazione);
                 item.SubItems.Add(p.Email);
                 item.SubItems.Add(p.NumeroCamera);
                 item.SubItems.Add(p.DataCheckIn.ToString("dd/MM/yyyy"));
                 item.SubItems.Add(p.DataCheckOut.ToString("dd/MM/yyyy"));
-                item.SubItems.Add(notti.ToString());
+                item.SubItems.Add(p.Notti.ToString());
                 item.SubItems.Add($"€ {p.PrezzoTotale:0.00}");
                 item.SubItems.Add(p.MetodoPagamento);
                 item.SubItems.Add(p.Stato);
                 item.SubItems.Add(p.DataPrenotazione.ToString("dd/MM/yyyy HH:mm"));
 
-                // Colore in base allo stato
                 switch (p.Stato)
                 {
                     case "confermata": item.ForeColor = Color.Green; break;
                     case "in attesa": item.ForeColor = Color.DarkOrange; break;
                     case "cancellata": item.ForeColor = Color.Gray; break;
                 }
-
                 listView_prenotazioni.Items.Add(item);
             }
-
-
         }
 
-        //Cancella Prenotazione
         private void button48_Click(object sender, EventArgs e)
         {
             if (listView_prenotazioni.SelectedItems.Count == 0)
@@ -1316,46 +901,28 @@ namespace HOTEL_LUCIBLU
 
             string codiceStr = listView_prenotazioni.SelectedItems[0].Text;
             string statoAttuale = listView_prenotazioni.SelectedItems[0].SubItems[8].Text;
+            int codice = int.Parse(codiceStr);
 
             if (statoAttuale == "cancellata")
             {
-                // Se già cancellata, chiedi se eliminare definitivamente
-                DialogResult conferma = MessageBox.Show(
-                    "La prenotazione è già cancellata.\nVuoi eliminarla definitivamente?",
-                    "Elimina definitivamente",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Question);
-
-                if (conferma == DialogResult.Yes)
+                if (MessageBox.Show("La prenotazione è già cancellata.\nVuoi eliminarla definitivamente?",
+                    "Elimina definitivamente", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    DatabaseHelper db = new DatabaseHelper();
-                    if (db.EliminaPrenotazione(int.Parse(codiceStr)))
-                    {
-                        MessageBox.Show("Prenotazione eliminata definitivamente.");
-                        CaricaPrenotazioni();
-                    }
+                    // ← USA Prenotazione.EliminaFisicamente() invece di DatabaseHelper
+                    if (Prenotazione.EliminaFisicamente(codice))
+                    { MessageBox.Show("Prenotazione eliminata definitivamente."); CaricaPrenotazioni(); }
                 }
                 return;
             }
 
-            DialogResult conf = MessageBox.Show(
-                $"Sei sicuro di voler cancellare la prenotazione #{codiceStr}?",
-                "Conferma cancellazione",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
-
-            if (conf == DialogResult.Yes)
+            if (MessageBox.Show($"Sei sicuro di voler cancellare la prenotazione #{codiceStr}?",
+                "Conferma cancellazione", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                DatabaseHelper db = new DatabaseHelper();
-                if (db.CancellaPrenotazione(int.Parse(codiceStr)))
-                {
-                    MessageBox.Show("Prenotazione cancellata.");
-                    CaricaPrenotazioni();
-                }
+                // ← USA Prenotazione.Cancella() invece di DatabaseHelper
+                if (Prenotazione.Cancella(codice))
+                { MessageBox.Show("Prenotazione cancellata."); CaricaPrenotazioni(); }
                 else
-                {
                     MessageBox.Show("Errore durante la cancellazione.");
-                }
             }
         }
 
@@ -1366,16 +933,8 @@ namespace HOTEL_LUCIBLU
         // LE MIE PRENOTAZIONI
         #region LE MIE PRENOTAZIONI
 
-        #region AZIONI BOTTONI
-        //Home
         private void button42_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedIndex = 2;
-        }
-
-        #endregion
-
-        #region CARICAMENTO PRENOTAZIONI
+            => tabControl1.SelectedIndex = 2;
 
         private void CaricaMiePrenotazioni()
         {
@@ -1397,18 +956,16 @@ namespace HOTEL_LUCIBLU
                 listView_mieprenotazioni.Columns.Add("Prenotato il", 130);
             }
 
-            DatabaseHelper db = new DatabaseHelper();
-            List<Prenotazione> prenotazioni = db.GetPrenotazioniUtente(utenteEmail);
+            // ← USA Cliente.VisualizzaStorico() invece di DatabaseHelper
+            Cliente cliente = new Cliente { Email = utenteEmail };
 
-            foreach (Prenotazione p in prenotazioni)
+            foreach (Prenotazione p in cliente.VisualizzaStorico())
             {
-                int notti = (int)(p.DataCheckOut - p.DataCheckIn).TotalDays;
-
                 ListViewItem item = new ListViewItem(p.CodicePrenotazione);
                 item.SubItems.Add(p.NumeroCamera);
                 item.SubItems.Add(p.DataCheckIn.ToString("dd/MM/yyyy"));
                 item.SubItems.Add(p.DataCheckOut.ToString("dd/MM/yyyy"));
-                item.SubItems.Add(notti.ToString());
+                item.SubItems.Add(p.Notti.ToString());
                 item.SubItems.Add($"€ {p.PrezzoTotale:0.00}");
                 item.SubItems.Add(p.MetodoPagamento);
                 item.SubItems.Add(p.Stato);
@@ -1420,18 +977,10 @@ namespace HOTEL_LUCIBLU
                     case "in attesa": item.ForeColor = Color.DarkOrange; break;
                     case "cancellata": item.ForeColor = Color.Gray; break;
                 }
-
                 listView_mieprenotazioni.Items.Add(item);
             }
         }
 
-        
-
-        #endregion
-
-        #region Cancella prenotazione
-
-        //Cancella prenotazione
         private void button43_Click(object sender, EventArgs e)
         {
             if (listView_mieprenotazioni.SelectedItems.Count == 0)
@@ -1444,7 +993,6 @@ namespace HOTEL_LUCIBLU
             string codiceStr = listView_mieprenotazioni.SelectedItems[0].Text;
             string statoAttuale = listView_mieprenotazioni.SelectedItems[0].SubItems[7].Text;
 
-            // Controlla che sia "in attesa"
             if (statoAttuale != "in attesa")
             {
                 MessageBox.Show("Puoi annullare solo le prenotazioni in attesa.", "Operazione non consentita",
@@ -1452,43 +1000,29 @@ namespace HOTEL_LUCIBLU
                 return;
             }
 
-            DialogResult conferma = MessageBox.Show(
-                $"Sei sicuro di voler annullare la prenotazione #{codiceStr}?",
-                "Conferma annullamento",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
-
-            if (conferma == DialogResult.Yes)
+            if (MessageBox.Show($"Sei sicuro di voler annullare la prenotazione #{codiceStr}?",
+                "Conferma annullamento", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                DatabaseHelper db = new DatabaseHelper();
-                if (db.CancellaPrenotazione(int.Parse(codiceStr)))
-                {
-                    MessageBox.Show("Prenotazione annullata con successo.");
-                    CaricaMiePrenotazioni(); // Aggiorna la lista
-                }
+                // ← USA Cliente.AnnullaPrenotazione() invece di DatabaseHelper
+                Cliente cliente = new Cliente { Email = utenteEmail };
+                if (cliente.AnnullaPrenotazione(int.Parse(codiceStr)))
+                { MessageBox.Show("Prenotazione annullata con successo."); CaricaMiePrenotazioni(); }
                 else
-                {
                     MessageBox.Show("Errore durante l'annullamento");
-                }
             }
         }
 
         #endregion
 
-        #endregion
+        // ACCOUNT UTENTE
+        #region ACCOUNT UTENTE
 
-        //ACCOUNT
-        #region ACCOUNT
-
-        #region Aggiornamento dei dati nella sezione account
         private void AggiornaDatiAccount()
         {
-            DatabaseHelper db = new DatabaseHelper();
-            Utente u = db.GetUtente(utenteEmail);
-
+            // ← USA Utente.GetUtente() invece di DatabaseHelper
+            Utente u = Utente.GetUtente(utenteEmail);
             if (u == null) return;
 
-            // Label con i dati
             label_nome_account.Text = u.Nome;
             label_cognome_account.Text = u.Cognome;
             label_email_account.Text = u.Email;
@@ -1496,17 +1030,13 @@ namespace HOTEL_LUCIBLU
                 ? u.DataNascita.Value.ToString("dd/MM/yyyy") : "—";
             label_dataCreazione_account.Text = u.DataCreazione.ToString("dd/MM/yyyy HH:mm");
 
-            // Precompila le TextBox di modifica
             textBox_nome_account.Text = u.Nome;
             textBox_cognome_account.Text = u.Cognome;
             textBox_email_account.Text = u.Email;
             textBox_password_account.Text = "";
             dateTimePicker_account.Value = u.DataNascita ?? DateTime.Today;
         }
-        #endregion
 
-        #region Salvataggio dei nuovi dati modificati
-        //Salvataggio modifiche account
         private void button_salva_account_Click(object sender, EventArgs e)
         {
             string nuovaEmail = textBox_email_account.Text.Trim();
@@ -1521,20 +1051,17 @@ namespace HOTEL_LUCIBLU
                 return;
             }
 
-            DatabaseHelper db = new DatabaseHelper();
-
-            bool successo = db.ModificaUtente(
-                utenteEmail,                    // email originale
-                nuovaEmail,                     // nuova email
-                nome,
-                cognome,
-                dateTimePicker_account.Value,
-                password                        // vuota = non cambia la password
-            );
-
-            if (successo)
+            // ← USA u.Modifica() invece di DatabaseHelper
+            Utente u = new Utente
             {
-                // Aggiorna variabili locali e settings
+                Email = utenteEmail,
+                Nome = nome,
+                Cognome = cognome,
+                DataNascita = dateTimePicker_account.Value
+            };
+
+            if (u.Modifica(nuovaEmail, password))
+            {
                 utenteEmail = nuovaEmail;
                 utenteNome = nome;
                 Properties.Settings.Default.UtenteEmail = nuovaEmail;
@@ -1545,19 +1072,11 @@ namespace HOTEL_LUCIBLU
                 AggiornaDatiAccount();
             }
             else
-            {
                 MessageBox.Show("Errore durante il salvataggio.");
-            }
         }
 
         #endregion
 
         #endregion
-
-        #endregion
-
-        
-
-
     }
 }
